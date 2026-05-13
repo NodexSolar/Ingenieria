@@ -487,7 +487,7 @@ footer{background:var(--forest);border-top:1px solid rgba(246,241,233,.06);paddi
       <p class="svc-desc">Transformá tu hogar en una fuente de energía propia. Reducí significativamente tu factura eléctrica con un sistema diseñado a medida para tu consumo y tu espacio.</p>
       <div class="svc-feats">
         <div class="svc-feat">Análisis de consumo y diseño personalizado</div>
-        <div class="svc-feat">Instalación certificada con garantía extendida</div>
+        <div class="svc-feat">Instalación certificada con a extendida</div>
         <div class="svc-feat">Monitoreo remoto y soporte post-instalación</div>
         <div class="svc-feat">Gestión completa de trámites con la distribuidora</div>
       </div>
@@ -771,7 +771,7 @@ const revObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.
 document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 function toggleMenu(){document.getElementById('mobMenu').classList.toggle('open');}
 let counted=false;
-const countObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting&&!counted){counted=true;countUp('cnt-inst',0,50,1800);countUp('cnt-kw',0,500,2200);countUp('cnt-gar',0,15,1400);}});},{threshold:.5});
+const countObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting&&!counted){counted=true;countUp('cnt-inst',0,50,1800);countUp('cnt-kw',0,500,2200);countUp('cnt-gar',0,10,1400);}});},{threshold:.5});
 const numSec=document.getElementById('numbers-section');if(numSec)countObs.observe(numSec);
 function countUp(id,from,to,duration){const el=document.getElementById(id);if(!el)return;const start=performance.now();function step(now){const p=Math.min((now-start)/duration,1);const ease=1-Math.pow(1-p,3);el.textContent=Math.round(from+(to-from)*ease);if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
 function toggleFaq(btn){const ans=btn.nextElementSibling;const wasOpen=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(q=>{q.classList.remove('open');q.nextElementSibling.classList.remove('open');});if(!wasOpen){btn.classList.add('open');ans.classList.add('open');}}
