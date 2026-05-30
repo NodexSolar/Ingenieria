@@ -257,8 +257,32 @@ nav.scrolled{background:rgba(250,248,244,.99);box-shadow:0 1px 16px rgba(26,26,1
 .proj-detail{font-size:11px;font-weight:300;color:rgba(255,255,255,.5);margin-top:4px;}
 .proj-badge{position:absolute;top:16px;left:16px;background:rgba(250,248,244,.85);backdrop-filter:blur(8px);padding:5px 12px;font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--stone);transition:opacity .3s;}
 .proj-card:hover .proj-badge{opacity:0;}
+.proj-specs{position:absolute;top:16px;right:16px;display:flex;flex-direction:column;gap:5px;align-items:flex-end;opacity:0;transition:opacity .35s;}
+.proj-card:hover .proj-specs{opacity:1;}
+.proj-spec-pill{background:rgba(200,136,26,.85);backdrop-filter:blur(6px);padding:4px 10px;font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#fff;}
 .proj-cta{margin-top:3px;padding:36px 48px;background:var(--cream);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--border-lt);}
 .proj-cta-text{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;font-style:italic;color:var(--text);}
+
+/* GOOGLE REVIEWS */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.review-card{background:var(--white);padding:36px 32px;display:flex;flex-direction:column;gap:18px;border:1px solid var(--border-lt);transition:background .25s,transform .25s,box-shadow .25s;}
+.review-card:hover{background:var(--cream);transform:translateY(-4px);box-shadow:0 16px 40px rgba(26,26,18,.08);}
+.rc-header{display:flex;align-items:center;gap:14px;}
+.rc-avatar{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:600;color:#fff;flex-shrink:0;}
+.rc-name{font-size:13px;font-weight:500;color:var(--text);line-height:1.2;}
+.rc-date{font-size:11px;font-weight:300;color:var(--stone);margin-top:2px;}
+.rc-stars{display:flex;gap:2px;}
+.rc-star{width:14px;height:14px;fill:#FBBC04;}
+.rc-text{font-size:13px;font-weight:300;line-height:1.75;color:var(--muted);flex:1;}
+.rc-footer{display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid var(--border-lt);}
+.rc-google-logo{display:flex;align-items:center;gap:6px;font-size:10px;font-weight:400;letter-spacing:.04em;color:var(--stone);}
+.reviews-cta{margin-top:3px;padding:32px 48px;background:var(--cream-dk);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--border-lt);}
+.reviews-rating{display:flex;align-items:center;gap:16px;}
+.rr-score{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--text);line-height:1;letter-spacing:-.02em;}
+.rr-score span{font-style:italic;color:var(--sol);}
+.rr-info{display:flex;flex-direction:column;gap:4px;}
+.rr-stars{display:flex;gap:2px;}
+.rr-label{font-size:11px;font-weight:300;color:var(--stone);letter-spacing:.05em;}
 
 /* NUMBERS */
 .numbers{background:var(--forest);display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(246,241,233,.06);border-bottom:1px solid rgba(246,241,233,.06);}
@@ -651,17 +675,54 @@ footer{background:var(--forest);border-top:1px solid rgba(246,241,233,.06);paddi
     <span class="page-num">03 / 07</span>
   </div>
   <div class="proj-grid">
+    <!-- Proyecto 1: Pelon - Chapadmalal (featured) -->
     <div class="proj-card feat reveal">
-      <img class="proj-img" src="https://solarservice.uk/wp-content/uploads/2023/08/solar-pv-panels-on-flat-roof-min.jpg" alt="Instalación residencial techo loza">
+      <img class="proj-img" src="proyecto-pelon.jpg" alt="Instalación residencial híbrida Chapadmalal">
       <div class="proj-overlay"></div>
-      <div class="proj-badge">Residencial · Destacado</div>
-      <div class="proj-info"><div class="proj-tag">Residencial · Techo de loza</div><div class="proj-name">Sistema con estructura orientada al Norte</div><div class="proj-detail">Máximo aprovechamiento de la irradiación solar</div></div>
+      <div class="proj-badge">Residencial · Híbrida</div>
+      <div class="proj-specs">
+        <span class="proj-spec-pill">8 paneles</span>
+        <span class="proj-spec-pill">4.6 kW</span>
+        <span class="proj-spec-pill">+ Baterías</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-tag">Residencial Híbrida · Chapadmalal, Buenos Aires</div>
+        <div class="proj-name">Casa de barrio · Chapa inclinada</div>
+        <div class="proj-detail">8 paneles · 4.6 kWp · Con baterías de respaldo · Objetivo: ahorro + backup ante cortes</div>
+      </div>
     </div>
+    <!-- Proyecto 2: Daro - Escobar -->
     <div class="proj-card reveal rd1">
-      <img class="proj-img" src="https://www.pretapower.com/wp-content/uploads/2025/08/Commercial-Solar-Install-on-Corrugated-Metal-Warehouse-Roof.jpg" alt="Instalación industrial galpón">
+      <img class="proj-img" src="proyecto-daro.jpg" alt="Instalación residencial híbrida Escobar">
       <div class="proj-overlay"></div>
-      <div class="proj-badge">Industrial · Techo engrafado</div>
-      <div class="proj-info"><div class="proj-tag">Industrial · Techo coplanar engrafado</div><div class="proj-name">Galpón industrial · Gran escala</div><div class="proj-detail">Instalación coplanar de alta potencia</div></div>
+      <div class="proj-badge">Residencial · Híbrida</div>
+      <div class="proj-specs">
+        <span class="proj-spec-pill">12 paneles</span>
+        <span class="proj-spec-pill">6.9 kW</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-tag">Residencial Híbrida · Escobar, Buenos Aires</div>
+        <div class="proj-name">Instalación residencial · Teja</div>
+        <div class="proj-detail">12 paneles · 6.9 kWp · Medidor bidireccional + baterías · Ahorro + backup</div>
+      </div>
+    </div>
+  </div>
+  <!-- Segunda fila: Chape solo, centrado -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:3px;">
+    <div class="proj-card reveal" style="grid-column:span 3;aspect-ratio:21/8;">
+      <img class="proj-img" src="proyecto-chape.jpg" alt="Instalación industrial on-grid Vicente López">
+      <div class="proj-overlay"></div>
+      <div class="proj-badge">Industrial · On-Grid</div>
+      <div class="proj-specs">
+        <span class="proj-spec-pill">16 paneles</span>
+        <span class="proj-spec-pill">9.6 kW</span>
+        <span class="proj-spec-pill">Red + Medidor bidireccional</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-tag">Industrial On-Grid · Vicente López, Buenos Aires</div>
+        <div class="proj-name">Instalación industrial · Chapa coplanar</div>
+        <div class="proj-detail">16 paneles · 9.6 kWp · Conectado a la red con medidor bidireccional · Objetivo: reducción de factura</div>
+      </div>
     </div>
   </div>
   <div class="proj-cta reveal">
@@ -692,16 +753,98 @@ footer{background:var(--forest);border-top:1px solid rgba(246,241,233,.06);paddi
   </div>
 </div>
 
-<!-- TESTIMONIOS -->
-<section class="page bg-cream-dk">
+<!-- REVIEWS GOOGLE -->
+<section id="reviews" class="page bg-cream-dk">
   <div class="section-header reveal">
-    <div><p class="sh-lbl">05 — Lo que dicen</p><h2 class="sh-title">Nuestros <em>Clientes</em></h2></div>
+    <div><p class="sh-lbl">05 — Lo que dicen</p><h2 class="sh-title">Reseñas <em>reales</em></h2></div>
     <span class="page-num">05 / 07</span>
   </div>
-  <div class="testi-grid">
-    <div class="testi-card reveal"><div class="tc-stars">★★★★★</div><p class="tc-text">"Desde que instalamos los paneles, nuestra factura bajó un 75%. El equipo de Nodex fue muy profesional y transparente. Los recomiendo sin dudarlo."</p><div class="tc-sep"></div><div><div class="tc-name">Martín G.</div><div class="tc-role">Casa familiar · Palermo, CABA</div></div></div>
-    <div class="testi-card reveal rd1"><div class="tc-stars">★★★★★</div><p class="tc-text">"Instalamos un sistema de 60 kWp en nuestro galpón. El retorno fue mejor de lo esperado. Cumplieron con todo lo prometido y más."</p><div class="tc-sep"></div><div><div class="tc-name">Diego F.</div><div class="tc-role">Gerente de operaciones · Zona Industrial GBA</div></div></div>
-    <div class="testi-card reveal rd2"><div class="tc-stars">★★★★★</div><p class="tc-text">"Lo que más valoro es el seguimiento post-venta. Siempre disponibles para cualquier consulta. Genuinamente comprometidos con lo que hacen."</p><div class="tc-sep"></div><div><div class="tc-name">Luciana M.</div><div class="tc-role">Propietaria · Zona Norte, Buenos Aires</div></div></div>
+  <div class="reviews-grid">
+    <!-- Review 1: Dario Mintzer -->
+    <div class="review-card reveal">
+      <div class="rc-header">
+        <div class="rc-avatar" style="background:#5F6368;">D</div>
+        <div>
+          <div class="rc-name">Dario Mintzer</div>
+          <div class="rc-date">Hace 19 horas · Google</div>
+        </div>
+      </div>
+      <div class="rc-stars">
+        <svg class="rc-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="rc-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="rc-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="rc-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="rc-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="rc-text">"La verdad fue una buena experiencia en general. Instalaron paneles solares en el techo de casa y quedó impecable. Buena atención y asesoramiento. Instalación prolija y profesional. Quedé muy conforme con el servicio."</p>
+      <div class="rc-footer">
+        <svg width="14" height="14" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <span class="rc-google-logo">Reseña verificada en Google</span>
+      </div>
+    </div>
+    <!-- Review 2: Juan Sanchez -->
+    <div class="review-card reveal rd1">
+      <div class="rc-header">
+        <div class="rc-avatar" style="background:linear-gradient(135deg,#9C27B0,#E91E63);">J</div>
+        <div>
+          <div class="rc-name">Juan Sanchez <span style="font-size:10px;font-weight:300;color:var(--stone);">· Local Guide</span></div>
+          <div class="rc-date">Hace 19 horas · Google</div>
+        </div>
+      </div>
+      <div class="rc-stars">
+        <svg class="rc-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="rc-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="rc-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="rc-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="rc-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="rc-text">"Muy conforme con el trabajo de Nodex Solar. La instalación en mi negocio quedó excelente y ya estamos viendo un ahorro importante en el consumo eléctrico. Todo el proceso fue muy profesional, desde el asesoramiento hasta la puesta en marcha. Los recomiendo totalmente."</p>
+      <div class="rc-footer">
+        <svg width="14" height="14" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <span class="rc-google-logo">Reseña verificada en Google</span>
+      </div>
+    </div>
+    <!-- Review 3: Delfina Martino Clou -->
+    <div class="review-card reveal rd2">
+      <div class="rc-header">
+        <div class="rc-avatar" style="background:linear-gradient(135deg,#FF6D00,#FF8F00);">D</div>
+        <div>
+          <div class="rc-name">Delfina Martino Clou <span style="font-size:10px;font-weight:300;color:var(--stone);">· Local Guide</span></div>
+          <div class="rc-date">Hace 6 horas · Google</div>
+        </div>
+      </div>
+      <div class="rc-stars">
+        <svg class="rc-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="rc-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="rc-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="rc-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="rc-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="rc-text">"Excelente servicio, atentos y detallistas! Muy recomendable Nodex Solar. La instalación quedó excelente, trabajaron con mucha prolijidad y explicaron todo el funcionamiento de forma simple y clara. Estoy muy contenta con el resultado y con el ahorro energético que genera el sistema. ¡Gracias chicos! 🌟"</p>
+      <div class="rc-footer">
+        <svg width="14" height="14" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <span class="rc-google-logo">Reseña verificada en Google</span>
+      </div>
+    </div>
+  </div>
+  <div class="reviews-cta reveal">
+    <div class="reviews-rating">
+      <div class="rr-score">5.0<span>/5</span></div>
+      <div class="rr-info">
+        <div class="rr-stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="rr-label">Calificación en Google Maps</div>
+      </div>
+    </div>
+    <a href="https://www.google.com/maps/place/Nodex+Solar/@-34.5358643,-58.5388224,683m/data=!3m2!1e3!4b1!4m6!3m5!1s0x95bcb11bdf65d54b:0x5013c6835455155c" target="_blank" rel="noopener" class="btn-outline" style="font-size:11px;padding:14px 28px;">
+      <svg width="14" height="14" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+      Ver todas las reseñas en Google
+    </a>
   </div>
 </section>
 
