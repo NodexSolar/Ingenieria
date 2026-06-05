@@ -1,46 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Pedí tu presupuesto de paneles solares personalizado en Zona Norte, Buenos Aires. Subí tu factura y calculamos el sistema ideal para tu hogar o empresa. Sin compromiso.">
-<title>Presupuesto de Paneles Solares Personalizado | Nodex Solar – Zona Norte GBA</title>
+<meta name="description" content="Contactate con Nodex Solar para pedir tu cotización de paneles solares personalizada. Zona Norte, Buenos Aires.">
+<title>Cotización de Paneles Solares | Nodex Solar – Zona Norte GBA</title>
 <link rel="canonical" href="https://nodexsolar.com.ar/formulario.html">
-<!-- Open Graph -->
-<meta property="og:title" content="Presupuesto de Paneles Solares Personalizado | Nodex Solar">
-<meta property="og:description" content="Subí tu factura y te armamos una propuesta real para tu sistema solar. Sin compromiso. Zona Norte, Buenos Aires.">
-<meta property="og:url" content="https://nodexsolar.com.ar/formulario.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Nodex Solar">
-<meta property="og:locale" content="es_AR">
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Presupuesto Solar Personalizado | Nodex Solar">
-<meta name="twitter:description" content="Subí tu factura y calculamos el sistema solar ideal para tu hogar o empresa en Zona Norte GBA.">
-<!-- Schema: Service -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Presupuesto de Sistema Solar Fotovoltaico",
-  "description": "Cotización personalizada de instalación de paneles solares para hogares y empresas en Zona Norte, Buenos Aires.",
-  "url": "https://nodexsolar.com.ar/formulario.html",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Nodex Solar",
-    "url": "https://nodexsolar.com.ar/",
-    "telephone": "+54-9-11-7643-8672",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Vicente López",
-      "addressRegion": "Buenos Aires",
-      "addressCountry": "AR"
-    }
-  },
-  "areaServed": ["Zona Norte GBA", "Buenos Aires", "Argentina"],
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "ARS", "description": "Presupuesto sin cargo" }
-}
-</script>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -48,32 +16,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KTT9TDJ2');</script>
 <!-- End Google Tag Manager -->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-<!-- PDF.js para leer facturas en el browser -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --sol:#C8881A;--sol-lt:#E8A835;--sol-vivid:#EF9F27;--sol-pale:#FDF3E0;--sol-border:rgba(200,136,26,.22);
   --forest:#152815;--forest2:#1B3219;--forest3:#243D22;
   --cream:#F6F1E9;--cream-dk:#EDE5D4;--cream-bg:#FAF8F4;
   --white:#FFFFFF;--text:#1A1A12;--muted:rgba(26,26,18,.48);--stone:#8A8878;
-  --border-lt:rgba(26,26,18,.1);--border-sol:rgba(200,136,26,.2);
-  --nav-h:72px;
+  --border-lt:rgba(26,26,18,.1);--nav-h:72px;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--cream-bg);color:var(--text);-webkit-font-smoothing:antialiased;min-height:100vh;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream-bg);color:var(--text);-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column;}
 a{color:inherit;text-decoration:none;}
-
-@keyframes fade-up{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
 @keyframes spin-cw{to{transform:rotate(360deg);}}
+@keyframes fade-up{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
 @keyframes wa-pulse{0%{transform:scale(1);opacity:.5;}100%{transform:scale(1.9);opacity:0;}}
-@keyframes spin{to{transform:rotate(360deg);}}
-@keyframes scan-line{0%,100%{top:0;}50%{top:calc(100% - 3px);}}
-@keyframes breathe{0%,100%{opacity:.88;}50%{opacity:1;}}
+.logo-spin-slow{animation:spin-cw 120s linear infinite;}
 
-/* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(250,248,244,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-lt);}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(250,248,244,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border-lt);}
 .nav-logo{display:flex;align-items:center;gap:14px;cursor:pointer;}
 .nl-main{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;letter-spacing:.32em;text-transform:uppercase;color:var(--text);line-height:1;display:block;}
 .nl-sub{font-size:8px;font-weight:300;letter-spacing:.5em;text-transform:uppercase;color:var(--sol);line-height:1;display:block;margin-top:3px;}
@@ -82,203 +44,69 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:100;display:
 .nav-back-line{display:block;width:28px;height:1px;background:currentColor;transition:width .3s;}
 .nav-back-link:hover .nav-back-line{width:16px;}
 
-/* ── Page ── */
-.page-outer{padding-top:var(--nav-h);min-height:100vh;}
-.form-intro{background:var(--cream);border-bottom:1px solid var(--border-lt);padding:72px 80px 64px;}
-.intro-eyebrow{font-size:9.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--sol);display:flex;align-items:center;gap:14px;margin-bottom:20px;}
-.intro-eyebrow::before{content:'';width:28px;height:1px;background:var(--sol);opacity:.7;}
-.intro-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5.5vw,72px);font-weight:300;line-height:.93;letter-spacing:-.02em;color:var(--text);}
-.intro-h1 em{font-style:italic;color:var(--sol);}
-.intro-sub{font-size:14px;font-weight:300;line-height:1.82;color:var(--muted);max-width:540px;margin-top:24px;}
+/* HERO */
+.page-hero{background:var(--forest);padding:80px 5% 64px;margin-top:var(--nav-h);position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='52' viewBox='0 0 60 52'%3E%3Cpolygon points='30,1 59,17 59,35 30,51 1,35 1,17' stroke='%23EF9F27' stroke-width='1' fill='none'/%3E%3C/svg%3E");background-size:60px 52px;opacity:.03;pointer-events:none;}
+.hero-inner{max-width:700px;position:relative;z-index:1;}
+.hero-eyebrow{font-size:9.5px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--sol-lt);display:flex;align-items:center;gap:14px;margin-bottom:20px;}
+.hero-eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--sol-lt);opacity:.6;}
+.hero-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5vw,64px);font-weight:300;line-height:.95;letter-spacing:-.02em;color:var(--cream);margin-bottom:20px;}
+.hero-h1 em{font-style:italic;color:var(--sol-lt);}
+.hero-sub{font-size:15px;font-weight:300;color:rgba(246,241,233,.5);line-height:1.8;max-width:520px;}
 
-/* ── Survey (idéntico a index.html) ── */
-.survey-wrap{background:var(--cream);border:1px solid var(--border-lt);position:relative;overflow:hidden;}
-.survey-inner{padding:64px 80px;position:relative;z-index:1;}
-.survey-header{margin-bottom:40px;}
-.survey-eyebrow{font-size:9px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--sol);margin-bottom:10px;}
-.survey-title{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;color:var(--text);}
-.survey-title em{font-style:italic;color:var(--sol);}
-.survey-step{display:none;animation:fade-up .4s ease both;}
-.survey-step.active{display:block;}
-.survey-progress{display:flex;gap:8px;align-items:center;margin-bottom:40px;}
-.sp-dot{width:6px;height:6px;border-radius:50%;background:rgba(26,26,18,.15);transition:background .3s,transform .3s;}
-.sp-dot.active{background:var(--sol);transform:scale(1.3);}
-.sp-dot.done{background:var(--forest);}
+/* CONTENT */
+.content{flex:1;padding:72px 5% 80px;max-width:860px;margin:0 auto;width:100%;animation:fade-up .6s ease both;}
 
-/* ── Questions ── */
-.step-question{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--text);margin-bottom:8px;line-height:1.25;}
-.step-hint{font-size:12.5px;font-weight:300;color:var(--muted);margin-bottom:32px;line-height:1.7;max-width:580px;}
+.thank-icon{font-size:52px;margin-bottom:28px;display:block;}
 
-/* ── Option buttons ── */
-.step-options{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
-.step-options.three{grid-template-columns:repeat(3,1fr);}
-.step-options.four{grid-template-columns:repeat(2,1fr);}
-.opt-btn{background:var(--white);border:1px solid var(--border-lt);padding:22px;text-align:left;cursor:pointer;transition:background .2s,border-color .2s,transform .15s;display:flex;flex-direction:column;gap:8px;font-family:'DM Sans',sans-serif;}
-.opt-btn:hover,.opt-btn.selected{background:var(--sol-pale);border-color:var(--sol);transform:translateY(-2px);}
-.opt-btn.selected{box-shadow:0 0 0 1px var(--sol);}
-.opt-emoji{font-size:22px;line-height:1;}
-.opt-label{font-size:13px;font-weight:400;color:var(--text);line-height:1.3;}
-.opt-sub{font-size:11px;font-weight:300;color:var(--muted);line-height:1.4;}
+.steps-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin:40px 0;}
+@media(max-width:640px){.steps-grid{grid-template-columns:1fr;}}
 
-/* ── Nav buttons ── */
-.survey-nav{display:flex;align-items:center;justify-content:space-between;margin-top:40px;gap:16px;}
-.survey-back{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);background:none;border:none;cursor:pointer;transition:color .2s;padding:0;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:10px;}
-.survey-back:hover{color:var(--text);}
-.survey-back-line{display:block;width:24px;height:1px;background:currentColor;transition:width .3s;}
-.survey-back:hover .survey-back-line{width:14px;}
-.btn-next{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--white);background:var(--forest);border:none;cursor:pointer;padding:16px 36px;clip-path:polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%);transition:background .2s,transform .2s;display:inline-flex;align-items:center;gap:12px;}
-.btn-next:hover{background:var(--forest2);transform:translateY(-2px);}
-.btn-sol-fill{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--text);background:var(--sol-vivid);border:none;cursor:pointer;padding:16px 36px;clip-path:polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%);transition:background .2s,transform .2s;display:inline-flex;align-items:center;gap:12px;}
-.btn-sol-fill:hover{background:var(--sol-lt);transform:translateY(-2px);}
-.btn-wa{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--white);background:#1A6A35;border:none;cursor:pointer;padding:16px 32px;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);transition:background .2s,transform .2s;display:inline-flex;align-items:center;gap:12px;}
-.btn-wa:hover{background:#22884A;transform:translateY(-1px);}
+.step-card{background:var(--white);border:1px solid var(--border-lt);padding:40px 36px;position:relative;overflow:hidden;transition:border-color .25s,background .25s;}
+.step-card:hover{background:var(--cream);border-color:var(--sol-border);}
+.step-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--sol);transition:width .4s;}
+.step-card:hover::after{width:100%;}
+.step-num{font-family:'DM Mono',monospace;font-size:10px;font-weight:500;color:var(--sol);letter-spacing:.18em;margin-bottom:16px;}
+.step-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--text);margin-bottom:10px;line-height:1.2;}
+.step-title em{font-style:italic;color:var(--sol);}
+.step-desc{font-size:13.5px;font-weight:300;line-height:1.75;color:var(--muted);margin-bottom:28px;}
 
-/* ── Inputs ── */
-.form-lbl{display:block;font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--stone);margin-bottom:8px;}
-.form-input{width:100%;background:var(--white);border:1px solid var(--border-lt);color:var(--text);font-family:'DM Sans',sans-serif;font-size:14px;font-weight:300;padding:14px 16px;outline:none;transition:border-color .25s;appearance:none;border-radius:0;}
-.form-input:focus{border-color:var(--sol);}
-.form-input::placeholder{color:var(--muted);}
-.input-group{margin-bottom:20px;}
-.input-helper{font-size:11px;color:var(--stone);margin-top:6px;line-height:1.5;display:flex;align-items:flex-start;gap:6px;}
-.input-helper::before{content:'→';color:var(--sol);flex-shrink:0;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.err-msg{font-size:11px;color:#B03030;margin-top:6px;display:none;}
-.err-msg.show{display:block;}
+.btn-primary{display:inline-flex;align-items:center;gap:14px;font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--white);background:var(--forest);text-decoration:none;border:none;cursor:pointer;padding:16px 32px;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);transition:background .2s,transform .2s;}
+.btn-primary:hover{background:var(--forest2);transform:translateY(-2px);}
+.btn-wa{display:inline-flex;align-items:center;gap:12px;font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--white);background:#1A6A35;text-decoration:none;border:none;cursor:pointer;padding:16px 32px;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);transition:background .2s,transform .2s;}
+.btn-wa:hover{background:#22884A;transform:translateY(-2px);}
 
-/* ── UPLOAD ZONE ── */
-.upload-zone{border:1.5px dashed var(--sol-border);background:var(--sol-pale);padding:52px 32px;text-align:center;cursor:pointer;transition:border-color .25s,background .25s;position:relative;overflow:hidden;}
-.upload-zone:hover{border-color:var(--sol);background:#faefd0;}
-.upload-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
-.upload-icon{font-size:40px;display:block;margin-bottom:14px;}
-.upload-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--text);margin-bottom:6px;}
-.upload-hint{font-size:12px;font-weight:300;color:var(--muted);}
-.upload-tags{display:flex;gap:8px;justify-content:center;margin-top:14px;flex-wrap:wrap;}
-.upload-tag{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--stone);background:var(--white);border:1px solid var(--border-lt);padding:4px 10px;}
+.divider-strip{background:var(--cream-dk);border-top:1px solid var(--border-lt);border-bottom:1px solid var(--border-lt);padding:28px 5%;text-align:center;margin:0;}
+.divider-strip p{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;font-style:italic;color:var(--muted);}
 
-/* File preview */
-.upload-preview{display:none;margin-top:16px;border:1px solid var(--sol-border);background:var(--white);overflow:hidden;}
-.upload-preview.show{display:block;}
-.preview-img{max-width:100%;max-height:200px;object-fit:contain;display:block;margin:0 auto;padding:12px;}
-.preview-pdf{padding:20px 24px;display:flex;align-items:center;gap:14px;}
-.preview-pdf-icon{font-size:32px;}
-.preview-pdf-name{font-size:13px;font-weight:300;color:var(--text);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.preview-remove{font-size:10px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--stone);background:none;border:none;cursor:pointer;flex-shrink:0;font-family:'DM Sans',sans-serif;}
-.preview-remove:hover{color:var(--text);}
+/* FOOTER */
+footer{background:var(--forest2);border-top:1px solid rgba(246,241,233,.06);padding:22px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-text{font-size:12px;font-weight:300;color:rgba(246,241,233,.25);}
+.footer-text a{color:var(--sol-lt);transition:opacity .2s;}
+.footer-text a:hover{opacity:.8;}
 
-/* Scan anim */
-.scan-bar{display:none;position:absolute;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--sol-vivid),transparent);top:0;animation:scan-line 1.5s ease-in-out infinite;}
-
-/* Reading state */
-.reading-state{display:none;margin-top:16px;padding:16px 20px;background:var(--sol-pale);border:1px solid var(--sol-border);align-items:center;gap:14px;}
-.reading-state.show{display:flex;}
-.spinner{display:inline-block;width:18px;height:18px;border:2px solid rgba(200,136,26,.3);border-top-color:var(--sol);border-radius:50%;animation:spin .7s linear infinite;flex-shrink:0;}
-
-/* Extract badge */
-.extract-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;}
-.badge-ok{background:rgba(21,40,21,.08);color:var(--forest);border:1px solid rgba(21,40,21,.15);}
-.badge-manual{background:rgba(200,136,26,.1);color:#7a4a0a;border:1px solid var(--sol-border);}
-
-/* ── Factura data fields ── */
-.factura-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px;}
-.fact-card{background:var(--white);border:1px solid var(--border-lt);padding:20px 18px;transition:border-color .2s;position:relative;}
-.fact-card:focus-within{border-color:var(--sol);box-shadow:0 0 0 2px rgba(200,136,26,.08);}
-.fact-card-icon{font-size:20px;margin-bottom:10px;}
-.fact-card-lbl{font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--stone);margin-bottom:4px;display:block;}
-.fact-card-hint{font-size:10.5px;font-weight:300;color:var(--muted);margin-bottom:10px;line-height:1.4;}
-.fact-input{width:100%;border:none;border-bottom:1.5px solid var(--border-lt);background:transparent;font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:var(--text);padding:6px 0;outline:none;transition:border-color .2s;}
-.fact-input:focus{border-color:var(--sol);}
-.fact-input::placeholder{color:var(--muted);font-size:20px;}
-.fact-input.auto-filled{color:var(--forest);border-color:var(--sol-border);}
-.fact-unit{font-size:10px;font-weight:400;color:var(--stone);margin-top:5px;letter-spacing:.08em;}
-.auto-tag{position:absolute;top:10px;right:10px;font-size:8px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;background:var(--sol-pale);color:var(--sol);padding:2px 7px;border:1px solid var(--sol-border);}
-
-/* ── Estimación inline (lógica de calculadora.html) ── */
-.estimacion-wrap{margin-top:0;}
-.est-hero{background:var(--forest);padding:32px 36px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:space-between;}
-.est-hero-left .est-eyebrow{font-size:9px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--sol-lt);margin-bottom:8px;}
-.est-hero-left .est-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--cream);line-height:1.1;}
-.est-hero-left .est-title em{font-style:italic;color:var(--sol-lt);}
-.est-hero-right{font-size:11px;font-weight:300;color:rgba(246,241,233,.4);max-width:280px;line-height:1.6;}
-.est-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:2px;}
-.est-card{background:var(--white);border:1px solid var(--border-lt);padding:28px 24px;text-align:center;transition:background .2s,border-color .2s;}
-.est-card:hover{background:var(--cream);border-color:var(--sol-border);}
-.est-card.highlight{background:var(--sol-pale);border-color:var(--sol-border);}
-.est-icon{font-size:26px;margin-bottom:10px;}
-.est-value{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--text);line-height:1;letter-spacing:-.02em;margin-bottom:4px;}
-.est-value .unit{font-size:14px;font-weight:300;color:var(--stone);font-family:'DM Sans',sans-serif;}
-.est-label{font-size:9.5px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--stone);}
-.roi-strip{background:var(--sol-pale);border:1px solid var(--sol-border);border-top:none;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
-.roi-strip-left .roi-big{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--text);line-height:1;letter-spacing:-.02em;}
-.roi-strip-left .roi-big span{font-style:italic;color:var(--sol);}
-.roi-strip-left .roi-sub{font-size:11px;font-weight:300;color:var(--muted);margin-top:4px;}
-.roi-strip-right{font-size:11.5px;font-weight:300;color:var(--muted);max-width:360px;line-height:1.6;font-style:italic;}
-.est-disclaimer{margin-top:2px;padding:14px 20px;border:1px solid var(--border-lt);background:var(--cream-dk);}
-.est-disclaimer p{font-size:11px;font-weight:300;color:var(--muted);line-height:1.65;}
-.est-disclaimer strong{font-weight:400;color:var(--text);}
-
-/* ── Resumen card ── */
-.resumen-card{background:var(--white);border:1px solid var(--border-lt);overflow:hidden;margin-bottom:32px;}
-.resumen-header{background:var(--forest);padding:16px 28px;}
-.resumen-header-title{font-size:9px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:rgba(246,241,233,.5);}
-.resumen-row{display:flex;align-items:center;justify-content:space-between;padding:13px 28px;border-bottom:1px solid var(--border-lt);}
-.resumen-row:last-child{border-bottom:none;}
-.rr-key{font-size:11px;font-weight:300;color:var(--muted);}
-.rr-val{font-size:12px;font-weight:500;color:var(--text);}
-.rr-val.accent{color:var(--sol);}
-
-/* ── Disqualification ── */
-.disq-wrap{padding:12px 0;animation:fade-up .5s ease;}
-.disq-icon{font-size:44px;margin-bottom:20px;}
-.disq-tag{font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:var(--sol);margin-bottom:12px;}
-.disq-title{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:400;color:var(--text);margin-bottom:20px;line-height:1.2;}
-.disq-body{font-size:14px;font-weight:300;line-height:1.85;color:var(--muted);max-width:580px;margin-bottom:16px;}
-.disq-note{font-size:12.5px;font-weight:300;line-height:1.7;color:var(--muted);max-width:580px;border-left:2px solid var(--sol-border);padding-left:16px;margin-bottom:32px;}
-.disq-restart{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:color .2s;}
-.disq-restart:hover{color:var(--text);}
-
-.skip-link{font-size:11px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;cursor:pointer;background:none;border:none;font-family:'DM Sans',sans-serif;padding:0;transition:color .2s;}
-.skip-link:hover{color:var(--text);}
-
-/* ── WA Float ── */
+/* WA FLOAT */
 .wa-float{position:fixed;bottom:2rem;right:2rem;z-index:997;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .25s;}
 .wa-float:hover{transform:scale(1.1);}
 .wa-float::before{content:'';position:absolute;width:60px;height:60px;border-radius:50%;background:#25D366;animation:wa-pulse 2s ease-out infinite;opacity:.5;}
 .wa-float svg{position:relative;z-index:1;}
-
-/* ── Responsive ── */
-@media(max-width:960px){
-  .form-intro,.survey-inner{padding:56px 40px;}
-  .factura-grid,.est-grid{grid-template-columns:1fr 1fr;}
-}
-@media(max-width:600px){
-  .form-intro,.survey-inner{padding:40px 20px;}
-  .step-options,.step-options.three,.step-options.four{grid-template-columns:1fr;}
-  .form-row{grid-template-columns:1fr;}
-  .survey-nav{flex-direction:column-reverse;align-items:stretch;}
-  .btn-next,.btn-sol-fill,.btn-wa{justify-content:center;}
-  .factura-grid,.est-grid{grid-template-columns:1fr;}
-  .est-hero{padding:24px 20px;}
-}
 </style>
 </head>
 <body>
-
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTT9TDJ2"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
 <!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">
-    <svg width="34" height="40" viewBox="0 0 200 234" fill="none">
+    <svg width="34" height="40" viewBox="0 0 200 234" fill="none" class="logo-spin-slow">
       <defs><clipPath id="nc"><polygon points="100,24 178,69 178,159 100,204 22,159 22,69"/></clipPath></defs>
       <g clip-path="url(#nc)">
         <line x1="-100" y1="162" x2="300" y2="-69" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
-        <line x1="-100" y1="184" x2="300" y2="-47" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
         <line x1="-100" y1="206" x2="300" y2="-25" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
-        <line x1="-100" y1="228" x2="300" y2="-3" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
         <line x1="-100" y1="250" x2="300" y2="19" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
-        <line x1="-100" y1="272" x2="300" y2="41" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
         <line x1="-100" y1="294" x2="300" y2="63" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
       </g>
       <line x1="100" y1="24" x2="100" y2="204" stroke="#C8881A" stroke-width="1.2" opacity=".5"/>
@@ -302,964 +130,68 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
 </nav>
 
-<div class="page-outer">
-  <!-- INTRO -->
-  <div class="form-intro">
-    <div class="intro-eyebrow">Cotización personalizada</div>
-    <h1 class="intro-h1">Tu sistema solar,<br><em>diseñado para vos</em></h1>
-    <p class="intro-sub">Subí tu factura y la leemos automáticamente, o completá los datos manualmente. Te armamos una propuesta real sin compromiso ni rodeos.</p>
+<!-- HERO -->
+<div class="page-hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Cotización · Zona Norte GBA</div>
+    <h1 class="hero-h1">Gracias por<br><em>elegirnos</em></h1>
+    <p class="hero-sub">Queremos darte la mejor atención posible. Elegí la opción que más te convenga para avanzar con tu cotización solar.</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <div class="steps-grid">
+
+    <!-- OPCIÓN 1: Calculadora -->
+    <div class="step-card">
+      <div class="step-num">Opción 01</div>
+      <h2 class="step-title">Usá nuestra<br><em>calculadora solar</em></h2>
+      <p class="step-desc">Ingresá el monto de tu factura de luz y tu consumo en kWh. En menos de 2 minutos te mostramos el sistema estimado, la inversión y el tiempo de recupero.</p>
+      <a href="calculadora.html" class="btn-primary">
+        Ir a la calculadora
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+
+    <!-- OPCIÓN 2: WhatsApp -->
+    <div class="step-card">
+      <div class="step-num">Opción 02</div>
+      <h2 class="step-title">Escribinos por<br><em>WhatsApp</em></h2>
+      <p class="step-desc">Hablá directamente con nuestro equipo. Te asesoramos sin compromiso, respondemos tus dudas y coordinamos una visita técnica gratuita a tu domicilio.</p>
+      <a href="https://wa.me/5491176438672?text=Hola%20Nodex%20Solar%2C%20quiero%20pedir%20una%20cotizaci%C3%B3n%20de%20paneles%20solares." target="_blank" rel="noopener" class="btn-wa">
+        Escribir por WhatsApp
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.112 1.512 5.849L.057 23.882l6.21-1.629A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-4.99-1.364l-.36-.213-3.685.967.984-3.594-.233-.37A9.818 9.818 0 0112 2.182c5.425 0 9.818 4.393 9.818 9.818 0 5.426-4.393 9.818-9.818 9.818z"/></svg>
+      </a>
+    </div>
+
   </div>
 
-  <!-- SURVEY -->
-  <div class="survey-wrap">
-    <div class="survey-inner">
+  <!-- Info strip -->
+  <div style="background:var(--white);border:1px solid var(--border-lt);padding:32px 36px;display:flex;align-items:flex-start;gap:20px;flex-wrap:wrap;">
+    <div style="flex:1;min-width:220px;">
+      <div style="font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:var(--sol);margin-bottom:10px;">¿Qué necesitás tener a mano?</div>
+      <p style="font-size:13.5px;font-weight:300;line-height:1.75;color:var(--muted);">Para que podamos darte una estimación más precisa, es útil tener el <strong style="color:var(--text);font-weight:400;">monto de tu última factura de luz</strong> y, si la tenés, el <strong style="color:var(--text);font-weight:400;">consumo en kWh del período</strong>. Si no los tenés, no te preocupes — nuestro equipo te guía desde cero.</p>
+    </div>
+    <div style="flex:1;min-width:220px;">
+      <div style="font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:var(--sol);margin-bottom:10px;">Nuestro compromiso</div>
+      <p style="font-size:13.5px;font-weight:300;line-height:1.75;color:var(--muted);">Respondemos en menos de 24 hs. La visita técnica y el presupuesto son <strong style="color:var(--text);font-weight:400;">completamente gratuitos y sin compromiso</strong>. Trabajamos en Zona Norte GBA y alrededores.</p>
+    </div>
+  </div>
 
-      <div class="survey-header" id="survey-header">
-        <div class="survey-eyebrow" id="step-eyebrow">Paso 1 de 6</div>
-        <div class="survey-title" id="step-title">Empecemos por tu <em>factura de luz</em></div>
-      </div>
-      <div class="survey-progress" id="dots-wrap"></div>
+</div>
 
-      <!-- ══════════════════════════════════════════
-           STEP 0 — Upload factura
-      ═══════════════════════════════════════════ -->
-      <div class="survey-step active" id="step-0">
-        <p class="step-question">¿Tenés tu factura de luz?</p>
-        <p class="step-hint">Subí el PDF o una foto y la leemos automáticamente. Si preferís, podés completar los datos a mano.</p>
-
-        <div class="upload-zone" id="upload-zone" style="position:relative;">
-          <div class="scan-bar" id="scan-bar"></div>
-          <input type="file" id="file-input" accept="image/*,.pdf" onchange="handleUpload(this)">
-          <span class="upload-icon">📄</span>
-          <div class="upload-title">Subí tu factura aquí</div>
-          <div class="upload-hint">Foto, imagen o PDF descargado — Edenor o EDESUR</div>
-          <div class="upload-tags">
-            <span class="upload-tag">JPG / PNG</span>
-            <span class="upload-tag">PDF</span>
-            <span class="upload-tag">Hasta 10 MB</span>
-          </div>
-        </div>
-
-        <!-- Estado: leyendo -->
-        <div class="reading-state" id="reading-state">
-          <div class="spinner"></div>
-          <div>
-            <div style="font-size:12px;font-weight:500;color:var(--text);">Leyendo tu factura…</div>
-            <div style="font-size:11px;font-weight:300;color:var(--muted);margin-top:2px;">Identificando distribuidora y extrayendo datos</div>
-          </div>
-        </div>
-
-        <!-- Preview -->
-        <div class="upload-preview" id="file-preview"></div>
-
-        <div style="margin-top:20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
-          <button class="btn-sol-fill" id="btn-analizar" style="display:none;" onclick="goToFacturaData()">
-            Ver datos extraídos
-            <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h14M10 1l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <button class="skip-link" onclick="goManual()">Completar manualmente →</button>
-        </div>
-      </div>
-
-      <!-- ══════════════════════════════════════════
-           STEP F1 — Datos extraídos / confirmación
-      ═══════════════════════════════════════════ -->
-      <div class="survey-step" id="step-f1">
-        <p class="step-question" id="f1-question">Confirmá los datos<br>de tu <em>factura</em></p>
-        <div id="f1-status-badge" style="margin-bottom:20px;"></div>
-        <p class="step-hint" id="f1-hint">Verificá que los valores sean correctos. Podés corregirlos si algo no coincide.</p>
-
-        <div class="factura-grid">
-          <!-- TOTAL -->
-          <div class="fact-card">
-            <div id="tag-total" class="auto-tag" style="display:none;">✓ Auto</div>
-            <div class="fact-card-icon">💰</div>
-            <span class="fact-card-lbl">Total a pagar</span>
-            <div class="fact-card-hint">El total de la factura con todos los impuestos incluidos</div>
-            <input class="fact-input" id="fact-total" type="text" placeholder="$ 0" oninput="onFactTotalInput(this)">
-            <div class="fact-unit">pesos argentinos</div>
-            <div class="err-msg" id="err-fact-total">Ingresá el total de la factura.</div>
-          </div>
-          <!-- VARIABLE -->
-          <div class="fact-card">
-            <div id="tag-variable" class="auto-tag" style="display:none;">✓ Auto</div>
-            <div class="fact-card-icon">⚡</div>
-            <span class="fact-card-lbl">Costos variables (energía)</span>
-            <div class="fact-card-hint">Cargo por consumo de kWh — lo que impacta la energía solar</div>
-            <input class="fact-input" id="fact-variable" type="text" placeholder="$ 0" oninput="formatPeso(this)">
-            <div class="fact-unit">cargos que solar puede eliminar</div>
-          </div>
-          <!-- kWh -->
-          <div class="fact-card">
-            <div id="tag-kwh" class="auto-tag" style="display:none;">✓ Auto</div>
-            <div class="fact-card-icon">📊</div>
-            <span class="fact-card-lbl">Consumo del período</span>
-            <div class="fact-card-hint">Kilovatios-hora consumidos en el mes (figura en la factura)</div>
-            <input class="fact-input" id="fact-kwh" type="number" placeholder="0" min="0">
-            <div class="fact-unit">kWh / mes</div>
-          </div>
-        </div>
-
-        <!-- Ayuda visual -->
-        <div style="padding:14px 18px;border-left:2px solid var(--sol-border);background:var(--sol-pale);margin-bottom:4px;">
-          <p style="font-size:11.5px;font-weight:300;color:var(--muted);line-height:1.65;">
-            💡 <strong style="font-weight:400;color:var(--text);">¿Dónde encontrar estos datos?</strong>
-            En Edenor buscá <em>"Total a pagar"</em>, <em>"Cargo variable"</em> y <em>"Total Consumo kWh"</em>.
-            En EDESUR buscá <em>"Total a pagar"</em>, <em>"Cargo por energía"</em> y <em>"Consumo del período kWh"</em>.
-          </p>
-        </div>
-
-        <div class="survey-nav">
-          <button class="survey-back" onclick="goTo(0)">
-            <span class="survey-back-line"></span>Atrás
-          </button>
-          <button class="btn-next" onclick="submitFactura()">
-            Continuar
-            <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h14M10 1l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- ══════════════════════════════════════════
-           STEP F2 — Estimación preliminar inline
-      ═══════════════════════════════════════════ -->
-      <div class="survey-step" id="step-f2">
-        <p class="step-question">Tu <em>estimación preliminar</em><br>está lista</p>
-        <p class="step-hint">Basada en tu factura, calculamos el sistema solar recomendado. Es una aproximación — el diseño final se define con visita técnica gratuita.</p>
-
-        <div class="estimacion-wrap" id="estimacion-wrap">
-          <!-- generado por JS -->
-        </div>
-
-        <div class="survey-nav" style="margin-top:32px;">
-          <button class="survey-back" onclick="goTo('f1')">
-            <span class="survey-back-line"></span>Atrás
-          </button>
-          <button class="btn-next" onclick="goTo('c1');setupBackC1('f2');">
-            Continuar con la consulta
-            <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h14M10 1l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- ══════════════════════════════════════════
-           STEP M1 — Tipo (manual path)
-      ═══════════════════════════════════════════ -->
-      <div class="survey-step" id="step-m1">
-        <p class="step-question">¿Para dónde necesitás<br>la energía solar?</p>
-        <p class="step-hint">El tipo de instalación define el tamaño del sistema y los equipos recomendados.</p>
-        <div class="step-options three">
-          <button class="opt-btn" onclick="selectOpt(this,'tipo','Residencial');goTo('m2');buildM2Ranges('Residencial');">
-            <span class="opt-emoji">🏠</span>
-            <span class="opt-label">Residencial</span>
-            <span class="opt-sub">Hogar o vivienda particular</span>
-          </button>
-          <button class="opt-btn" onclick="selectOpt(this,'tipo','Industrial / Comercial');goTo('m2');buildM2Ranges('Industrial / Comercial');">
-            <span class="opt-emoji">🏭</span>
-            <span class="opt-label">Industrial / Comercial</span>
-            <span class="opt-sub">Empresa, fábrica o comercio</span>
-          </button>
-          <button class="opt-btn" onclick="selectOpt(this,'tipo','Campo / Rural');goTo('m2');buildM2Ranges('Campo / Rural');">
-            <span class="opt-emoji">🌾</span>
-            <span class="opt-label">Campo / Rural</span>
-            <span class="opt-sub">Establecimiento agropecuario</span>
-          </button>
-        </div>
-        <div class="survey-nav"><button class="survey-back" onclick="goTo(0)"><span class="survey-back-line"></span>Atrás</button></div>
-      </div>
-
-      <!-- ══════════════════════════════════════════
-           STEP M2 — Cuánto pagás (condicional)
-      ═══════════════════════════════════════════ -->
-      <div class="survey-step" id="step-m2">
-        <p class="step-question" id="m2-question">¿Cuánto pagás de luz por mes?</p>
-        <p class="step-hint">Elegí el rango más cercano a tu factura promedio de los últimos meses.</p>
-        <div class="step-options" id="m2-options"></div>
-        <div class="survey-nav"><button class="survey-back" onclick="goTo('m1')"><span class="survey-back-line"></span>Atrás</button></div>
-      </div>
-
-      <!-- ══════════════════════════════════════════
-           STEP C1 — Motivación (camino común)
-      ═══════════════════════════════════════════ -->
-      <div class="survey-step" id="step-c1">
-        <p class="step-question">¿Para qué necesitás<br>la energía solar?</p>
-        <p class="step-hint">Esto define el tipo de sistema: con o sin baterías, conexión a red, o totalmente autónomo.</p>
-        <div class="step-options four">
-          <button class="opt-btn" onclick="selectOpt(this,'motivo','Bajar la factura de luz');goTo('c2');setupBackC2('c1');">
-            <span class="opt-emoji">📉</span>
-            <span class="opt-label">Bajar la factura</span>
-            <span class="opt-sub">Inyecto a la red y reduzco el gasto mensual</span>
-          </button>
-          <button class="opt-btn" onclick="selectOpt(this,'motivo','Respaldo ante cortes de luz');goTo('c2');setupBackC2('c1');">
-            <span class="opt-emoji">🔋</span>
-            <span class="opt-label">Respaldo ante cortes</span>
-            <span class="opt-sub">Tener energía cuando hay apagones</span>
-          </button>
-          <button class="opt-btn" onclick="selectOpt(this,'motivo','Sin red eléctrica / off-grid');goTo('c2');setupBackC2('c1');">
-            <span class="opt-emoji">🌐</span>
-            <span class="opt-label">Sin red / off-grid</span>
-            <span class="opt-sub">No tengo red o quiero independencia total</span>
-          </button>
-          <button class="opt-btn" onclick="selectOpt(this,'motivo','Mix: ahorro + respaldo');goTo('c2');setupBackC2('c1');">
-            <span class="opt-emoji">⚡</span>
-            <span class="opt-label">Mix: ahorro + respaldo</span>
-            <span class="opt-sub">Bajar la factura y tener batería de respaldo</span>
-          </button>
-        </div>
-        <div class="survey-nav"><button class="survey-back" id="back-c1" onclick=""><span class="survey-back-line"></span>Atrás</button></div>
-      </div>
-
-      <!-- ══════════════════════════════════════════
-           STEP C2 — Tipo de techo
-      ═══════════════════════════════════════════ -->
-      <div class="survey-step" id="step-c2">
-        <p class="step-question">¿Cómo es el techo donde<br>irían los <em>paneles</em>?</p>
-        <p class="step-hint">Define la estructura de fijación y el tiempo de instalación.</p>
-        <div class="step-options four">
-          <button class="opt-btn" onclick="selectOpt(this,'techo','Chapa');goTo('c3');setupBackC3('c2');">
-            <span class="opt-emoji">🔩</span>
-            <span class="opt-label">Chapa</span>
-            <span class="opt-sub">Zinc, prepintada o similar</span>
-          </button>
-          <button class="opt-btn" onclick="selectOpt(this,'techo','Losa');goTo('c3');setupBackC3('c2');">
-            <span class="opt-emoji">🧱</span>
-            <span class="opt-label">Losa</span>
-            <span class="opt-sub">Hormigón armado o cemento</span>
-          </button>
-          <button class="opt-btn" onclick="selectOpt(this,'techo','Tejas');goTo('c3');setupBackC3('c2');">
-            <span class="opt-emoji">🏘️</span>
-            <span class="opt-label">Tejas</span>
-            <span class="opt-sub">Cerámicas, francesas o coloniales</span>
-          </button>
-          <button class="opt-btn" onclick="selectOpt(this,'techo','Otro / No sé');goTo('c3');setupBackC3('c2');">
-            <span class="opt-emoji">❓</span>
-            <span class="opt-label">Otro / No sé</span>
-            <span class="opt-sub">Madera, pizarra u otro tipo</span>
-          </button>
-        </div>
-        <div class="survey-nav"><button class="survey-back" id="back-c2" onclick=""><span class="survey-back-line"></span>Atrás</button></div>
-      </div>
-
-      <!-- ══════════════════════════════════════════
-           STEP C3 — Ubicación
-      ═══════════════════════════════════════════ -->
-      <div class="survey-step" id="step-c3">
-        <p class="step-question">¿En qué localidad<br>está la <em>propiedad</em>?</p>
-        <p class="step-hint">Nos permite estimar la irradiación solar anual y coordinar la visita técnica sin cargo.</p>
-        <div class="input-group" style="max-width:440px;">
-          <label class="form-lbl" for="localidad">Ciudad / Partido / Provincia</label>
-          <input type="text" id="localidad" class="form-input" placeholder="Ej: Munro, Vicente López, Buenos Aires">
-          <div class="input-helper">Podés poner solo el barrio o ciudad.</div>
-          <div class="err-msg" id="err-localidad">Por favor ingresá una localidad.</div>
-        </div>
-        <div class="survey-nav">
-          <button class="survey-back" id="back-c3" onclick=""><span class="survey-back-line"></span>Atrás</button>
-          <button class="btn-next" onclick="submitLocalidad()">
-            Continuar
-            <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h14M10 1l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- ══════════════════════════════════════════
-           STEP CONTACT
-      ═══════════════════════════════════════════ -->
-      <div class="survey-step" id="step-contact">
-        <p class="step-question">Último paso — tus<br><em>datos de contacto</em></p>
-        <p class="step-hint">Te contactamos en menos de 24 hs con tu propuesta completa.</p>
-
-        <div class="resumen-card" id="resumen-card"></div>
-
-        <div class="form-row" style="margin-bottom:16px;">
-          <div class="input-group" style="margin-bottom:0;">
-            <label class="form-lbl" for="nombre">Nombre completo</label>
-            <input type="text" id="nombre" class="form-input" placeholder="Juan García">
-            <div class="err-msg" id="err-nombre">Ingresá tu nombre.</div>
-          </div>
-          <div class="input-group" style="margin-bottom:0;">
-            <label class="form-lbl" for="telefono">WhatsApp / Teléfono</label>
-            <input type="tel" id="telefono" class="form-input" placeholder="+54 9 11 XXXX XXXX">
-            <div class="err-msg" id="err-tel">Ingresá un número de contacto.</div>
-          </div>
-        </div>
-        <div class="input-group" style="max-width:440px;">
-          <label class="form-lbl" for="email">Email <span style="opacity:.5;font-weight:300;">(opcional)</span></label>
-          <input type="email" id="email" class="form-input" placeholder="juan@ejemplo.com">
-        </div>
-
-        <div class="survey-nav">
-          <button class="survey-back" onclick="goTo('c3')"><span class="survey-back-line"></span>Atrás</button>
-          <button class="btn-wa" onclick="submitFinal()">
-            Enviar por WhatsApp
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="white"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.112 1.512 5.849L.057 23.882l6.21-1.629A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-4.99-1.364l-.36-.213-3.685.967.984-3.594-.233-.37A9.818 9.818 0 0112 2.182c5.425 0 9.818 4.393 9.818 9.818 0 5.426-4.393 9.818-9.818 9.818z" fill="white"/></svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- ══════════════════════════════════════════
-           DISQUALIFICATION
-      ═══════════════════════════════════════════ -->
-      <div class="survey-step" id="step-disq">
-        <div class="disq-wrap">
-          <div class="disq-icon">🌱</div>
-          <div class="disq-tag">Te lo decimos con total honestidad</div>
-          <div class="disq-title">Por ahora, la energía solar<br>no sería una buena inversión para vos</div>
-          <p class="disq-body">Con un consumo de menos de $300.000 por mes, el costo de instalación de un sistema fotovoltaico es muy difícil de recuperar. Los sistemas solares tienen un retorno real de 4 a 7 años para consumidores medios y altos — y para consumos menores, la inversión simplemente no se recupera en forma rentable.</p>
-          <div class="disq-note">
-            Esto puede cambiar si tu consumo crece: si sumás aire acondicionado, vehículo eléctrico, pileta, maquinaria o actividad industrial. Cuando eso pase, vas a ser el candidato perfecto para solar.<br><br>
-            <strong style="font-weight:400;color:var(--text);">Guardá nuestro contacto hoy y escribinos cuando tu situación cambie. Te vamos a asesorar con la misma honestidad.</strong>
-          </div>
-          <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
-            <a href="https://wa.me/5491176438672?text=Hola%20Nodex%20Solar%2C%20quiero%20guardar%20su%20contacto%20para%20cuando%20mi%20consumo%20crezca." target="_blank" class="btn-wa">
-              Guardar contacto en WhatsApp
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="white"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.112 1.512 5.849L.057 23.882l6.21-1.629A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-4.99-1.364l-.36-.213-3.685.967.984-3.594-.233-.37A9.818 9.818 0 0112 2.182c5.425 0 9.818 4.393 9.818 9.818 0 5.426-4.393 9.818-9.818 9.818z" fill="white"/></svg>
-            </a>
-            <button class="disq-restart" onclick="restartForm()">← Volver al inicio</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- ══════════════════════════════════════════
-           SUCCESS
-      ═══════════════════════════════════════════ -->
-      <div class="survey-step" id="step-success">
-        <div style="padding:12px 0;animation:fade-up .5s ease;">
-          <div style="font-size:48px;margin-bottom:20px;">☀️</div>
-          <div style="font-size:9.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--sol);margin-bottom:12px;">¡Todo listo!</div>
-          <div class="survey-title" style="margin-bottom:20px;">Tu consulta está<br><em>en camino</em></div>
-          <p style="font-size:14px;font-weight:300;line-height:1.82;color:var(--muted);max-width:480px;margin-bottom:24px;">Abrimos WhatsApp con toda tu información lista para enviar. Un asesor de Nodex Solar te contacta en menos de 24 hs con tu propuesta completa y personalizada.</p>
-          <div style="padding:16px 20px;border-left:2px solid var(--sol-border);background:var(--sol-pale);margin-bottom:36px;max-width:480px;">
-            <p style="font-size:12px;font-weight:300;color:var(--muted);line-height:1.65;">Si subiste tu factura, te pediremos adjuntarla también en el chat de WhatsApp para que nuestro equipo la analice en detalle.</p>
-          </div>
-          <a href="index.html" class="btn-next">
-            <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M15 5H1M6 1L2 5l4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Volver al sitio
-          </a>
-        </div>
-      </div>
-
-    </div><!-- /survey-inner -->
-  </div><!-- /survey-wrap -->
-</div><!-- /page-outer -->
-
-<footer style="background:#1B3219;border-top:1px solid rgba(246,241,233,.06);padding:22px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-  <span style="font-size:12px;font-weight:300;color:rgba(246,241,233,.25);">© 2025 Nodex Solar · Munro, Buenos Aires</span>
-  <a href="privacidad.html" style="font-size:12px;font-weight:300;color:#E8A835;transition:opacity .2s;">Política de privacidad</a>
+<!-- FOOTER -->
+<footer>
+  <span class="footer-text">© 2025 Nodex Solar · Soifer Guido Adriel · CUIT 20-36728049-3 · Munro, Buenos Aires</span>
+  <span class="footer-text"><a href="privacidad.html">Política de privacidad</a> · <a href="index.html">Volver al sitio</a></span>
 </footer>
 
 <!-- WA Float -->
-<a href="https://wa.me/5491176438672" target="_blank" class="wa-float" aria-label="WhatsApp">
+<a href="https://wa.me/5491176438672?text=Hola%20Nodex%20Solar%2C%20quiero%20pedir%20una%20cotizaci%C3%B3n%20de%20paneles%20solares." target="_blank" class="wa-float" aria-label="WhatsApp">
   <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.112 1.512 5.849L.057 23.882l6.21-1.629A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-4.99-1.364l-.36-.213-3.685.967.984-3.594-.233-.37A9.818 9.818 0 0112 2.182c5.425 0 9.818 4.393 9.818 9.818 0 5.426-4.393 9.818-9.818 9.818z"/></svg>
 </a>
 
-<script>
-/* ═══════════════════════════════════════════════════
-   CONFIGURACIÓN PDF.js
-═══════════════════════════════════════════════════ */
-if (window.pdfjsLib) {
-  pdfjsLib.GlobalWorkerOptions.workerSrc =
-    'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-}
-
-/* ═══════════════════════════════════════════════════
-   ESTADO GLOBAL
-═══════════════════════════════════════════════════ */
-const WA_NUM = '5491176438672';
-const DISQ_LIMIT = 300000;
-const TC_DEFAULT = 1200; // tipo de cambio USD/ARS para estimaciones
-
-const d = {
-  path: null,        // 'factura' | 'manual'
-  tipo: '',
-  facturaMes: '',    // label legible
-  facturaTotal: 0,
-  facturaVariable: 0,
-  facturaKwh: 0,
-  distribuidora: '', // 'Edenor' | 'EDESUR' | ''
-  tieneArchivo: false,
-  autoExtraido: false,
-  motivo: '',
-  techo: '',
-  localidad: '',
-  nombre: '', telefono: '', email: '',
-  // estimacion
-  est: null,
-};
-
-/* ═══════════════════════════════════════════════════
-   NAVEGACIÓN
-═══════════════════════════════════════════════════ */
-const STEPS_FACTURA = ['f1','f2','c1','c2','c3','contact'];
-const STEPS_MANUAL  = ['m1','m2','c1','c2','c3','contact'];
-
-const STEP_META = {
-  '0':       {ey:'Comenzamos',           ti:'Tu <em>factura de luz</em>'},
-  'f1':      {ey:'Paso 1 · Con factura', ti:'Datos de tu <em>factura</em>'},
-  'f2':      {ey:'Estimación preliminar',ti:'Tu sistema solar <em>estimado</em>'},
-  'm1':      {ey:'Paso 1 · Manual',      ti:'Tipo de <em>instalación</em>'},
-  'm2':      {ey:'Paso 2 · Manual',      ti:'Tu <em>consumo</em> mensual'},
-  'c1':      {ey:'Tu objetivo',          ti:'¿Para qué necesitás la <em>energía solar</em>?'},
-  'c2':      {ey:'Tu techo',             ti:'Tipo de <em>techo</em>'},
-  'c3':      {ey:'Ubicación',            ti:'¿Dónde está la <em>propiedad</em>?'},
-  'contact': {ey:'Último paso',          ti:'Tus <em>datos de contacto</em>'},
-  'disq':    {ey:'Nuestra recomendación',ti:'Una respuesta <em>honesta</em>'},
-  'success': {ey:'Enviado',              ti:'Tu consulta está en <em>camino</em>'},
-};
-
-let currentStep = '0';
-
-function goTo(id) {
-  id = String(id);
-  document.querySelectorAll('.survey-step').forEach(s => s.classList.remove('active'));
-  const el = document.getElementById('step-' + id);
-  if (el) el.classList.add('active');
-  currentStep = id;
-  const hide = ['disq','success'].includes(id);
-  const hdr  = document.getElementById('survey-header');
-  const dots = document.getElementById('dots-wrap');
-  hdr.style.display  = hide ? 'none' : '';
-  dots.style.display = hide ? 'none' : '';
-  if (!hide) {
-    const m = STEP_META[id] || {ey:'',ti:''};
-    document.getElementById('step-eyebrow').innerHTML = m.ey;
-    document.getElementById('step-title').innerHTML   = m.ti;
-    updateDots(id);
-  }
-  window.scrollTo({top: document.querySelector('.survey-wrap').offsetTop - 80, behavior:'smooth'});
-}
-
-function updateDots(id) {
-  const seq = d.path === 'factura' ? STEPS_FACTURA : STEPS_MANUAL;
-  const wrap = document.getElementById('dots-wrap');
-  wrap.innerHTML = '';
-  const idx = seq.indexOf(id);
-  seq.forEach((s, i) => {
-    const dot = document.createElement('span');
-    dot.className = 'sp-dot' + (i < idx ? ' done' : i === idx ? ' active' : '');
-    wrap.appendChild(dot);
-  });
-}
-
-/* Back button helpers */
-function setupBackC1(from) { document.getElementById('back-c1').onclick = () => goTo(from); }
-function setupBackC2(from) { document.getElementById('back-c2').onclick = () => goTo(from); }
-function setupBackC3(from) { document.getElementById('back-c3').onclick = () => goTo(from); }
-
-/* ═══════════════════════════════════════════════════
-   EXTRACCIÓN DE TEXTO DEL PDF (PDF.js)
-═══════════════════════════════════════════════════ */
-async function extractPDFText(file) {
-  const arrayBuffer = await file.arrayBuffer();
-  const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-  let text = '';
-  const maxPages = Math.min(pdf.numPages, 4);
-  for (let i = 1; i <= maxPages; i++) {
-    const page = await pdf.getPage(i);
-    const content = await page.getTextContent();
-    text += content.items.map(item => item.str).join(' ') + '\n';
-  }
-  return text;
-}
-
-/* ═══════════════════════════════════════════════════
-   PARSER DE FACTURAS ELÉCTRICAS ARGENTINAS
-   Soporta: Edenor T1 Residencial, Edenor T2 Industrial, EDESUR
-═══════════════════════════════════════════════════ */
-function parseARNum(str) {
-  if (!str) return 0;
-  str = str.trim().replace(/\s/g, '');
-  // Formato argentino: 3.239.541,32 → 3239541.32
-  if (/,\d+$/.test(str)) {
-    return parseFloat(str.replace(/\./g, '').replace(',', '.')) || 0;
-  }
-  // Sin decimales con puntos de miles: 24.763
-  return parseFloat(str.replace(/\./g, '')) || 0;
-}
-
-function parseBillText(text) {
-  // Normalizar: comprimir espacios múltiples
-  const t = text.replace(/\s+/g, ' ');
-
-  let total    = 0;
-  let variable = 0;
-  let kwh      = 0;
-  let distrib  = '';
-
-  // ── Identificar distribuidora ──────────────────
-  if (/edenor/i.test(t))  distrib = 'Edenor';
-  if (/edesur/i.test(t))  distrib = 'EDESUR';
-
-  // ── TOTAL A PAGAR ──────────────────────────────
-  // Edenor: "Total a pagar $ 24.763,32"
-  // EDESUR: "TOTAL A PAGAR $ 45.234,10" o "Total a pagar $45.234,10"
-  let m = t.match(/Total a pagar\s*\$\s*([\d.,]+)/i);
-  if (!m) m = t.match(/TOTAL A PAGAR\s*\$\s*([\d.,]+)/i);
-  if (!m) m = t.match(/Total al vencimiento[^$]*\$\s*([\d.,]+)/i);
-  if (m) total = parseARNum(m[1]);
-
-  // ── CARGO VARIABLE / ENERGÍA ───────────────────
-  // Edenor T1: "Cargo variable 15.734,71"  (en la liquidación detallada)
-  // Edenor T2: "Cargo variable - kWh 5859 482.488,65"
-  // EDESUR:    "Cargo por energía  12.345,67" o "Cargo variable  12.345,67"
-  m = t.match(/Cargo variable\s*(?:-\s*kWh\s*[\d.,]+)?\s*([\d.]+,\d+)/i);
-  if (!m) m = t.match(/Cargo por energ[íi]a\s+([\d.]+,\d+)/i);
-  if (!m) m = t.match(/Energ[íi]a activa[^$\n]*\$([\d.,]+)/i);
-  if (!m) {
-    // fallback: "2 - Cargo variable 15.734,71"
-    m = t.match(/\d\s*-\s*Cargo variable\s+([\d.]+,\d+)/i);
-  }
-  if (m) variable = parseARNum(m[1]);
-
-  // Si no encontramos variable, usar Conceptos Eléctricos como proxy
-  if (!variable) {
-    m = t.match(/Conceptos El[eé]ctricos\s*\$\s*([\d.,]+)/i);
-    if (m) variable = parseARNum(m[1]);
-  }
-
-  // ── kWh CONSUMIDOS ─────────────────────────────
-  // Edenor T1: "Total Consumo 118 kWh"
-  // Edenor T2: "Energía Activa Consumo período: 5.859 kWh" o en tabla "5.859 kWh"
-  // EDESUR:    "Consumo del período XXXXX kWh" o "Consumo: XXX kWh"
-  m = t.match(/Total Consumo\s+([\d.,]+)\s*kWh/i);
-  if (!m) m = t.match(/Consumo per[íi]odo:\s*([\d.,]+)\s*kWh/i);
-  if (!m) m = t.match(/Consumo del per[íi]odo[^0-9]*([\d.,]+)\s*kWh/i);
-  if (!m) m = t.match(/Energ[íi]a Activa\s+Consumo per[íi]odo:\s*([\d.,]+)\s*kWh/i);
-  if (!m) m = t.match(/kWh en \d+ d[íi]as[^0-9]*([\d.,]+)/i);
-  if (!m) {
-    // Edenor T2: línea de energía activa "5.859 kWh" al lado de lectura
-    m = t.match(/Real\s+[\d]+\s+[\d]+\s+([\d.]+)\s*kWh/i);
-  }
-  if (!m) {
-    // Buscar simplemente "5.859 kWh" como patrón standalone
-    const kwhMatches = [...t.matchAll(/([\d.]+,?\d*)\s+kWh/gi)];
-    if (kwhMatches.length > 0) {
-      // Tomar el primero razonable (entre 10 y 999999)
-      for (const km of kwhMatches) {
-        const v = parseARNum(km[1]);
-        if (v >= 10 && v <= 999999) { kwh = v; break; }
-      }
-    }
-  }
-  if (m && !kwh) kwh = parseARNum(m[1]);
-
-  return {
-    total,
-    variable,
-    kwh,
-    distrib,
-    found: total > 0,
-  };
-}
-
-/* ═══════════════════════════════════════════════════
-   UPLOAD HANDLER
-═══════════════════════════════════════════════════ */
-async function handleUpload(input) {
-  if (!input.files || !input.files[0]) return;
-  const file = input.files[0];
-  const isPDF = file.type === 'application/pdf';
-  d.tieneArchivo = true;
-
-  // Mostrar preview
-  const preview = document.getElementById('file-preview');
-  if (isPDF) {
-    preview.innerHTML = `
-      <div class="preview-pdf">
-        <span class="preview-pdf-icon">📑</span>
-        <span class="preview-pdf-name">${file.name}</span>
-        <button class="preview-remove" onclick="removeFile()">✕ Quitar</button>
-      </div>`;
-  } else {
-    const reader = new FileReader();
-    reader.onload = e => {
-      preview.innerHTML = `<div style="position:relative;">
-        <img src="${e.target.result}" class="preview-img" alt="Factura">
-        <button class="preview-remove" style="position:absolute;top:10px;right:10px;background:rgba(250,248,244,.9);padding:4px 12px;border:1px solid var(--border-lt);font-size:10px;font-family:DM Sans,sans-serif;cursor:pointer;" onclick="removeFile()">✕ Quitar</button>
-      </div>`;
-    };
-    reader.readAsDataURL(file);
-  }
-  preview.classList.add('show');
-
-  // Si es PDF → intentar leer automáticamente
-  if (isPDF && window.pdfjsLib) {
-    document.getElementById('reading-state').classList.add('show');
-    document.getElementById('scan-bar').style.display = 'block';
-    try {
-      const text = await extractPDFText(file);
-      const parsed = parseBillText(text);
-      d.autoExtraido = parsed.found;
-      d.distribuidora = parsed.distrib;
-      // Guardar valores extraídos para pre-llenar
-      d._parsed = parsed;
-    } catch (err) {
-      d.autoExtraido = false;
-      d._parsed = null;
-    }
-    document.getElementById('reading-state').classList.remove('show');
-    document.getElementById('scan-bar').style.display = 'none';
-  } else {
-    d.autoExtraido = false;
-    d._parsed = null;
-  }
-
-  document.getElementById('btn-analizar').style.display = 'inline-flex';
-}
-
-function removeFile() {
-  document.getElementById('file-input').value = '';
-  document.getElementById('file-preview').innerHTML = '';
-  document.getElementById('file-preview').classList.remove('show');
-  document.getElementById('btn-analizar').style.display = 'none';
-  document.getElementById('reading-state').classList.remove('show');
-  d.tieneArchivo = false;
-  d.autoExtraido = false;
-  d._parsed = null;
-}
-
-function goToFacturaData() {
-  d.path = 'factura';
-  // Pre-llenar campos si extrajimos datos
-  const p = d._parsed;
-  if (p && p.found) {
-    setFactField('fact-total',    p.total,    'tag-total',    true);
-    setFactField('fact-variable', p.variable, 'tag-variable', true);
-    setFactField('fact-kwh',      p.kwh,      'tag-kwh',      p.kwh > 0, true);
-    // Badge de extracción exitosa
-    const distTxt = p.distrib ? ` (${p.distrib})` : '';
-    document.getElementById('f1-status-badge').innerHTML =
-      `<span class="extract-badge badge-ok">✓ Factura leída automáticamente${distTxt}</span>`;
-    document.getElementById('f1-hint').textContent =
-      'Verificá que los valores sean correctos. Podés editar cualquier campo si algo no coincide.';
-  } else {
-    // No se pudo leer — modo manual
-    document.getElementById('f1-status-badge').innerHTML =
-      `<span class="extract-badge badge-manual">⚠ Completá los datos manualmente</span>`;
-    document.getElementById('f1-hint').textContent =
-      'No pudimos leer automáticamente tu factura (puede ser una foto o un PDF protegido). Ingresá los datos que figuran en ella.';
-  }
-  goTo('f1');
-}
-
-function setFactField(id, value, tagId, show, isRaw=false) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  if (value && value > 0) {
-    if (isRaw) {
-      el.value = value;
-    } else {
-      el.value = '$ ' + Math.round(value).toLocaleString('es-AR');
-    }
-    el.classList.add('auto-filled');
-    const tag = document.getElementById(tagId);
-    if (tag && show) tag.style.display = 'block';
-  }
-}
-
-function goManual() {
-  d.path = 'manual';
-  goTo('m1');
-}
-
-/* ═══════════════════════════════════════════════════
-   FORMATEO DE PESOS
-═══════════════════════════════════════════════════ */
-function formatPeso(el) {
-  let v = el.value.replace(/[^\d]/g, '');
-  if (v) el.value = '$ ' + parseInt(v).toLocaleString('es-AR');
-}
-
-function parsePesoInput(str) {
-  return parseInt((str || '').replace(/[^\d]/g, '')) || 0;
-}
-
-function onFactTotalInput(el) {
-  formatPeso(el);
-}
-
-/* ═══════════════════════════════════════════════════
-   SUBMIT FACTURA (step F1 → F2 o Disq)
-═══════════════════════════════════════════════════ */
-function submitFactura() {
-  const total    = parsePesoInput(document.getElementById('fact-total').value);
-  const variable = parsePesoInput(document.getElementById('fact-variable').value);
-  const kwh      = parseFloat(document.getElementById('fact-kwh').value) || 0;
-
-  if (!total) { showErr('err-fact-total', true); return; }
-  showErr('err-fact-total', false);
-
-  d.facturaTotal    = total;
-  d.facturaVariable = variable;
-  d.facturaKwh      = kwh;
-  d.facturaMes      = '$ ' + total.toLocaleString('es-AR');
-
-  if (total < DISQ_LIMIT) { goTo('disq'); return; }
-
-  // Calcular estimación y mostrar F2
-  if (kwh > 0) {
-    d.est = calcularEstimacion(total, kwh);
-    renderEstimacion(d.est, total, variable, kwh);
-    setupBackC1('f2');
-    goTo('f2');
-  } else {
-    // Sin kWh no podemos calcular, saltear F2
-    setupBackC1('f1');
-    goTo('c1');
-  }
-}
-
-/* ═══════════════════════════════════════════════════
-   CALCULADORA INLINE (lógica de calculadora.html)
-═══════════════════════════════════════════════════ */
-function calcularEstimacion(FAC, kwhBruto, pct=0.50, TC=TC_DEFAULT) {
-  const X    = kwhBruto * 0.75;
-  const P    = X / (4.8 * 0.8 * 30);
-  const N    = Math.ceil(P * 1.66667);
-  const rawC = (1277.4 * Math.pow(P, -0.204)) * P;
-  const C    = Math.max(rawC, 4000);
-  const AH   = FAC * pct;
-  const ROI  = Math.max((C * TC) / (AH * 12), 2.9);
-  const co2  = (X * 12 * 0.4 / 1000);
-  return { N, P: P.toFixed(1), C: Math.round(C), AH: Math.round(AH), ROI: ROI.toFixed(1), co2: co2.toFixed(1) };
-}
-
-const fmt = (n, d=0) => Math.round(parseFloat(n)).toLocaleString('es-AR', {minimumFractionDigits:d, maximumFractionDigits:d});
-
-function renderEstimacion(e, total, variable, kwh) {
-  const roiN = parseFloat(e.ROI);
-  const roiColor = roiN <= 4 ? 'var(--forest)' : roiN <= 6 ? '#7c4500' : '#7c2d12';
-  const roiMsg   = roiN <= 4
-    ? '✦ Excelente retorno — el sistema se paga en menos de 4 años'
-    : roiN <= 6
-    ? '◎ Buen retorno — entre 4 y 6 años de recupero'
-    : '◌ Retorno moderado — analizamos opciones de financiamiento';
-
-  const ahorroAnual = e.AH * 12;
-
-  document.getElementById('estimacion-wrap').innerHTML = `
-    <div class="est-hero">
-      <div class="est-hero-left">
-        <div class="est-eyebrow">Sistema recomendado · Estimación preliminar</div>
-        <div class="est-title">Tu instalación solar <em>estimada</em></div>
-      </div>
-      <div class="est-hero-right">Valores orientativos basados en tu factura. El diseño final se define en la visita técnica gratuita.</div>
-    </div>
-
-    <div class="est-grid">
-      <div class="est-card">
-        <div class="est-icon">🔆</div>
-        <div class="est-value">${fmt(e.N)} <span class="unit">pan.</span></div>
-        <div class="est-label">Paneles de 600W</div>
-      </div>
-      <div class="est-card">
-        <div class="est-icon">⚡</div>
-        <div class="est-value">${e.P} <span class="unit">kW</span></div>
-        <div class="est-label">Potencia instalada</div>
-      </div>
-      <div class="est-card highlight">
-        <div class="est-icon">💵</div>
-        <div class="est-value">USD ${fmt(e.C)}</div>
-        <div class="est-label">Inversión estimada</div>
-      </div>
-      <div class="est-card highlight">
-        <div class="est-icon">📉</div>
-        <div class="est-value">$${fmt(e.AH)} <span class="unit">/mes</span></div>
-        <div class="est-label">Ahorro mensual estimado</div>
-      </div>
-      <div class="est-card">
-        <div class="est-icon">🌿</div>
-        <div class="est-value">${e.co2} <span class="unit">ton</span></div>
-        <div class="est-label">CO₂ evitado por año</div>
-      </div>
-      <div class="est-card">
-        <div class="est-icon">📆</div>
-        <div class="est-value">${e.ROI} <span class="unit">años</span></div>
-        <div class="est-label">Retorno de inversión</div>
-      </div>
-    </div>
-
-    <div class="roi-strip">
-      <div class="roi-strip-left">
-        <div class="roi-big" style="color:${roiColor};">${e.ROI} <span>años</span></div>
-        <div class="roi-sub">${roiMsg}</div>
-      </div>
-      <div class="roi-strip-right">
-        En 25 años de vida útil, tu sistema generaría un ahorro acumulado estimado de
-        <strong style="color:var(--text);font-weight:500;">$${fmt(ahorroAnual * 25)}</strong>
-        en comparación con seguir pagando la red eléctrica.
-      </div>
-    </div>
-
-    <div class="est-disclaimer">
-      <p>
-        <strong>Esta es una estimación orientativa.</strong> El sistema real puede variar según la orientación e inclinación del techo, la calidad de la instalación, tarifas vigentes y condiciones de financiamiento.
-        Nuestro equipo diseña el sistema exacto en una visita técnica gratuita — sin compromiso.
-      </p>
-    </div>`;
-}
-
-/* ═══════════════════════════════════════════════════
-   MANUAL PATH — RANGOS
-═══════════════════════════════════════════════════ */
-const RANGES = {
-  'Residencial': [
-    {l:'Menos de $100.000',     s:'Consumo muy bajo',  v:80000},
-    {l:'$100.000 – $300.000',   s:'Consumo bajo',      v:200000},
-    {l:'$300.000 – $500.000',   s:'Consumo medio-alto',v:400000},
-    {l:'Más de $500.000',       s:'Consumo alto',      v:600000},
-  ],
-  'Industrial / Comercial': [
-    {l:'Menos de $500.000',     s:'Escala mediana',    v:300000},
-    {l:'$500.000 – $1.000.000', s:'Gran escala',       v:750000},
-    {l:'Más de $1.000.000',     s:'Escala industrial', v:1200000},
-  ],
-  'Campo / Rural': [
-    {l:'Menos de $200.000',     s:'Uso básico',        v:100000},
-    {l:'$200.000 – $600.000',   s:'Uso agropecuario',  v:400000},
-    {l:'Más de $600.000',       s:'Uso intensivo',     v:800000},
-  ],
-};
-
-function buildM2Ranges(tipo) {
-  const ranges = RANGES[tipo] || RANGES['Residencial'];
-  const labels = {'Residencial':'tu hogar','Industrial / Comercial':'tu empresa','Campo / Rural':'tu campo'};
-  document.getElementById('m2-question').innerHTML = `¿Cuánto pagás de luz en <em>${labels[tipo]||'la propiedad'}</em> por mes?`;
-  const cols = ranges.length === 4 ? 'step-options four' : 'step-options';
-  const container = document.getElementById('m2-options');
-  container.className = cols;
-  container.innerHTML = ranges.map(r => `
-    <button class="opt-btn" onclick="selectM2(this,'${r.l}',${r.v})">
-      <span class="opt-label">${r.l}</span>
-      <span class="opt-sub">${r.s}</span>
-    </button>`).join('');
-}
-
-function selectM2(el, label, val) {
-  el.closest('.step-options').querySelectorAll('.opt-btn').forEach(b => b.classList.remove('selected'));
-  el.classList.add('selected');
-  d.facturaMes  = label;
-  d.facturaTotal = val;
-  setTimeout(() => {
-    if (val < DISQ_LIMIT) { goTo('disq'); return; }
-    setupBackC1('m2');
-    goTo('c1');
-  }, 260);
-}
-
-/* ═══════════════════════════════════════════════════
-   SELECCIÓN GENÉRICA DE OPCIONES
-═══════════════════════════════════════════════════ */
-function selectOpt(el, key, val) {
-  el.closest('.step-options').querySelectorAll('.opt-btn').forEach(b => b.classList.remove('selected'));
-  el.classList.add('selected');
-  d[key] = val;
-}
-
-/* ═══════════════════════════════════════════════════
-   LOCALIDAD → CONTACTO
-═══════════════════════════════════════════════════ */
-function submitLocalidad() {
-  const loc = document.getElementById('localidad').value.trim();
-  if (!loc) { showErr('err-localidad', true); return; }
-  showErr('err-localidad', false);
-  d.localidad = loc;
-  buildResumen();
-  goTo('contact');
-}
-
-function buildResumen() {
-  const rows = [
-    d.tipo        ? ['Tipo de proyecto',    d.tipo]        : null,
-    d.facturaMes  ? ['Factura mensual',     d.facturaMes]  : null,
-    d.facturaKwh  ? ['Consumo mensual',     d.facturaKwh + ' kWh'] : null,
-    d.motivo      ? ['Objetivo',            d.motivo]      : null,
-    d.techo       ? ['Tipo de techo',       d.techo]       : null,
-    d.localidad   ? ['Localidad',           d.localidad]   : null,
-    d.est         ? ['Inversión estimada',  'USD ' + fmt(d.est.C)] : null,
-    d.est         ? ['ROI estimado',        d.est.ROI + ' años']   : null,
-  ].filter(Boolean);
-
-  document.getElementById('resumen-card').innerHTML = `
-    <div class="resumen-header"><span class="resumen-header-title">Tu proyecto en resumen</span></div>
-    ${rows.map(([k,v]) => `
-      <div class="resumen-row">
-        <span class="rr-key">${k}</span>
-        <span class="rr-val accent">${v}</span>
-      </div>`).join('')}`;
-}
-
-/* ═══════════════════════════════════════════════════
-   SUBMIT FINAL → WHATSAPP
-═══════════════════════════════════════════════════ */
-function submitFinal() {
-  const nombre   = document.getElementById('nombre').value.trim();
-  const telefono = document.getElementById('telefono').value.trim();
-  const email    = document.getElementById('email').value.trim();
-  let ok = true;
-  if (!nombre)   { showErr('err-nombre', true);  ok = false; } else showErr('err-nombre', false);
-  if (!telefono) { showErr('err-tel', true);     ok = false; } else showErr('err-tel', false);
-  if (!ok) return;
-  d.nombre = nombre; d.telefono = telefono; d.email = email;
-
-  const estLines = d.est ? [
-    ``,
-    `📐 *Estimación preliminar del sistema:*`,
-    `   • Paneles: ${d.est.N} (600W c/u)`,
-    `   • Potencia: ${d.est.P} kW`,
-    `   • Inversión estimada: USD ${fmt(d.est.C)}`,
-    `   • Ahorro mensual est.: $${fmt(d.est.AH)}`,
-    `   • ROI estimado: ${d.est.ROI} años`,
-  ] : [];
-
-  const lines = [
-    `☀️ *Nueva consulta — nodexsolar.com.ar*`,
-    ``,
-    `👤 *Nombre:* ${nombre}`,
-    `📱 *Teléfono:* ${telefono}`,
-    email ? `📧 *Email:* ${email}` : null,
-    ``,
-    `━━━━━━━━━━━━━━━━━━━━━━`,
-    d.tipo        ? `🏷️ *Tipo:* ${d.tipo}` : null,
-    d.facturaMes  ? `💡 *Factura mensual:* ${d.facturaMes}` : null,
-    d.facturaKwh  ? `📊 *Consumo:* ${d.facturaKwh} kWh/mes` : null,
-    d.facturaVariable ? `⚡ *Costos variables (energía):* $${Math.round(d.facturaVariable).toLocaleString('es-AR')}` : null,
-    d.distribuidora ? `🏢 *Distribuidora:* ${d.distribuidora}` : null,
-    d.motivo      ? `🎯 *Objetivo:* ${d.motivo}` : null,
-    d.techo       ? `🏠 *Techo:* ${d.techo}` : null,
-    d.localidad   ? `📍 *Localidad:* ${d.localidad}` : null,
-    ...estLines,
-    `━━━━━━━━━━━━━━━━━━━━━━`,
-    d.tieneArchivo ? `📎 *Factura adjunta:* La envío en este chat.` : null,
-    ``,
-    `Me gustaría recibir una propuesta personalizada. ¡Muchas gracias!`,
-  ].filter(l => l !== null).join('\n');
-
-  window.open('https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(lines), '_blank');
-  goTo('success');
-}
-
-/* ═══════════════════════════════════════════════════
-   HELPERS
-═══════════════════════════════════════════════════ */
-function showErr(id, show) {
-  const el = document.getElementById(id);
-  if (el) el.classList.toggle('show', show);
-}
-
-function restartForm() {
-  Object.assign(d, {path:null,tipo:'',facturaMes:'',facturaTotal:0,facturaVariable:0,facturaKwh:0,
-    distribuidora:'',tieneArchivo:false,autoExtraido:false,motivo:'',techo:'',localidad:'',
-    nombre:'',telefono:'',email:'',est:null,_parsed:null});
-  removeFile();
-  document.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('selected'));
-  document.querySelectorAll('.auto-tag').forEach(t => t.style.display='none');
-  document.querySelectorAll('.fact-input').forEach(i => {i.value='';i.classList.remove('auto-filled');});
-  goTo('0');
-}
-
-// Init
-updateDots('0');
-document.getElementById('dots-wrap').style.display = 'none';
-</script>
 </body>
 </html>
