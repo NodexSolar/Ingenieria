@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Política de privacidad de Nodex Solar. Conocé cómo recopilamos, usamos y protegemos tus datos personales conforme a la Ley 25.326.">
+<title>Política de Privacidad | Nodex Solar</title>
+<link rel="canonical" href="https://nodexsolar.com.ar/privacidad.html">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sol:#C8881A;--sol-lt:#E8A835;--sol-vivid:#EF9F27;--sol-pale:#FDF3E0;--sol-border:rgba(200,136,26,.22);
+  --forest:#152815;--forest2:#1B3219;--forest3:#243D22;
+  --cream:#F6F1E9;--cream-dk:#EDE5D4;--cream-bg:#FAF8F4;
+  --white:#FFFFFF;--text:#1A1A12;--muted:rgba(26,26,18,.48);--stone:#8A8878;
+  --border-lt:rgba(26,26,18,.1);--nav-h:72px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream-bg);color:var(--text);-webkit-font-smoothing:antialiased;min-height:100vh;}
+a{color:inherit;text-decoration:none;}
+@keyframes spin-cw{to{transform:rotate(360deg);}}
+.logo-spin-slow{animation:spin-cw 120s linear infinite;}
+
+nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(250,248,244,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border-lt);}
+.nav-logo{display:flex;align-items:center;gap:14px;cursor:pointer;}
+.nl-main{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;letter-spacing:.32em;text-transform:uppercase;color:var(--text);line-height:1;display:block;}
+.nl-sub{font-size:8px;font-weight:300;letter-spacing:.5em;text-transform:uppercase;color:var(--sol);line-height:1;display:block;margin-top:3px;}
+.nav-back-link{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:12px;transition:color .2s;}
+.nav-back-link:hover{color:var(--text);}
+.nav-back-line{display:block;width:28px;height:1px;background:currentColor;transition:width .3s;}
+.nav-back-link:hover .nav-back-line{width:16px;}
+
+.page-hero{background:var(--forest);padding:80px 5% 64px;margin-top:var(--nav-h);position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='52' viewBox='0 0 60 52'%3E%3Cpolygon points='30,1 59,17 59,35 30,51 1,35 1,17' stroke='%23EF9F27' stroke-width='1' fill='none'/%3E%3C/svg%3E");background-size:60px 52px;opacity:.03;pointer-events:none;}
+.hero-inner{max-width:800px;position:relative;z-index:1;}
+.hero-eyebrow{font-size:9.5px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--sol-lt);display:flex;align-items:center;gap:14px;margin-bottom:20px;}
+.hero-eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--sol-lt);opacity:.6;}
+.hero-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5vw,64px);font-weight:300;line-height:.95;letter-spacing:-.02em;color:var(--cream);margin-bottom:16px;}
+.hero-h1 em{font-style:italic;color:var(--sol-lt);}
+.hero-sub{font-size:14px;font-weight:300;color:rgba(246,241,233,.45);line-height:1.75;max-width:540px;}
+
+.content-wrap{max-width:800px;margin:0 auto;padding:72px 5% 100px;}
+
+.section-block{margin-bottom:52px;}
+.section-eyebrow{font-size:9px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--sol);display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.section-eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--sol);opacity:.6;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--text);margin-bottom:18px;line-height:1.2;}
+.section-title em{font-style:italic;color:var(--sol);}
+.section-body{font-size:14px;font-weight:300;line-height:1.85;color:var(--muted);margin-bottom:14px;}
+.section-body strong{font-weight:500;color:var(--text);}
+.section-body a{color:var(--sol);border-bottom:1px solid var(--sol-border);transition:border-color .2s;}
+.section-body a:hover{border-color:var(--sol);}
+
+.item-list{display:flex;flex-direction:column;gap:10px;margin:16px 0;}
+.item{display:flex;align-items:flex-start;gap:14px;font-size:13.5px;font-weight:300;line-height:1.7;color:var(--muted);}
+.item::before{content:'';display:block;width:4px;height:4px;border-radius:50%;background:var(--sol);flex-shrink:0;margin-top:8px;}
+.item strong{font-weight:500;color:var(--text);}
+
+.highlight-box{background:var(--sol-pale);border:1px solid var(--sol-border);border-left:3px solid var(--sol);padding:24px 28px;margin:24px 0;}
+.highlight-box p{font-size:13px;font-weight:300;line-height:1.75;color:var(--muted);}
+.highlight-box p strong{font-weight:500;color:var(--text);}
+
+.divider{height:1px;background:var(--border-lt);margin:52px 0;}
+
+.contact-card{background:var(--white);border:1px solid var(--border-lt);padding:36px;display:flex;flex-direction:column;gap:14px;}
+.cc-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--text);}
+.cc-item{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;font-weight:300;color:var(--muted);}
+.cc-label{font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);min-width:80px;padding-top:2px;}
+.cc-val a{color:var(--sol);}
+
+footer{background:var(--forest2);border-top:1px solid rgba(246,241,233,.06);padding:28px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-text{font-size:12px;font-weight:300;color:rgba(246,241,233,.25);}
+.footer-text a{color:var(--sol-lt);transition:opacity .2s;}
+.footer-text a:hover{opacity:.8;}
+
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:997;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .25s;}
+.wa-float:hover{transform:scale(1.1);}
+.wa-float::before{content:'';position:absolute;width:60px;height:60px;border-radius:50%;background:#25D366;animation:wa-pulse 2s ease-out infinite;opacity:.5;}
+@keyframes wa-pulse{0%{transform:scale(1);opacity:.5;}100%{transform:scale(1.9);opacity:0;}}
+.wa-float svg{position:relative;z-index:1;}
+
+@media(max-width:640px){
+  .page-hero{padding:60px 5% 48px;}
+  .content-wrap{padding:48px 5% 72px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="34" height="40" viewBox="0 0 200 234" fill="none" class="logo-spin-slow">
+      <defs><clipPath id="nc"><polygon points="100,24 178,69 178,159 100,204 22,159 22,69"/></clipPath></defs>
+      <g clip-path="url(#nc)">
+        <line x1="-100" y1="162" x2="300" y2="-69" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
+        <line x1="-100" y1="206" x2="300" y2="-25" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
+        <line x1="-100" y1="250" x2="300" y2="19" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
+        <line x1="-100" y1="294" x2="300" y2="63" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
+      </g>
+      <line x1="100" y1="24" x2="100" y2="204" stroke="#C8881A" stroke-width="1.2" opacity=".5"/>
+      <line x1="178" y1="69" x2="22" y2="159" stroke="#C8881A" stroke-width="1.2" opacity=".5"/>
+      <line x1="178" y1="159" x2="22" y2="69" stroke="#C8881A" stroke-width="1.2" opacity=".5"/>
+      <polygon points="100,24 178,69 178,159 100,204 22,159 22,69" stroke="#C8881A" stroke-width="2.5" fill="none"/>
+      <circle cx="100" cy="114" r="18" stroke="#C8881A" stroke-width=".8" opacity=".3" fill="none"/>
+      <circle cx="100" cy="114" r="10" fill="#C8881A"/>
+      <circle cx="100" cy="24" r="5" fill="#C8881A"/>
+      <circle cx="178" cy="69" r="5" fill="#C8881A"/>
+      <circle cx="178" cy="159" r="5" fill="#C8881A"/>
+      <circle cx="100" cy="204" r="5" fill="#C8881A"/>
+      <circle cx="22" cy="159" r="5" fill="#C8881A"/>
+      <circle cx="22" cy="69" r="5" fill="#C8881A"/>
+    </svg>
+    <div><span class="nl-main">Nodex</span><span class="nl-sub">Solar</span></div>
+  </a>
+  <a href="index.html" class="nav-back-link">
+    <span class="nav-back-line"></span>
+    Volver al inicio
+  </a>
+</nav>
+
+<div class="page-hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Legal · Privacidad</div>
+    <h1 class="hero-h1">Política de<br><em>Privacidad</em></h1>
+    <p class="hero-sub">Cómo recopilamos, usamos y protegemos tus datos personales. Última actualización: junio de 2025.</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- 1. RESPONSABLE -->
+  <div class="section-block">
+    <div class="section-eyebrow">01</div>
+    <h2 class="section-title">Responsable del <em>tratamiento</em></h2>
+    <p class="section-body">
+      El responsable del tratamiento de tus datos personales es <strong>Nodex Solar</strong>, empresa dedicada a la instalación de sistemas fotovoltaicos, con domicilio en Munro, Vicente López, Buenos Aires, Argentina.
+    </p>
+    <p class="section-body">
+      Podés contactarnos en cualquier momento mediante los canales indicados al final de este documento.
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 2. DATOS QUE RECOPILAMOS -->
+  <div class="section-block">
+    <div class="section-eyebrow">02</div>
+    <h2 class="section-title">Datos que <em>recopilamos</em></h2>
+    <p class="section-body">Recopilamos únicamente los datos que vos nos proporcionás voluntariamente a través de nuestros formularios y herramientas:</p>
+    <div class="item-list">
+      <div class="item"><span><strong>Datos de identidad:</strong> nombre y apellido.</span></div>
+      <div class="item"><span><strong>Datos de contacto:</strong> número de WhatsApp/teléfono y dirección de correo electrónico (este último es opcional).</span></div>
+      <div class="item"><span><strong>Datos de consumo energético:</strong> información de tu factura de electricidad (distribuidora, consumo en kWh y monto), que nos proporcionás para calcular tu sistema solar. Esta información se procesa localmente en tu navegador y no se almacena en nuestros servidores.</span></div>
+      <div class="item"><span><strong>Datos de ubicación:</strong> localidad o ciudad donde se ubicaría la instalación, para estimar la irradiación solar y coordinar la visita técnica.</span></div>
+      <div class="item"><span><strong>Datos técnicos:</strong> tipo de techo y motivación de la instalación, para personalizar la propuesta.</span></div>
+    </div>
+    <div class="highlight-box">
+      <p><strong>Importante:</strong> la información de tu factura de luz que subís en el formulario (PDF o imagen) se procesa directamente en tu navegador. Ningún archivo es enviado ni almacenado en nuestros servidores.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 3. FINALIDAD -->
+  <div class="section-block">
+    <div class="section-eyebrow">03</div>
+    <h2 class="section-title">Para qué usamos tus <em>datos</em></h2>
+    <p class="section-body">Utilizamos tus datos personales exclusivamente para las siguientes finalidades:</p>
+    <div class="item-list">
+      <div class="item"><span><strong>Elaborar tu presupuesto personalizado:</strong> analizar tu consumo y diseñar la propuesta de sistema solar más adecuada para tu situación.</span></div>
+      <div class="item"><span><strong>Contactarte:</strong> comunicarnos con vos vía WhatsApp o email para enviarte tu propuesta, responder consultas y coordinar la visita técnica gratuita.</span></div>
+      <div class="item"><span><strong>Mejorar nuestros servicios:</strong> analizar en forma agregada y anónima los datos de consumo para optimizar nuestras estimaciones.</span></div>
+    </div>
+    <p class="section-body">No utilizamos tus datos para ninguna otra finalidad sin tu consentimiento previo y expreso.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 4. BASE LEGAL -->
+  <div class="section-block">
+    <div class="section-eyebrow">04</div>
+    <h2 class="section-title">Base legal del <em>tratamiento</em></h2>
+    <p class="section-body">
+      El tratamiento de tus datos se realiza en el marco de la <strong>Ley 25.326 de Protección de Datos Personales</strong> de la República Argentina y sus normas reglamentarias. La base legal que justifica el tratamiento es tu <strong>consentimiento libre e informado</strong>, otorgado al completar y enviar nuestros formularios de contacto o presupuesto.
+    </p>
+    <p class="section-body">
+      Podés revocar tu consentimiento en cualquier momento comunicándote con nosotros, sin que ello afecte la licitud del tratamiento previo a la revocación.
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 5. COMPARTIR DATOS -->
+  <div class="section-block">
+    <div class="section-eyebrow">05</div>
+    <h2 class="section-title">¿Compartimos tus <em>datos</em>?</h2>
+    <p class="section-body">
+      <strong>No vendemos, alquilamos ni cedemos tus datos personales a terceros.</strong> Tus datos se utilizan exclusivamente para la prestación de nuestros servicios.
+    </p>
+    <p class="section-body">En forma excepcional, podemos compartir información con:</p>
+    <div class="item-list">
+      <div class="item"><span><strong>Proveedores de servicios tecnológicos</strong> necesarios para el funcionamiento del sitio (por ejemplo, Google Fonts para tipografías), que operan bajo sus propias políticas de privacidad.</span></div>
+      <div class="item"><span><strong>Autoridades públicas</strong>, cuando exista una obligación legal que lo requiera.</span></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 6. CONSERVACIÓN -->
+  <div class="section-block">
+    <div class="section-eyebrow">06</div>
+    <h2 class="section-title">Conservación de <em>datos</em></h2>
+    <p class="section-body">
+      Conservamos tus datos personales durante el tiempo necesario para prestarte el servicio solicitado y, posteriormente, por el plazo que la normativa argentina exija. Una vez vencidos dichos plazos, tus datos son eliminados o anonimizados de forma segura.
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 7. DERECHOS -->
+  <div class="section-block">
+    <div class="section-eyebrow">07</div>
+    <h2 class="section-title">Tus <em>derechos</em></h2>
+    <p class="section-body">En virtud de la Ley 25.326, tenés derecho a:</p>
+    <div class="item-list">
+      <div class="item"><span><strong>Acceso:</strong> solicitar información sobre los datos personales que tenemos sobre vos.</span></div>
+      <div class="item"><span><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</span></div>
+      <div class="item"><span><strong>Supresión:</strong> solicitar la eliminación de tus datos cuando ya no sean necesarios para la finalidad para la que fueron recopilados.</span></div>
+      <div class="item"><span><strong>Oposición:</strong> oponerte al tratamiento de tus datos en determinadas circunstancias.</span></div>
+    </div>
+    <p class="section-body" style="margin-top:16px;">
+      Para ejercer cualquiera de estos derechos, podés contactarnos a través de los canales indicados más abajo. Responderemos tu solicitud dentro de los plazos previstos por la normativa vigente.
+    </p>
+    <div class="highlight-box">
+      <p>La Dirección Nacional de Protección de Datos Personales (DNPDP) es el organismo de control competente ante el cual podés presentar reclamaciones: <a href="https://www.argentina.gob.ar/aaip" target="_blank" rel="noopener">www.argentina.gob.ar/aaip</a></p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 8. COOKIES -->
+  <div class="section-block">
+    <div class="section-eyebrow">08</div>
+    <h2 class="section-title">Cookies y tecnologías <em>similares</em></h2>
+    <p class="section-body">
+      Nuestro sitio no utiliza cookies propias de seguimiento ni publicidad. Sí cargamos fuentes tipográficas mediante <strong>Google Fonts</strong>, servicio de Google LLC que puede registrar datos técnicos de conexión según su propia <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad</a>.
+    </p>
+    <p class="section-body">
+      La calculadora solar y el formulario de presupuesto funcionan íntegramente en el navegador del usuario, sin enviar datos a servidores externos.
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 9. SEGURIDAD -->
+  <div class="section-block">
+    <div class="section-eyebrow">09</div>
+    <h2 class="section-title">Seguridad de la <em>información</em></h2>
+    <p class="section-body">
+      Adoptamos medidas técnicas y organizativas razonables para proteger tus datos personales frente a accesos no autorizados, pérdida o divulgación. El sitio opera bajo protocolo <strong>HTTPS</strong> y se sirve mediante <strong>Cloudflare</strong>, que proporciona capas adicionales de seguridad.
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 10. CAMBIOS -->
+  <div class="section-block">
+    <div class="section-eyebrow">10</div>
+    <h2 class="section-title">Cambios en esta <em>política</em></h2>
+    <p class="section-body">
+      Podemos actualizar esta política periódicamente para reflejar cambios en nuestras prácticas o en la normativa aplicable. Publicaremos la versión actualizada en esta misma página con la fecha de última modificación. Te recomendamos revisarla periódicamente.
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CONTACTO -->
+  <div class="section-block">
+    <div class="section-eyebrow">Contacto</div>
+    <h2 class="section-title">¿Tenés <em>preguntas</em>?</h2>
+    <p class="section-body" style="margin-bottom:24px;">Para consultas sobre esta política o para ejercer tus derechos, comunicate con nosotros:</p>
+    <div class="contact-card">
+      <div class="cc-title">Nodex Solar</div>
+      <div class="cc-item"><span class="cc-label">Email</span><span class="cc-val"><a href="mailto:nodexsolar@gmail.com">nodexsolar@gmail.com</a></span></div>
+      <div class="cc-item"><span class="cc-label">WhatsApp</span><span class="cc-val"><a href="https://wa.me/5491176438672" target="_blank">+54 9 11 7643 8672</a></span></div>
+      <div class="cc-item"><span class="cc-label">Domicilio</span><span class="cc-val">Munro, Vicente López, Buenos Aires, Argentina</span></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-text">© 2025 Nodex Solar · Munro, Buenos Aires · <a href="mailto:nodexsolar@gmail.com">nodexsolar@gmail.com</a></span>
+  <span class="footer-text"><a href="index.html">Volver al sitio</a></span>
+</footer>
+
+<a href="https://wa.me/5491176438672" target="_blank" class="wa-float" aria-label="WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.112 1.512 5.849L.057 23.882l6.21-1.629A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-4.99-1.364l-.36-.213-3.685.967.984-3.594-.233-.37A9.818 9.818 0 0112 2.182c5.425 0 9.818 4.393 9.818 9.818 0 5.426-4.393 9.818-9.818 9.818z"/></svg>
+</a>
+
+</body>
+</html>
