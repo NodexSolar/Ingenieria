@@ -642,17 +642,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <button class="opt-btn" onclick="selectMTecho(this,'Tejas')">
             <span class="opt-emoji">🏘️</span>
             <span class="opt-label">Techo de tejas</span>
-            <span class="opt-sub">Cerámicas, francesas o coloniales — estructura especial (+5%)</span>
+            <span class="opt-sub">Cerámicas, francesas o coloniales</span>
           </button>
           <button class="opt-btn" onclick="selectMTecho(this,'Losa')">
             <span class="opt-emoji">🧱</span>
             <span class="opt-label">Losa / terraza</span>
-            <span class="opt-sub">Hormigón o cemento — fijación con lastre (+10%)</span>
+            <span class="opt-sub">Hormigón o cemento</span>
           </button>
           <button class="opt-btn" onclick="selectMTecho(this,'Suelo')">
             <span class="opt-emoji">🌿</span>
             <span class="opt-label">Sobre el suelo</span>
-            <span class="opt-sub">Estructura en tierra, campo o jardín (+15%)</span>
+            <span class="opt-sub">Estructura en tierra, campo o jardín</span>
           </button>
         </div>
         <div class="survey-nav">
@@ -678,15 +678,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </p>
         </div>
 
+        <div style="margin-top:20px;">
+          <label class="form-lbl" for="m-est-ciudad">Ciudad / Partido / Provincia</label>
+          <input type="text" id="m-est-ciudad" class="form-input" placeholder="Ej: Munro, Vicente López, Buenos Aires" style="max-width:440px;">
+        </div>
+
         <div class="est-manual-actions">
-          <a id="btn-wa-manual" href="#" target="_blank" class="btn-wa">
+          <a id="btn-wa-manual" href="#" target="_blank" class="btn-wa" onclick="buildWaManual(event)">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.112 1.512 5.849L.057 23.882l6.21-1.629A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-4.99-1.364l-.36-.213-3.685.967.984-3.594-.233-.37A9.818 9.818 0 0112 2.182c5.425 0 9.818 4.393 9.818 9.818 0 5.426-4.393 9.818-9.818 9.818z"/></svg>
             Pedir presupuesto preciso
           </a>
-          <button class="btn-next" onclick="goTo('c1');setupBackC1('m-est');">
-            Continuar el formulario
-            <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h14M10 1l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
           <button class="survey-back" onclick="goTo('m-techo')"><span class="survey-back-line"></span>Atrás</button>
         </div>
       </div>
@@ -1213,10 +1214,8 @@ function renderEstimacionManual(e, total, label, techo) {
     ? '◎ Buen retorno estimado — entre 4 y 6 años'
     : '◌ Retorno moderado — consultá opciones de financiamiento';
 
-  const techoLabel = {'Chapa':'Techo de chapa','Tejas':'Techo de tejas (+5%)','Losa':'Losa / terraza (+10%)','Suelo':'Sobre el suelo (+15%)'};
-  const ajusteText = factor > 1
-    ? ` <small style="color:var(--sol);font-size:11px;font-family:DM Sans,sans-serif;">(+${Math.round((factor-1)*100)}% montaje)</small>`
-    : '';
+  const techoLabel = {'Chapa':'Techo de chapa','Tejas':'Techo de tejas','Losa':'Losa / terraza','Suelo':'Sobre el suelo'};
+  const ajusteText = '';
 
   const resumenRows = [
     d.tipo  ? `<div class="resumen-row"><span class="rr-key">Tipo de proyecto</span><span class="rr-val accent">${d.tipo}</span></div>` : '',
@@ -1471,6 +1470,36 @@ function restartForm() {
   document.querySelectorAll('.auto-tag').forEach(t => t.style.display='none');
   document.querySelectorAll('.fact-input').forEach(i => {i.value='';i.classList.remove('auto-filled');});
   goTo('0');
+}
+
+/* ═══════════════════════════════════════════════════
+   BUILD WA LINK MANUAL (incluye ciudad al momento de click)
+═══════════════════════════════════════════════════ */
+function buildWaManual(e) {
+  const ciudad = (document.getElementById('m-est-ciudad').value || '').trim();
+  const techoLabel = {'Chapa':'Techo de chapa','Tejas':'Techo de tejas','Losa':'Losa / terraza','Suelo':'Sobre el suelo'};
+  const factor     = TECHO_FACTORS[d.techo] || 1.0;
+  const cAjustado  = d.est ? Math.round(d.est.C * factor) : 0;
+  const AH         = d.facturaTotal ? Math.round(d.facturaTotal * 0.45) : 0;
+  let roiRaw       = d.est && AH ? (cAjustado * TC_DEFAULT) / (AH * 12) : 0;
+  const roiMin     = d.tipo === 'Residencial' ? 4.0 : 2.9;
+  const roiStr     = d.est ? Math.max(roiRaw, roiMin).toFixed(1) : '—';
+
+  const msg = encodeURIComponent(
+    '☀️ *Consulta vía formulario — Nodex Solar*\n\n' +
+    (d.tipo       ? '🏷️ *Tipo:* '         + d.tipo + '\n' : '') +
+    (d.facturaMes ? '💡 *Factura mensual:* ' + d.facturaMes + '\n' : '') +
+    (d.techo      ? '🏠 *Montaje:* '        + (techoLabel[d.techo]||d.techo) + '\n' : '') +
+    (ciudad       ? '📍 *Localidad:* '      + ciudad + '\n' : '') +
+    '\n📐 *Estimación orientativa (supuestos medios):*\n' +
+    (d.est ? '   • Paneles: ' + d.est.N + ' (600W c/u)\n' : '') +
+    (d.est ? '   • Potencia: ' + d.est.P + ' kW\n' : '') +
+    '   • Inversión estimada: USD ' + fmt(cAjustado) + '\n' +
+    '   • Ahorro mensual est.: $' + fmt(AH) + '/mes\n' +
+    '   • ROI estimado: ' + roiStr + ' años\n\n' +
+    'Me gustaría recibir un presupuesto preciso. ¡Gracias!'
+  );
+  document.getElementById('btn-wa-manual').href = 'https://wa.me/' + WA_NUM + '?text=' + msg;
 }
 
 // Init
