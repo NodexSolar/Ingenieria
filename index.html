@@ -436,8 +436,8 @@ footer{background:var(--forest);border-top:1px solid rgba(246,241,233,.06);paddi
 .brands-track{display:flex;align-items:center;gap:0;width:max-content;animation:brands-scroll 28s linear infinite;}
 .brands-track:hover{animation-play-state:paused;}
 .brand-item{display:flex;align-items:center;justify-content:center;padding:0 48px;height:60px;flex-shrink:0;}
-.brand-item img{height:36px;width:auto;object-fit:contain;filter:grayscale(100%) opacity(.45);transition:filter .3s;}
-.brand-item img:hover{filter:grayscale(0%) opacity(1);}
+.brand-item img{height:36px;width:auto;object-fit:contain;filter:opacity(.85);transition:filter .3s;}
+.brand-item img:hover{filter:opacity(1);}
 @keyframes brands-scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
 
 /* REVEAL */
