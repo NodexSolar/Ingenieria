@@ -423,6 +423,23 @@ footer{background:var(--forest);border-top:1px solid rgba(246,241,233,.06);paddi
 .hero-wa-link svg{flex-shrink:0;color:#25D366;}
 @media(max-width:480px){.wa-float{bottom:1rem;right:1rem;padding:13px 18px 13px 14px;}}
 
+/* BRANDS CAROUSEL */
+.brands-strip{background:var(--white);padding:56px 0;border-top:1px solid var(--border-lt);border-bottom:1px solid var(--border-lt);overflow:hidden;position:relative;}
+.brands-strip::before,.brands-strip::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none;}
+.brands-strip::before{left:0;background:linear-gradient(to right,var(--white),transparent);}
+.brands-strip::after{right:0;background:linear-gradient(to left,var(--white),transparent);}
+.brands-header{text-align:center;margin-bottom:36px;padding:0 5%;}
+.brands-eyebrow{font-size:9.5px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--sol);display:inline-flex;align-items:center;gap:14px;margin-bottom:12px;}
+.brands-eyebrow::before,.brands-eyebrow::after{content:'';display:block;width:24px;height:1px;background:currentColor;opacity:.5;}
+.brands-subtitle{font-size:13px;font-weight:300;color:var(--muted);letter-spacing:.04em;}
+.brands-track-wrap{overflow:hidden;}
+.brands-track{display:flex;align-items:center;gap:0;width:max-content;animation:brands-scroll 28s linear infinite;}
+.brands-track:hover{animation-play-state:paused;}
+.brand-item{display:flex;align-items:center;justify-content:center;padding:0 48px;height:60px;flex-shrink:0;}
+.brand-item img{height:36px;width:auto;object-fit:contain;filter:grayscale(100%) opacity(.45);transition:filter .3s;}
+.brand-item img:hover{filter:grayscale(0%) opacity(1);}
+@keyframes brands-scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
 .reveal.visible{opacity:1;transform:none;}
@@ -594,7 +611,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="proyectos" class="page bg-cream">
   <div class="section-header reveal">
     <div><p class="sh-lbl">01 — Trabajos realizados</p><h2 class="sh-title">Proyectos <em>Destacados</em></h2></div>
-    <span class="page-num">01 / 07</span>
+    <span class="page-num">01 / 06</span>
   </div>
   <div class="proj-grid">
     <!-- Proyecto 1: Pelon - Chapadmalal (featured) -->
@@ -657,7 +674,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="servicios" class="page bg-white">
   <div class="section-header reveal">
     <div><p class="sh-lbl">02 — Lo que hacemos</p><h2 class="sh-title">Nuestros <em>Servicios</em></h2></div>
-    <span class="page-num">02 / 07</span>
+    <span class="page-num">02 / 06</span>
   </div>
   <div class="svc-grid">
     <div class="svc-card reveal">
@@ -768,10 +785,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- MARCAS -->
+<div class="brands-strip reveal">
+  <div class="brands-header">
+    <p class="brands-eyebrow">Nuestros fabricantes</p>
+    <p class="brands-subtitle">Trabajamos con las mejores marcas para garantizar mayor confianza y durabilidad</p>
+  </div>
+  <div class="brands-track-wrap">
+    <div class="brands-track">
+      <div class="brand-item"><img src="marcas/Ja Solar.jpg" alt="JA Solar"></div>
+      <div class="brand-item"><img src="marcas/Jinko.jpg" alt="Jinko Solar"></div>
+      <div class="brand-item"><img src="marcas/Trina.jpg" alt="Trina Solar"></div>
+      <div class="brand-item"><img src="marcas/canadina solar.jpg" alt="Canadian Solar"></div>
+      <div class="brand-item"><img src="marcas/Amerisolar  USA.jpg" alt="Amerisolar USA"></div>
+      <div class="brand-item"><img src="marcas/risen solar tech.jpg" alt="Risen Solar Tech"></div>
+      <div class="brand-item"><img src="marcas/Growatt.jpg" alt="Growatt"></div>
+      <div class="brand-item"><img src="marcas/huawei.jpg" alt="Huawei Solar"></div>
+      <div class="brand-item"><img src="marcas/deye.jpg" alt="Deye"></div>
+      <div class="brand-item"><img src="marcas/chiko.jpg" alt="Chiko Solar"></div>
+      <!-- Duplicado para loop infinito -->
+      <div class="brand-item"><img src="marcas/Ja Solar.jpg" alt="JA Solar"></div>
+      <div class="brand-item"><img src="marcas/Jinko.jpg" alt="Jinko Solar"></div>
+      <div class="brand-item"><img src="marcas/Trina.jpg" alt="Trina Solar"></div>
+      <div class="brand-item"><img src="marcas/canadina solar.jpg" alt="Canadian Solar"></div>
+      <div class="brand-item"><img src="marcas/Amerisolar  USA.jpg" alt="Amerisolar USA"></div>
+      <div class="brand-item"><img src="marcas/risen solar tech.jpg" alt="Risen Solar Tech"></div>
+      <div class="brand-item"><img src="marcas/Growatt.jpg" alt="Growatt"></div>
+      <div class="brand-item"><img src="marcas/huawei.jpg" alt="Huawei Solar"></div>
+      <div class="brand-item"><img src="marcas/deye.jpg" alt="Deye"></div>
+      <div class="brand-item"><img src="marcas/chiko.jpg" alt="Chiko Solar"></div>
+    </div>
+  </div>
+</div>
+
 <!-- WHY -->
 <section class="why" id="nosotros">
   <div class="reveal">
-    <p class="why-eyebrow">Por qué elegirnos</p>
+    <p class="why-eyebrow">03 — Por qué elegirnos</p>
     <h2 class="why-title">Más que una<br>empresa <em>solar.</em></h2>
     <p class="why-text">Nodex Solar nació con una convicción: la energía solar tiene que ser precisa, honesta y pensada para las personas. Somos ingenieros con vocación de servicio que creemos que vivir bien y consumir bien van de la mano.</p>
   </div>
@@ -808,8 +858,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- REVIEWS GOOGLE -->
 <section id="reviews" class="page bg-cream-dk">
   <div class="section-header reveal">
-    <div><p class="sh-lbl">05 — Lo que dicen</p><h2 class="sh-title">Reseñas <em>reales</em></h2></div>
-    <span class="page-num">05 / 07</span>
+    <div><p class="sh-lbl">04 — Lo que dicen</p><h2 class="sh-title">Reseñas <em>reales</em></h2></div>
+    <span class="page-num">04 / 06</span>
   </div>
   <div class="reviews-grid">
     <!-- Review 1: Dario Mintzer -->
@@ -903,8 +953,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- FAQ -->
 <section id="faq" class="page bg-white">
   <div class="section-header reveal">
-    <div><p class="sh-lbl">06 — Preguntas frecuentes</p><h2 class="sh-title">Tus <em>dudas</em>, respondidas.</h2></div>
-    <span class="page-num">06 / 07</span>
+    <div><p class="sh-lbl">05 — Preguntas frecuentes</p><h2 class="sh-title">Tus <em>dudas</em>, respondidas.</h2></div>
+    <span class="page-num">05 / 06</span>
   </div>
   <div class="faq-list reveal">
     <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">¿Cuánto tarda la instalación?<span class="faq-icon">+</span></button><div class="faq-a"><p>Una instalación residencial típica toma entre 1 y 3 días. Las industriales, entre 1 y 3 semanas según el tamaño. Antes de empezar, te damos un cronograma exacto con fechas comprometidas.</p></div></div>
@@ -935,8 +985,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- CONTACTO -->
 <section id="contacto">
   <div class="section-header reveal">
-    <div><p class="sh-lbl">07 — Hablemos</p><h2 class="sh-title">Pedí tu <em>Presupuesto</em></h2></div>
-    <span class="page-num">07 / 07</span>
+    <div><p class="sh-lbl">06 — Hablemos</p><h2 class="sh-title">Pedí tu <em>Presupuesto</em></h2></div>
+    <span class="page-num">06 / 06</span>
   </div>
   <div class="contact-grid">
     <div class="reveal">
