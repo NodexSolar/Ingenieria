@@ -462,7 +462,7 @@ function calcular(){
   const P=X/(4.8*0.8*30);
   const N=Math.ceil(P*1.66667);
   const rawC=(1090.9*Math.pow(P,-0.198))*P;
-  let C=Math.max(rawC,4200);
+  let C=Math.max(rawC,4000);
   if(techo==='chapa'||techo==='teja') C=C*0.75;
   const cpkw=C/P;
   const AH=FAC*pct;
@@ -579,7 +579,7 @@ function mostrarResultados(email){
   }
 
   // Tabla de detalle
-  const techoLabel={chapa:'Chapa (−25% inversión)',teja:'Tejas (−25% inversión)',losa:'Losa (bloques de cemento)',otro:'Otro'};
+  const techoLabel={chapa:'Chapa',teja:'Tejas',losa:'Losa',otro:'Otro'};
   document.getElementById('d-fac').textContent='$ '+fmt(FAC)+' ARS';
   document.getElementById('d-kwh').textContent=fmt(XBruto)+' kWh/mes';
   document.getElementById('d-x').textContent=fmt(X,0)+' kWh/mes';
