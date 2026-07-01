@@ -103,6 +103,30 @@ input[type="range"]{width:100%;accent-color:var(--sol-vivid);height:4px;cursor:p
 .tc-row input:focus{border-color:var(--sol);}
 .tc-note{font-size:11px;font-weight:300;color:var(--stone);}
 
+/* TECHO SELECTOR */
+.techo-row{margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border-lt);}
+.techo-row .techo-q{font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);margin-bottom:12px;display:block;}
+.techo-options{display:flex;gap:8px;flex-wrap:wrap;}
+.techo-options label{display:flex;align-items:center;gap:7px;padding:9px 16px;border:1.5px solid var(--border-lt);font-size:.85rem;font-weight:400;color:var(--text);cursor:pointer;transition:border-color .2s,background .2s;user-select:none;}
+.techo-options input[type="radio"]{display:none;}
+.techo-options input[type="radio"]:checked + span{color:var(--forest);}
+.techo-options label:has(input:checked){border-color:var(--sol);background:var(--sol-pale);}
+.techo-note{margin-top:10px;font-size:11px;font-weight:300;color:var(--stone);display:none;padding:8px 12px;background:#f0f4f0;border-left:3px solid var(--sol);}
+.techo-note.visible{display:block;}
+
+/* EMAIL MODAL */
+.email-overlay{display:none;position:fixed;inset:0;background:rgba(21,40,21,.82);z-index:500;align-items:center;justify-content:center;padding:20px;}
+.email-overlay.active{display:flex;}
+.email-modal{background:var(--white);padding:44px 40px;max-width:440px;width:100%;border:1px solid var(--border-lt);animation:fade-up .25s ease;}
+.email-modal h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--forest);margin-bottom:8px;line-height:1.2;}
+.email-modal p{font-size:13px;font-weight:300;color:var(--stone);margin-bottom:24px;line-height:1.6;}
+.email-modal input[type="email"]{width:100%;padding:13px 16px;border:1.5px solid var(--border-lt);font-size:1rem;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s;background:var(--cream-bg);}
+.email-modal input[type="email"]:focus{border-color:var(--sol);}
+.email-modal .email-err{font-size:11px;color:#b91c1c;margin-top:6px;display:none;}
+.email-modal .email-err.visible{display:block;}
+.btn-ver{width:100%;margin-top:16px;background:var(--forest);color:var(--cream);font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;padding:16px;border:none;cursor:pointer;transition:background .2s;}
+.btn-ver:hover{background:var(--forest2);}
+
 /* WARNING */
 #warning{display:none;background:#fff7ed;border:1px solid rgba(200,136,26,.3);padding:12px 16px;font-size:.88rem;color:#92400e;margin-top:16px;}
 
@@ -228,6 +252,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- INPUTS -->
   <div class="card">
     <div class="card-title">01 — Datos de tu factura</div>
+    <div class="techo-row">
+      <span class="techo-q">¿Cómo es el techo donde van colocados los paneles?</span>
+      <div class="techo-options">
+        <label><input type="radio" name="techo" value="chapa" onchange="onTechoChange()"><span>Chapa</span></label>
+        <label><input type="radio" name="techo" value="teja" onchange="onTechoChange()"><span>Tejas</span></label>
+        <label><input type="radio" name="techo" value="losa" onchange="onTechoChange()"><span>Losa</span></label>
+        <label><input type="radio" name="techo" value="otro" onchange="onTechoChange()" checked><span>Otro</span></label>
+      </div>
+      <div class="techo-note" id="techo-note-losa">🧱 En techo de Losa no se perfora la estructura — se utilizan bloques de cemento para sostener la estructura de los paneles.</div>
+    </div>
     <div class="input-grid">
       <div class="field">
         <label>Monto de la factura <span>(último mes)</span></label>
@@ -260,7 +294,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="tc-row">
       <label>Tipo de cambio USD/ARS</label>
       <input type="number" id="tc" value="1200" min="100">
-      <span class="tc-note">Actualizalo según la fecha de tu consulta</span>
+      <span class="tc-note" id="tc-note">Cargando cotización BNA…</span>
     </div>
     <div id="warning">⚠️ Por favor ingresá el monto de la factura y el consumo en kWh para calcular.</div>
     <button class="btn-calc" onclick="calcular()">
@@ -363,6 +397,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </div><!-- /container -->
 
+<!-- EMAIL MODAL -->
+<div class="email-overlay" id="email-overlay">
+  <div class="email-modal">
+    <h3>¡Ya casi tenés<br>tus resultados!</h3>
+    <p>Ingresá tu mail para ver el análisis personalizado de tu sistema solar.</p>
+    <input type="email" id="email-input" placeholder="tunombre@mail.com" autocomplete="email">
+    <div class="email-err" id="email-err">Por favor ingresá un mail válido (debe contener @).</div>
+    <button class="btn-ver" onclick="confirmarEmail()">Ver mis resultados →</button>
+  </div>
+</div>
+
 <footer>
   <span class="footer-text">Nodex Solar · Munro, Buenos Aires · <a href="mailto:nodexsolar@gmail.com">nodexsolar@gmail.com</a> · +54 9 11 7643 8672</span>
   <span class="footer-text" style="font-style:italic;">Los valores son estimativos. El diseño final se determina con visita técnica. · <a href="privacidad.html">Política de privacidad</a></span>
@@ -375,11 +420,40 @@ document.getElementById('pct').addEventListener('input',function(){
   document.getElementById('pct-label').textContent=this.value+'%';
 });
 
+// ── Cotización BNA al cargar la página ───────────────────────────
+(async function fetchBNA(){
+  const note=document.getElementById('tc-note');
+  try{
+    const res=await fetch('https://dolarapi.com/v1/dolares/oficial',{cache:'no-store'});
+    if(!res.ok) throw new Error('no response');
+    const data=await res.json();
+    const venta=data.venta;
+    if(!venta) throw new Error('sin valor');
+    document.getElementById('tc').value=venta;
+    const fecha=new Date(data.fechaActualizacion||Date.now());
+    const d=fecha.toLocaleDateString('es-AR',{day:'2-digit',month:'2-digit',year:'numeric'});
+    note.textContent='Tipo de cambio BNA ('+d+'): $'+fmt(venta)+' — podés modificarlo si querés';
+    note.style.color='var(--sol)';
+  }catch(e){
+    note.textContent='No se pudo cargar la cotización BNA. Ingresalo manualmente.';
+  }
+})();
+
+function onTechoChange(){
+  const techo=document.querySelector('input[name="techo"]:checked')?.value||'otro';
+  const nota=document.getElementById('techo-note-losa');
+  nota.classList.toggle('visible', techo==='losa');
+}
+
+// Guardamos los datos calculados para usarlos después del email
+let _pendingCalc=null;
+
 function calcular(){
   const FAC=parseFloat(document.getElementById('fac').value);
   const XBruto=parseFloat(document.getElementById('kwh').value);
   const pct=parseFloat(document.getElementById('pct').value)/100;
   const TC=parseFloat(document.getElementById('tc').value)||1200;
+  const techo=document.querySelector('input[name="techo"]:checked')?.value||'otro';
   const warn=document.getElementById('warning');
   if(!FAC||!XBruto||FAC<=0||XBruto<=0){warn.style.display='block';document.getElementById('results').style.display='none';return;}
   warn.style.display='none';
@@ -387,19 +461,69 @@ function calcular(){
   const X=XBruto*0.75;
   const P=X/(4.8*0.8*30);
   const N=Math.ceil(P*1.66667);
-  const rawC=(1277.4*Math.pow(P,-0.204))*P;
-  const C=Math.max(rawC,4000);
+  const rawC=(1090.9*Math.pow(P,-0.198))*P;
+  let C=Math.max(rawC,4200);
+  if(techo==='chapa'||techo==='teja') C=C*0.75;
   const cpkw=C/P;
   const AH=FAC*pct;
   const rawROI=(C*TC)/(AH*12);
-
-  // ── ROI MÍNIMO 2.9 AÑOS ──────────────────────────
   const ROI=Math.max(rawROI,2.9);
 
-  const kWhCubiertos=X;
-  const kWhAnio=kWhCubiertos*12;
+  _pendingCalc={FAC,XBruto,pct,TC,techo,X,P,N,C,cpkw,AH,ROI};
+
+  // Mostramos el modal de email
+  document.getElementById('email-overlay').classList.add('active');
+  setTimeout(()=>document.getElementById('email-input').focus(),100);
+}
+
+function confirmarEmail(){
+  const emailVal=document.getElementById('email-input').value.trim();
+  const err=document.getElementById('email-err');
+  if(!emailVal.includes('@')||emailVal.length<5){
+    err.classList.add('visible');
+    return;
+  }
+  err.classList.remove('visible');
+  document.getElementById('email-overlay').classList.remove('active');
+
+  // Enviar datos a FormSubmit (llega a guidosoifer@gmail.com)
+  const {FAC,XBruto,techo,P,N,C,AH,ROI,TC}=_pendingCalc||{};
+  const techoLabel={chapa:'Chapa',teja:'Tejas',losa:'Losa',otro:'Otro'};
+  fetch('https://formsubmit.co/ajax/guidosoifer@gmail.com',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({
+      _subject:'🌞 Nueva consulta calculadora Nodex Solar',
+      email: emailVal,
+      factura: '$ '+fmt(FAC)+' ARS',
+      consumo: fmt(XBruto)+' kWh/mes',
+      techo: techoLabel[techo]||techo,
+      potencia: fmt(P,2)+' kW',
+      paneles: N+' paneles',
+      inversion: 'USD '+fmt(C,0),
+      ahorro_mensual: '$ '+fmt(AH,0)+' ARS/mes',
+      tipo_de_cambio: '$ '+fmt(TC)+' ARS/USD',
+      roi: fmt(ROI,1)+' años',
+      _template:'table'
+    })
+  }).catch(()=>{});
+
+  mostrarResultados(emailVal);
+}
+
+document.getElementById('email-input').addEventListener('keydown',e=>{
+  if(e.key==='Enter') confirmarEmail();
+});
+
+function mostrarResultados(email){
+  const {FAC,XBruto,pct,TC,techo,X,P,N,C,cpkw,AH,ROI}=_pendingCalc;
+  const kWhAnio=X*12;
   const co2=(kWhAnio*0.4/1000);
   const ahUSD=AH/TC;
+
+  // GTM event con email
+  window.dataLayer=window.dataLayer||[];
+  window.dataLayer.push({event:'calculadora_resultado',email,techo,fac:FAC,kwh:XBruto,potencia:P,paneles:N,inversion:C,roi:ROI});
 
   document.getElementById('results').style.display='block';
   document.getElementById('r-paneles').innerHTML=fmt(N);
@@ -409,7 +533,6 @@ function calcular(){
   document.getElementById('r-co2').innerHTML=fmt(co2,1)+'<span class="unit"> ton/año</span>';
   document.getElementById('r-roi').innerHTML=fmt(ROI,1)+'<span class="unit"> años</span>';
 
-  // ROI color (mínimo 2.9, entonces >= 2.9 siempre)
   const roiCard=document.getElementById('roi-card');
   const roiHL=document.getElementById('roi-highlight');
   roiCard.className='result-card';
@@ -438,17 +561,10 @@ function calcular(){
   const labsEl=document.getElementById('bar-year-labels');
   barsEl.innerHTML='';labsEl.innerHTML='';
   const pctLine=Math.min((invUSD/maxVal)*100,98);
-  barsEl.style.setProperty('--line-pct',pctLine+'%');
-  barsEl.style.cssText+=`;--line-pct:${pctLine}%`;
-
-  // Re-set the ::before with CSS variable
-  barsEl.style.setProperty('--lp',pctLine+'%');
-  // Use inline style trick for the pseudo-element line
   const styleId='chart-style';
   let styleEl=document.getElementById(styleId);
   if(!styleEl){styleEl=document.createElement('style');styleEl.id=styleId;document.head.appendChild(styleEl);}
   styleEl.textContent=`.payback-bars::before{top:calc(100% - ${pctLine}% - 0px) !important;}`;
-
   for(let y=1;y<=years;y++){
     const savPct=Math.min((savings[y-1]/maxVal)*100,100);
     const paid=savings[y-1]>=invUSD;
@@ -462,13 +578,14 @@ function calcular(){
     const lbl=document.createElement('span');lbl.textContent='Año '+y;labsEl.appendChild(lbl);
   }
 
-  // Detail table
+  // Tabla de detalle
+  const techoLabel={chapa:'Chapa (−25% inversión)',teja:'Tejas (−25% inversión)',losa:'Losa (bloques de cemento)',otro:'Otro'};
   document.getElementById('d-fac').textContent='$ '+fmt(FAC)+' ARS';
   document.getElementById('d-kwh').textContent=fmt(XBruto)+' kWh/mes';
   document.getElementById('d-x').textContent=fmt(X,0)+' kWh/mes';
   document.getElementById('d-p').textContent=fmt(P,2)+' kW';
   document.getElementById('d-n').textContent=N+' paneles';
-  document.getElementById('d-cpkw').textContent='USD '+fmt(cpkw,0)+'/kW';
+  document.getElementById('d-cpkw').textContent='USD '+fmt(cpkw,0)+'/kW · Techo: '+(techoLabel[techo]||techo);
   document.getElementById('d-c').textContent='USD '+fmt(C,0);
   document.getElementById('d-ah').textContent='$ '+fmt(AH,0)+' ARS/mes';
   document.getElementById('d-ah-usd').textContent='USD '+fmt(ahUSD,0)+'/mes';
@@ -476,10 +593,12 @@ function calcular(){
   document.getElementById('d-roi').textContent=fmt(ROI,1)+' años';
 
   // WA CTA
+  const techoNombre={chapa:'Chapa',teja:'Tejas',losa:'Losa',otro:'Otro'}[techo]||techo;
   const msg=encodeURIComponent(
     '¡Hola Nodex Solar! Usé la calculadora del sitio y me interesa analizar mi caso:\n\n'+
     '📋 Factura mensual: $'+fmt(FAC)+' ARS\n'+
     '⚡ Consumo: '+fmt(XBruto)+' kWh/mes\n'+
+    '🏠 Tipo de techo: '+techoNombre+'\n'+
     '🔆 Sistema estimado: '+N+' paneles / '+fmt(P,1)+' kW\n'+
     '💵 Inversión estimada: USD '+fmt(C,0)+'\n'+
     '📆 ROI estimado: '+fmt(ROI,1)+' años\n\n'+
