@@ -204,6 +204,9 @@ nav.scrolled{background:rgba(250,248,244,.99);box-shadow:0 1px 16px rgba(26,26,1
 .btn-primary:hover{background:var(--forest2);transform:translateY(-2px);box-shadow:0 12px 32px rgba(21,40,21,.18);}
 .btn-sol{display:inline-flex;align-items:center;gap:14px;font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--text);background:var(--sol-vivid);text-decoration:none;border:none;cursor:pointer;padding:17px 38px;clip-path:polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%);transition:background .2s,transform .2s;}
 .btn-sol:hover{background:var(--sol-lt);transform:translateY(-2px);}
+.btn-cotiza{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--cream);background:var(--forest);text-decoration:none;border:none;cursor:pointer;padding:16px 26px;clip-path:polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%);transition:background .2s,transform .2s;}
+.btn-cotiza:hover{background:var(--forest2);transform:translateY(-2px);}
+.btn-cotiza .bc-sun{color:var(--sol-lt);font-size:14px;}
 .btn-ghost{display:inline-flex;align-items:center;gap:14px;font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;background:none;border:none;cursor:pointer;padding:0;transition:color .2s;}
 .btn-ghost:hover{color:var(--text);}
 .ghost-line{display:block;width:32px;height:1px;background:currentColor;transition:width .3s;}
@@ -583,6 +586,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><a href="#nosotros">Nosotros</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="calculadora.html" target="_blank">Calculadora ☀️</a></li>
+    <li><a href="cotizador.html" target="_blank">Cotizador 🔋</a></li>
     <li><a href="#contacto" class="nav-cta">Presupuesto</a></li>
   </ul>
   <button class="nav-burger" onclick="toggleMenu()" aria-label="Menú"><span></span><span></span><span></span></button>
@@ -594,6 +598,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#nosotros" onclick="toggleMenu()">Nosotros</a>
   <a href="#faq" onclick="toggleMenu()">FAQ</a>
   <a href="calculadora.html" onclick="toggleMenu()" target="_blank">Calculadora ☀️</a>
+  <a href="cotizador.html" onclick="toggleMenu()" target="_blank">Cotizador 🔋</a>
   <a href="#contacto" onclick="toggleMenu()" style="color:var(--sol)">Presupuesto →</a>
 </div>
 
@@ -609,6 +614,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(246,241,233,.6));pointer-events:none;"></div>
       </div>
       <div class="hero-actions fu">
+        <div style="flex-basis:100%;">
+          <a href="cotizador.html" target="_blank" class="btn-cotiza"><span class="bc-sun">☀️</span> Cotizá online con nuestra calculadora <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></a>
+        </div>
         <a href="#contacto" class="btn-sol">Solicitar presupuesto <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></a>
         <a href="#servicios" class="btn-ghost"><span class="ghost-line"></span>Ver servicios</a>
       </div>
@@ -1172,16 +1180,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- CALCULADORA BANNER -->
 <div class="calc-banner reveal">
   <div class="calc-banner-text">
-    <p class="calc-banner-eyebrow">Herramienta gratuita</p>
+    <p class="calc-banner-eyebrow">Herramientas gratuitas</p>
     <h3 class="calc-banner-title">¿Cuánto podés<br><em>ahorrar con solar?</em></h3>
-    <p class="calc-banner-sub">Ingresá el monto de tu factura y calculamos al instante tu sistema ideal, la inversión estimada y el retorno estimado en años.</p>
+    <p class="calc-banner-sub">Calculá tu ahorro con el monto de tu factura, o armá tu sistema a medida eligiendo tus artefactos: tamaño, tipo (On Grid, Híbrido u Off Grid) y precio aproximado.</p>
   </div>
   <div>
     <a href="calculadora.html" target="_blank" class="btn-sol" style="font-size:12px;padding:18px 40px;">
       ☀️ &nbsp;Abrir calculadora
       <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
     </a>
-    <p style="font-size:11px;color:rgba(246,241,233,.3);margin-top:12px;letter-spacing:.05em;">Simulador orientativo · Visita técnica sin cargo</p>
+    <a href="cotizador.html" target="_blank" class="btn-sol" style="font-size:12px;padding:18px 40px;margin-top:10px;margin-left:10px;background:transparent;color:var(--sol-lt);border:1.5px solid rgba(232,168,53,.5);clip-path:none;">
+      🔋 &nbsp;Armá tu sistema
+      <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+    </a>
+    <p style="font-size:11px;color:rgba(246,241,233,.3);margin-top:12px;letter-spacing:.05em;">Simuladores orientativos · Visita técnica sin cargo</p>
   </div>
 </div>
 

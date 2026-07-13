@@ -20,6 +20,7 @@ Munro, Vicente López, San Isidro, Tigre, Pilar, Escobar, San Fernando, San Mart
 ## Páginas clave
 - [Home](https://nodexsolar.com.ar/): presentación de la empresa, servicios, proyectos realizados, preguntas frecuentes y contacto.
 - [Calculadora solar](https://nodexsolar.com.ar/calculadora.html): estimador de ahorro y dimensionamiento de sistema solar según consumo.
+- [Cotizador solar](https://nodexsolar.com.ar/cotizador.html): cotizador por artefactos que recomienda tamaño, tipo de sistema (On Grid, Híbrido u Off Grid) y precio aproximado.
 - [Formulario de presupuesto](https://nodexsolar.com.ar/formulario.html): solicitud de presupuesto personalizado.
 
 ## Datos destacados

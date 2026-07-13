@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cotizador Solar Online | Armá tu sistema fotovoltaico a medida – Nodex Solar</title>
+<meta name="description" content="Elegí tus artefactos y descubrí qué sistema solar te conviene: On Grid, Híbrido u Off Grid. Tamaño, equipos y precio aproximado al instante. Gratis — Nodex Solar.">
+<link rel="canonical" href="https://nodexsolar.com.ar/cotizador.html">
+<!-- Open Graph -->
+<meta property="og:title" content="Cotizador Solar Online | Armá tu sistema fotovoltaico a medida">
+<meta property="og:description" content="Elegí tus artefactos y descubrí qué sistema solar te conviene: On Grid, Híbrido u Off Grid. Tamaño, equipos y precio aproximado al instante.">
+<meta property="og:url" content="https://nodexsolar.com.ar/cotizador.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nodex Solar">
+<meta property="og:locale" content="es_AR">
+<meta property="og:image" content="https://nodexsolar.com.ar/og-image.png?v=4">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cotizador Solar Online | Nodex Solar">
+<meta name="twitter:description" content="Armá tu sistema solar a medida: tamaño, tipo y precio aproximado según tus artefactos.">
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<!-- Schema: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Cotizador Solar Nodex",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "url": "https://nodexsolar.com.ar/cotizador.html",
+  "description": "Cotizador gratuito para dimensionar un sistema solar fotovoltaico On Grid, Híbrido u Off Grid según los artefactos del hogar, con precio aproximado.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "ARS" },
+  "author": { "@type": "Organization", "name": "Nodex Solar", "url": "https://nodexsolar.com.ar/" }
+}
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KTT9TDJ2');</script>
+<!-- End Google Tag Manager -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sol:#C8881A;--sol-lt:#E8A835;--sol-vivid:#EF9F27;--sol-pale:#FDF3E0;--sol-border:rgba(200,136,26,.2);
+  --forest:#152815;--forest2:#1B3219;--forest3:#243D22;
+  --cream:#F6F1E9;--cream-dk:#EDE5D4;--cream-bg:#FAF8F4;
+  --white:#FFFFFF;--text:#1A1A12;--muted:rgba(26,26,18,.48);--stone:#8A8878;
+  --border-lt:rgba(26,26,18,.1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream-bg);color:var(--text);-webkit-font-smoothing:antialiased;min-height:100vh;}
+a{color:inherit;text-decoration:none;}
+button{font-family:'DM Sans',sans-serif;}
+@keyframes spin-cw{to{transform:rotate(360deg);}}
+@keyframes fade-up{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+@keyframes pulse-dot{0%,100%{opacity:.35;}50%{opacity:1;}}
+.logo-spin-slow{animation:spin-cw 120s linear infinite;}
+
+/* HEADER */
+header{background:var(--white);border-bottom:1px solid var(--border-lt);padding:0 5%;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 12px rgba(26,26,18,.06);}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand-text .bn{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:var(--text);display:block;line-height:1;}
+.brand-text .bs{font-size:8px;font-weight:300;letter-spacing:.45em;text-transform:uppercase;color:var(--sol);display:block;margin-top:3px;}
+.back-link{font-size:11px;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:8px;transition:color .2s;}
+.back-link:hover{color:var(--text);}
+
+/* HERO */
+.hero{background:var(--forest);padding:52px 5% 44px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='52' viewBox='0 0 60 52'%3E%3Cpolygon points='30,1 59,17 59,35 30,51 1,35 1,17' stroke='%23EF9F27' stroke-width='1' fill='none'/%3E%3C/svg%3E");background-size:60px 52px;opacity:.03;pointer-events:none;}
+.hero-inner{max-width:860px;position:relative;z-index:1;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(200,136,26,.12);border:1px solid rgba(200,136,26,.25);padding:5px 14px;font-size:10px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:var(--sol-lt);margin-bottom:18px;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4.6vw,58px);font-weight:300;line-height:.98;letter-spacing:-.02em;color:var(--cream);margin-bottom:14px;}
+.hero h1 em{font-style:italic;color:var(--sol-lt);}
+.hero p{font-size:14.5px;font-weight:300;color:rgba(246,241,233,.5);max-width:560px;line-height:1.7;}
+
+/* STEPPER */
+.stepper-wrap{background:var(--white);border-bottom:1px solid var(--border-lt);padding:18px 5% 14px;position:sticky;top:64px;z-index:95;}
+.stepper{max-width:920px;margin:0 auto;display:flex;align-items:flex-start;gap:0;}
+.stp{flex:1;display:flex;flex-direction:column;align-items:center;gap:7px;position:relative;}
+.stp::before{content:'';position:absolute;top:13px;left:calc(-50% + 16px);right:calc(50% + 16px);height:1.5px;background:var(--border-lt);}
+.stp:first-child::before{display:none;}
+.stp.done::before,.stp.act::before{background:var(--sol);}
+.stp-dot{width:27px;height:27px;border-radius:50%;border:1.5px solid var(--border-lt);background:var(--cream-bg);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;color:var(--stone);transition:all .25s;position:relative;z-index:1;}
+.stp.act .stp-dot{border-color:var(--sol);background:var(--sol);color:var(--white);box-shadow:0 0 0 4px rgba(200,136,26,.15);}
+.stp.done .stp-dot{border-color:var(--sol);background:var(--sol-pale);color:var(--sol);}
+.stp-lbl{font-size:8.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--stone);text-align:center;}
+.stp.act .stp-lbl{color:var(--sol);}
+@media(max-width:560px){.stp-lbl{display:none;}.stepper-wrap{padding:14px 5% 12px;}}
+
+/* CONSUMO BAR (paso 2) */
+.consumo-bar{display:none;background:var(--forest);color:var(--cream);padding:10px 5%;position:sticky;top:142px;z-index:94;box-shadow:0 4px 14px rgba(21,40,21,.18);}
+.consumo-bar.visible{display:block;}
+.cb-inner{max-width:920px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+.cb-item{display:flex;align-items:baseline;gap:6px;}
+.cb-item .v{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:var(--sol-lt);line-height:1;}
+.cb-item .l{font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,241,233,.45);}
+.cb-nivel{font-size:9.5px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;padding:4px 12px;border:1px solid;}
+.cb-nivel.bajo{color:#8FD694;border-color:rgba(143,214,148,.4);}
+.cb-nivel.medio{color:var(--sol-lt);border-color:rgba(232,168,53,.4);}
+.cb-nivel.alto{color:#F2A08B;border-color:rgba(242,160,139,.4);}
+@media(max-width:560px){.consumo-bar{top:117px;}.cb-item .v{font-size:1.1rem;}}
+
+/* MAIN */
+.container{max-width:920px;margin:0 auto;padding:36px 5% 80px;}
+.paso{display:none;animation:fade-up .35s ease both;}
+.paso.act{display:block;}
+
+/* CARDS */
+.card{background:var(--white);padding:34px 36px;border:1px solid var(--border-lt);margin-bottom:2px;}
+@media(max-width:560px){.card{padding:26px 20px;}}
+.card-title{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;color:var(--sol);margin-bottom:22px;display:flex;align-items:center;gap:10px;}
+.card-title::before{content:'';display:block;width:3px;height:14px;background:var(--sol);}
+.q-lbl{font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);margin-bottom:12px;display:block;}
+.q-lbl em{font-style:normal;color:var(--muted);font-weight:300;text-transform:none;letter-spacing:0;}
+.q-block{margin-bottom:26px;}
+.q-block:last-child{margin-bottom:0;}
+
+/* OPTION CARDS (radio grandes) */
+.opt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;}
+.opt-card{border:1.5px solid var(--border-lt);background:var(--cream-bg);padding:16px 14px;cursor:pointer;text-align:center;transition:border-color .2s,background .2s;user-select:none;position:relative;}
+.opt-card:hover{border-color:var(--sol-border);}
+.opt-card.sel{border-color:var(--sol);background:var(--sol-pale);}
+.opt-card.disabled{opacity:.35;pointer-events:none;}
+.opt-icon{font-size:1.6rem;display:block;margin-bottom:8px;}
+.opt-name{font-size:.88rem;font-weight:500;color:var(--text);display:block;}
+.opt-desc{font-size:10.5px;font-weight:300;color:var(--stone);display:block;margin-top:4px;line-height:1.45;}
+.opt-badge{position:absolute;top:-8px;right:8px;background:var(--sol);color:var(--white);font-size:8px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;}
+
+/* PILL OPTIONS (radio chicas) */
+.pill-options{display:flex;gap:8px;flex-wrap:wrap;}
+.pill{display:flex;align-items:center;gap:7px;padding:9px 16px;border:1.5px solid var(--border-lt);background:var(--cream-bg);font-size:.85rem;font-weight:400;color:var(--text);cursor:pointer;transition:border-color .2s,background .2s;user-select:none;}
+.pill:hover{border-color:var(--sol-border);}
+.pill.sel{border-color:var(--sol);background:var(--sol-pale);}
+.q-note{margin-top:10px;font-size:11px;font-weight:300;color:var(--stone);display:none;padding:8px 12px;background:#f0f4f0;border-left:3px solid var(--sol);}
+.q-note.visible{display:block;}
+
+/* TEXT INPUTS */
+.txt-input{width:100%;padding:12px 14px;border:1.5px solid var(--border-lt);font-size:.95rem;font-weight:400;color:var(--text);font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s;background:var(--cream-bg);-moz-appearance:textfield;}
+.txt-input:focus{border-color:var(--sol);background:var(--white);}
+.txt-input::-webkit-outer-spin-button,.txt-input::-webkit-inner-spin-button{-webkit-appearance:none;}
+.input-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
+.field-lbl{display:block;font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);margin-bottom:8px;}
+.field-lbl em{font-style:normal;color:var(--muted);font-weight:300;text-transform:none;letter-spacing:0;}
+
+/* ACCORDION ARTEFACTOS */
+.acc-cat{border:1px solid var(--border-lt);margin-bottom:6px;background:var(--white);}
+.acc-head{width:100%;display:flex;align-items:center;justify-content:space-between;padding:15px 18px;background:var(--cream-bg);border:none;cursor:pointer;text-align:left;transition:background .2s;}
+.acc-head:hover{background:var(--cream);}
+.acc-head .ah-name{display:flex;align-items:center;gap:12px;font-size:.92rem;font-weight:500;color:var(--text);}
+.acc-head .ah-icon{font-size:1.25rem;}
+.acc-head .ah-count{font-size:10px;font-weight:600;letter-spacing:.08em;color:var(--sol);background:var(--sol-pale);border:1px solid var(--sol-border);padding:2px 9px;border-radius:20px;margin-left:6px;display:none;}
+.acc-head .ah-count.visible{display:inline-block;}
+.acc-head .ah-arrow{font-size:.8rem;color:var(--stone);transition:transform .25s;}
+.acc-cat.open .ah-arrow{transform:rotate(180deg);}
+.acc-body{display:none;border-top:1px solid var(--border-lt);}
+.acc-cat.open .acc-body{display:block;}
+.item-row{display:flex;align-items:center;gap:12px;padding:11px 18px;border-bottom:1px solid var(--border-lt);flex-wrap:wrap;}
+.item-row:last-child{border-bottom:none;}
+.item-row.on{background:var(--sol-pale);}
+.item-info{flex:1;min-width:170px;}
+.item-name{font-size:.88rem;font-weight:400;color:var(--text);}
+.item-w{font-size:10.5px;font-family:'DM Mono',monospace;color:var(--stone);}
+.stepper-ctl{display:flex;align-items:center;gap:0;border:1.5px solid var(--border-lt);background:var(--white);}
+.stepper-ctl button{width:32px;height:32px;border:none;background:transparent;font-size:1.05rem;color:var(--stone);cursor:pointer;transition:color .15s,background .15s;line-height:1;}
+.stepper-ctl button:hover{background:var(--sol-pale);color:var(--sol);}
+.stepper-ctl .qty{width:34px;text-align:center;font-family:'DM Mono',monospace;font-size:.9rem;font-weight:500;color:var(--text);}
+.item-extra{display:none;align-items:center;gap:8px;flex-wrap:wrap;}
+.item-row.on .item-extra{display:flex;}
+.mini-sel{padding:6px 8px;border:1.5px solid var(--border-lt);background:var(--white);font-size:.78rem;font-family:'DM Sans',sans-serif;color:var(--text);outline:none;cursor:pointer;}
+.mini-sel:focus{border-color:var(--sol);}
+.mini-lbl{font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--stone);}
+
+/* CUSTOM ITEMS */
+.custom-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:10px 0;border-bottom:1px dashed var(--border-lt);}
+.custom-row input{flex:1;min-width:110px;}
+.custom-row .del-btn{width:32px;height:32px;border:1.5px solid var(--border-lt);background:var(--white);color:#b91c1c;font-size:1rem;cursor:pointer;flex-shrink:0;}
+.add-custom{margin-top:14px;display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border:1.5px dashed var(--sol-border);background:transparent;color:var(--sol);font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;transition:background .2s;}
+.add-custom:hover{background:var(--sol-pale);}
+
+/* RESUMEN INLINE */
+.resumen-list{margin-top:6px;}
+.resumen-list .rl-row{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px dashed var(--border-lt);font-size:.84rem;}
+.resumen-list .rl-row:last-child{border-bottom:none;}
+.rl-row .rl-name{color:var(--muted);font-weight:300;}
+.rl-row .rl-val{font-family:'DM Mono',monospace;font-size:.78rem;color:var(--text);white-space:nowrap;}
+.resumen-tot{display:flex;justify-content:space-between;gap:10px;padding:12px 0 0;margin-top:8px;border-top:1.5px solid var(--sol-border);font-size:.9rem;font-weight:500;}
+.resumen-tot .rt-val{font-family:'DM Mono',monospace;color:var(--sol);}
+
+/* SLIDER */
+.slider-label{font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+.slider-label strong{color:var(--sol-vivid);font-size:1.1rem;font-family:'Cormorant Garamond',serif;font-weight:400;font-style:italic;}
+input[type="range"]{width:100%;accent-color:var(--sol-vivid);height:4px;cursor:pointer;}
+.slider-sublabels{display:flex;justify-content:space-between;font-size:10px;color:var(--stone);margin-top:6px;}
+
+/* NAV BUTTONS */
+.paso-nav{display:flex;justify-content:space-between;gap:12px;margin-top:22px;flex-wrap:wrap;}
+.btn-next{flex:1;min-width:200px;background:var(--forest);color:var(--cream);font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;padding:17px 28px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:12px;clip-path:polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%);transition:background .2s,transform .2s;}
+.btn-next:hover{background:var(--forest2);transform:translateY(-1px);}
+.btn-prev{background:transparent;color:var(--stone);font-size:11px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;padding:17px 22px;border:1.5px solid var(--border-lt);cursor:pointer;transition:border-color .2s,color .2s;}
+.btn-prev:hover{border-color:var(--stone);color:var(--text);}
+.step-err{display:none;background:#fff7ed;border:1px solid rgba(200,136,26,.3);padding:12px 16px;font-size:.86rem;color:#92400e;margin-top:16px;}
+.step-err.visible{display:block;}
+
+/* LOADING */
+.calc-loading{display:none;text-align:center;padding:70px 20px;}
+.calc-loading.visible{display:block;}
+.calc-loading .cl-sun{font-size:2.6rem;display:inline-block;animation:spin-cw 3s linear infinite;}
+.calc-loading p{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;font-style:italic;color:var(--muted);margin-top:18px;}
+.calc-loading .dots span{animation:pulse-dot 1.2s infinite;display:inline-block;}
+.calc-loading .dots span:nth-child(2){animation-delay:.2s;}
+.calc-loading .dots span:nth-child(3){animation-delay:.4s;}
+
+/* RESULTADO */
+.sys-banner{background:var(--forest);color:var(--cream);padding:26px 30px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:2px;}
+.sys-banner .sb-icon{font-size:2.2rem;}
+.sys-banner .sb-tipo{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:300;color:var(--sol-lt);line-height:1.1;}
+.sys-banner .sb-why{font-size:12.5px;font-weight:300;color:rgba(246,241,233,.55);line-height:1.6;flex-basis:100%;}
+.results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2px;}
+.result-card{background:var(--cream-bg);padding:24px 14px;text-align:center;border:1px solid var(--border-lt);}
+.result-card.highlight{background:var(--sol-pale);border-color:var(--sol-border);}
+.result-icon{font-size:1.7rem;margin-bottom:8px;}
+.result-value{font-family:'Cormorant Garamond',serif;font-size:1.85rem;font-weight:300;color:var(--text);line-height:1;margin-bottom:4px;letter-spacing:-.02em;}
+.result-value .unit{font-size:.8rem;font-weight:400;color:var(--stone);font-family:'DM Sans',sans-serif;}
+.result-label{font-size:9.5px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--stone);}
+.precio-hl{text-align:center;padding:30px 24px;margin-top:2px;background:var(--sol-pale);border:1px solid var(--sol-border);}
+.precio-hl .p-lbl{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sol);margin-bottom:10px;}
+.precio-hl .p-big{font-family:'Cormorant Garamond',serif;font-size:2.7rem;font-weight:300;line-height:1;letter-spacing:-.02em;color:var(--forest);}
+.precio-hl .p-ars{font-size:13px;font-weight:300;margin-top:8px;color:var(--muted);}
+.precio-hl .p-note{font-size:11px;font-weight:300;margin-top:12px;color:var(--stone);max-width:480px;margin-left:auto;margin-right:auto;line-height:1.6;}
+.detail-table{width:100%;border-collapse:collapse;font-size:.86rem;}
+.detail-table tr{border-bottom:1px solid var(--border-lt);}
+.detail-table tr:last-child{border-bottom:none;}
+.detail-table td{padding:9px 6px;}
+.detail-table td:first-child{color:var(--stone);font-weight:300;}
+.detail-table td:last-child{font-weight:500;text-align:right;font-family:'DM Mono',monospace;font-size:.8rem;}
+.detail-table tr.sep td{background:var(--cream);font-weight:600;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--stone);padding:7px 6px;}
+.res-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin-top:2px;}
+.res-actions .ra-btn{padding:16px 20px;font-size:10.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;text-align:center;transition:all .2s;border:1.5px solid var(--border-lt);background:var(--white);color:var(--text);}
+.res-actions .ra-btn:hover{border-color:var(--sol);color:var(--sol);}
+.res-actions .ra-btn.main{background:var(--forest);color:var(--cream);border-color:var(--forest);}
+.res-actions .ra-btn.main:hover{background:var(--forest2);color:var(--cream);}
+
+/* CONTACTO */
+.check-row{display:flex;align-items:flex-start;gap:10px;margin-top:18px;font-size:12.5px;font-weight:300;color:var(--muted);line-height:1.6;}
+.check-row input{margin-top:3px;accent-color:var(--sol);width:16px;height:16px;flex-shrink:0;cursor:pointer;}
+.check-row a{color:var(--sol);text-decoration:underline;text-underline-offset:2px;}
+textarea.txt-input{resize:vertical;min-height:90px;}
+.char-count{font-size:10px;color:var(--stone);text-align:right;margin-top:4px;}
+
+/* SUCCESS */
+.success-panel{display:none;text-align:center;padding:56px 30px;background:var(--white);border:1px solid var(--border-lt);}
+.success-panel.visible{display:block;}
+.success-panel .sp-icon{font-size:3rem;display:block;margin-bottom:18px;}
+.success-panel h3{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--forest);margin-bottom:10px;}
+.success-panel .sp-id{font-family:'DM Mono',monospace;font-size:.9rem;color:var(--sol);background:var(--sol-pale);border:1px solid var(--sol-border);display:inline-block;padding:6px 16px;margin-bottom:16px;}
+.success-panel p{font-size:13.5px;font-weight:300;color:var(--muted);max-width:440px;margin:0 auto 24px;line-height:1.7;}
+.btn-wa-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 30px;background:#25D366;color:white;font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;border:none;transition:opacity .2s,transform .2s;}
+.btn-wa-cta:hover{opacity:.9;transform:translateY(-1px);}
+
+/* FOOTER */
+footer{background:var(--forest2);padding:28px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;border-top:1px solid rgba(246,241,233,.06);}
+.footer-text{font-size:12px;font-weight:300;color:rgba(246,241,233,.25);}
+.footer-text a{color:var(--sol-lt);transition:opacity .2s;}
+.footer-text a:hover{opacity:.8;}
+
+/* WA FLOAT */
+.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:997;display:flex;align-items:center;gap:10px;background:#25D366;border-radius:50px;padding:14px 20px 14px 16px;box-shadow:0 4px 20px rgba(37,211,102,.35);transition:transform .25s,box-shadow .25s;text-decoration:none;}
+.wa-float:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(37,211,102,.45);}
+.wa-float::before{content:'';position:absolute;inset:0;border-radius:50px;background:#25D366;animation:wa-pulse 2.5s ease-out infinite;opacity:.4;z-index:0;}
+.wa-float svg{position:relative;z-index:1;flex-shrink:0;}
+.wa-float-label{position:relative;z-index:1;font-size:12px;font-weight:500;letter-spacing:.08em;color:#fff;white-space:nowrap;}
+@keyframes wa-pulse{0%{transform:scale(1);opacity:.4;}100%{transform:scale(1.7);opacity:0;}}
+@media(max-width:480px){.wa-float{bottom:1rem;right:1rem;padding:13px 18px 13px 14px;}}
+
+/* PRINT (Descargar PDF) */
+@media print{
+  header,.hero,.stepper-wrap,.consumo-bar,.res-actions,.paso-nav,footer,.wa-float{display:none !important;}
+  body{background:#fff;}
+  .container{padding:0;max-width:100%;}
+  .paso{display:none !important;}
+  #paso-4{display:block !important;}
+  .card,.sys-banner,.precio-hl{border:1px solid #ccc;page-break-inside:avoid;}
+  .sys-banner{background:#f5f5f0;color:#1A1A12;}
+  .sys-banner .sb-why{color:#555;}
+  .print-header{display:block !important;padding:18px 0;border-bottom:2px solid #C8881A;margin-bottom:14px;}
+}
+.print-header{display:none;font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--forest);}
+.print-header small{display:block;font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin-top:4px;}
+</style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTT9TDJ2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header>
+  <div class="brand">
+    <svg width="32" height="38" viewBox="0 0 200 234" fill="none" class="logo-spin-slow">
+      <defs><clipPath id="hc"><polygon points="100,24 178,69 178,159 100,204 22,159 22,69"/></clipPath></defs>
+      <g clip-path="url(#hc)">
+        <line x1="-100" y1="184" x2="300" y2="-47" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
+        <line x1="-100" y1="228" x2="300" y2="-3" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
+        <line x1="-100" y1="272" x2="300" y2="41" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
+      </g>
+      <line x1="100" y1="24" x2="100" y2="204" stroke="#C8881A" stroke-width="1.2" opacity=".5"/>
+      <line x1="178" y1="69" x2="22" y2="159" stroke="#C8881A" stroke-width="1.2" opacity=".5"/>
+      <line x1="178" y1="159" x2="22" y2="69" stroke="#C8881A" stroke-width="1.2" opacity=".5"/>
+      <polygon points="100,24 178,69 178,159 100,204 22,159 22,69" stroke="#C8881A" stroke-width="2.5" fill="none"/>
+      <circle cx="100" cy="114" r="16" stroke="#C8881A" stroke-width=".8" opacity=".3" fill="none"/>
+      <circle cx="100" cy="114" r="9" fill="#C8881A"/>
+      <circle cx="100" cy="24" r="4.5" fill="#C8881A"/>
+      <circle cx="178" cy="69" r="4.5" fill="#C8881A"/>
+      <circle cx="178" cy="159" r="4.5" fill="#C8881A"/>
+      <circle cx="100" cy="204" r="4.5" fill="#C8881A"/>
+      <circle cx="22" cy="159" r="4.5" fill="#C8881A"/>
+      <circle cx="22" cy="69" r="4.5" fill="#C8881A"/>
+    </svg>
+    <div class="brand-text">
+      <span class="bn">Nodex</span>
+      <span class="bs">Solar</span>
+    </div>
+  </div>
+  <a class="back-link" href="./index.html">
+    <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M13 5H1M5 9L1 5L5 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+    Volver al sitio
+  </a>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">🔋 &nbsp;Cotizador inteligente · On Grid / Híbrido / Off Grid</div>
+    <h1>Armá tu sistema solar<br><em>a tu medida</em></h1>
+    <p>Contanos qué querés alimentar con energía solar y te decimos qué sistema te conviene: tamaño, tipo de equipo y precio aproximado. En menos de 3 minutos.</p>
+  </div>
+</div>
+
+<!-- STEPPER -->
+<div class="stepper-wrap">
+  <div class="stepper" id="stepper">
+    <div class="stp" data-s="1"><div class="stp-dot">1</div><div class="stp-lbl">Propiedad</div></div>
+    <div class="stp" data-s="2"><div class="stp-dot">2</div><div class="stp-lbl">Artefactos</div></div>
+    <div class="stp" data-s="3"><div class="stp-dot">3</div><div class="stp-lbl">Sistema</div></div>
+    <div class="stp" data-s="4"><div class="stp-dot">4</div><div class="stp-lbl">Resultado</div></div>
+    <div class="stp" data-s="5"><div class="stp-dot">5</div><div class="stp-lbl">Contacto</div></div>
+  </div>
+</div>
+
+<!-- BARRA DE CONSUMO EN VIVO -->
+<div class="consumo-bar" id="consumo-bar">
+  <div class="cb-inner">
+    <div class="cb-item"><span class="v" id="cb-n">0</span><span class="l">aparatos</span></div>
+    <div class="cb-item"><span class="v" id="cb-w">0</span><span class="l">W total</span></div>
+    <div class="cb-item"><span class="v" id="cb-wh">0</span><span class="l">Wh/día</span></div>
+    <span class="cb-nivel bajo" id="cb-nivel">Consumo bajo</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ════════ PASO 1 — PROPIEDAD ════════ -->
+  <div class="paso act" id="paso-1">
+    <div class="card">
+      <div class="card-title">01 — Contanos sobre tu propiedad</div>
+
+      <div class="q-block">
+        <span class="q-lbl">¿Dónde va la instalación?</span>
+        <div class="opt-grid" id="opt-propiedad">
+          <div class="opt-card" data-v="casa"><span class="opt-icon">🏠</span><span class="opt-name">Casa</span><span class="opt-desc">Paneles en techo o patio</span></div>
+          <div class="opt-card" data-v="depto"><span class="opt-icon">🏢</span><span class="opt-name">Departamento</span><span class="opt-desc">Balcón o azotea compartida</span></div>
+          <div class="opt-card" data-v="comercio"><span class="opt-icon">🏭</span><span class="opt-name">Comercio / Industria</span><span class="opt-desc">Local, galpón o planta</span></div>
+          <div class="opt-card" data-v="campo"><span class="opt-icon">🌾</span><span class="opt-name">Campo / Rural</span><span class="opt-desc">Quinta, casa de campo</span></div>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-lbl">¿Qué conexión eléctrica tenés?</span>
+        <div class="pill-options" id="opt-conexion">
+          <div class="pill" data-v="mono">⚡ Monofásica (220V)</div>
+          <div class="pill" data-v="tri">🔌 Trifásica (380V)</div>
+          <div class="pill" data-v="ninguna">🚫 No tengo conexión a red</div>
+        </div>
+        <div class="q-note" id="note-ninguna">Sin conexión a red, tu opción es un sistema <strong>Off Grid</strong> con baterías — lo tenemos en cuenta en la recomendación.</div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-lbl">¿Cómo es el techo donde irían los paneles?</span>
+        <div class="pill-options" id="opt-techo">
+          <div class="pill" data-v="chapa">Chapa</div>
+          <div class="pill" data-v="teja">Tejas</div>
+          <div class="pill" data-v="losa">Losa</div>
+          <div class="pill" data-v="tierra">A piso / tierra</div>
+          <div class="pill" data-v="otro">Otro / no sé</div>
+        </div>
+        <div class="q-note" id="note-losa">🧱 En techo de losa no se perfora la estructura — se usan bloques de cemento para sostener la estructura de los paneles.</div>
+      </div>
+
+      <div class="q-block">
+        <div class="input-grid">
+          <div>
+            <label class="field-lbl" for="inp-localidad">Localidad <em>(opcional)</em></label>
+            <input type="text" class="txt-input" id="inp-localidad" placeholder="Ej.: Munro, Vicente López" maxlength="80">
+          </div>
+        </div>
+      </div>
+
+      <div class="step-err" id="err-1">⚠️ Elegí el tipo de propiedad, la conexión eléctrica y el tipo de techo para continuar.</div>
+      <div class="paso-nav">
+        <button class="btn-next" onclick="next(1)">Siguiente — Tus artefactos
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════ PASO 2 — ARTEFACTOS ════════ -->
+  <div class="paso" id="paso-2">
+    <div class="card">
+      <div class="card-title">02 — ¿Qué querés alimentar con energía solar?</div>
+      <p style="font-size:13px;font-weight:300;color:var(--muted);margin-bottom:20px;line-height:1.7;">Marcá la cantidad de cada artefacto y las horas de uso por día. La suma se actualiza sola en la barra verde. Las potencias son valores de referencia — después las ajustamos con vos.</p>
+      <div id="catalogo"></div>
+
+      <!-- PERSONALIZADO -->
+      <div class="acc-cat open" style="margin-top:6px;">
+        <button class="acc-head" type="button" onclick="this.parentElement.classList.toggle('open')">
+          <span class="ah-name"><span class="ah-icon">✏️</span> Otro dispositivo (personalizado)</span>
+          <span class="ah-arrow">▾</span>
+        </button>
+        <div class="acc-body" style="padding:6px 18px 16px;">
+          <div id="custom-rows"></div>
+          <button class="add-custom" type="button" onclick="addCustom()">+ Agregar dispositivo propio</button>
+        </div>
+      </div>
+
+      <!-- RESUMEN INLINE -->
+      <div class="q-block" style="margin-top:26px;">
+        <span class="q-lbl">Tu selección</span>
+        <div class="resumen-list" id="resumen-list"><p style="font-size:12.5px;color:var(--stone);font-weight:300;">Todavía no elegiste ningún artefacto.</p></div>
+        <div class="resumen-tot"><span>Energía diaria estimada</span><span class="rt-val" id="resumen-whdia">0 Wh/día</span></div>
+      </div>
+
+      <div class="q-block" style="margin-top:8px;padding-top:20px;border-top:1px solid var(--border-lt);">
+        <label class="field-lbl" for="inp-kwh">¿Tenés la factura a mano? Consumo mensual en kWh <em>(opcional — nos ayuda a afinar el cálculo)</em></label>
+        <div style="max-width:240px;position:relative;">
+          <input type="number" class="txt-input" id="inp-kwh" placeholder="Ej.: 450" min="0" style="padding-right:64px;">
+          <span style="position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:.8rem;color:var(--stone);">kWh/mes</span>
+        </div>
+      </div>
+
+      <div class="step-err" id="err-2">⚠️ Elegí al menos un artefacto (o cargá uno personalizado) para poder dimensionar tu sistema.</div>
+      <div class="paso-nav">
+        <button class="btn-prev" onclick="prev(2)">← Anterior</button>
+        <button class="btn-next" onclick="next(2)">Siguiente — Tipo de sistema
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════ PASO 3 — SISTEMA ════════ -->
+  <div class="paso" id="paso-3">
+    <div class="card">
+      <div class="card-title">03 — ¿Qué tipo de sistema buscás?</div>
+
+      <div class="q-block">
+        <div class="opt-grid" id="opt-sistema">
+          <div class="opt-card" data-v="ongrid"><span class="opt-icon">🔆</span><span class="opt-name">On Grid</span><span class="opt-desc">Conectado a la red. Bajás la factura e inyectás excedente. Sin baterías — máximo retorno.</span></div>
+          <div class="opt-card" data-v="hibrido"><span class="opt-icon">🔋</span><span class="opt-name">Híbrido</span><span class="opt-desc">Ahorro + respaldo con baterías de litio: seguís con luz cuando hay cortes.</span></div>
+          <div class="opt-card" data-v="offgrid"><span class="opt-icon">🏝️</span><span class="opt-name">Off Grid</span><span class="opt-desc">Independencia total de la red. Paneles + baterías dimensionados para todo tu consumo.</span></div>
+          <div class="opt-card" data-v="auto"><span class="opt-icon">🤔</span><span class="opt-name">No estoy seguro</span><span class="opt-desc">Te recomendamos el más conveniente según tus datos.</span></div>
+        </div>
+        <div class="q-note" id="note-sinred">Como no tenés conexión a red, dimensionamos directamente un sistema <strong>Off Grid</strong>.</div>
+      </div>
+
+      <div class="q-block" id="block-autonomia" style="display:none;">
+        <span class="q-lbl">¿Cuántas horas de respaldo querés cuando no hay sol? <em>— define cuántas baterías necesitás</em></span>
+        <div class="pill-options" id="opt-autonomia">
+          <div class="pill" data-v="2">2 hs</div>
+          <div class="pill" data-v="4">4 hs</div>
+          <div class="pill" data-v="6">6 hs</div>
+          <div class="pill" data-v="8">8 hs</div>
+          <div class="pill" data-v="12">12 hs</div>
+          <div class="pill" data-v="24">24 hs</div>
+        </div>
+      </div>
+
+      <div class="q-block" style="padding-top:18px;border-top:1px solid var(--border-lt);">
+        <div class="slider-label">
+          <span>¿Cuánto de todo eso usás al mismo tiempo?</span>
+          <strong id="sim-label">40%</strong>
+        </div>
+        <input type="range" id="inp-sim" min="30" max="100" value="40" step="5">
+        <div class="slider-sublabels"><span>30% — uso repartido</span><span>100% — todo junto</span></div>
+        <p style="font-size:11.5px;font-weight:300;color:var(--stone);margin-top:10px;">Consumo simultáneo estimado: <strong id="sim-w" style="color:var(--sol);">—</strong>. En una casa típica no todo funciona a la vez: 40% es un valor razonable.</p>
+      </div>
+
+      <div class="step-err" id="err-3">⚠️ Elegí un tipo de sistema para continuar.</div>
+      <div class="paso-nav">
+        <button class="btn-prev" onclick="prev(3)">← Anterior</button>
+        <button class="btn-next" onclick="next(3)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          Calcular mi sistema solar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════ PASO 4 — RESULTADO ════════ -->
+  <div class="paso" id="paso-4">
+
+    <div class="calc-loading" id="calc-loading">
+      <span class="cl-sun">☀️</span>
+      <p>Calculando tu solución ideal<span class="dots"><span>.</span><span>.</span><span>.</span></span></p>
+    </div>
+
+    <div id="resultado-body" style="display:none;">
+      <div class="print-header">Nodex Solar — Resumen de tu sistema solar<small id="print-meta"></small></div>
+
+      <div class="sys-banner">
+        <span class="sb-icon" id="res-icon">🔆</span>
+        <div>
+          <div style="font-size:9px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(246,241,233,.45);margin-bottom:4px;">Tu sistema recomendado</div>
+          <div class="sb-tipo" id="res-tipo">—</div>
+        </div>
+        <p class="sb-why" id="res-why"></p>
+      </div>
+
+      <div class="card" style="padding:26px 30px;">
+        <p style="font-size:13.5px;font-weight:300;color:var(--muted);line-height:1.75;" id="res-frase">—</p>
+      </div>
+
+      <div class="results-grid">
+        <div class="result-card">
+          <div class="result-icon">🔆</div>
+          <div class="result-value" id="res-paneles">—</div>
+          <div class="result-label" id="res-paneles-lbl">paneles de 600 W</div>
+        </div>
+        <div class="result-card">
+          <div class="result-icon">⚡</div>
+          <div class="result-value" id="res-kwp">—<span class="unit"> kWp</span></div>
+          <div class="result-label">potencia instalada</div>
+        </div>
+        <div class="result-card">
+          <div class="result-icon">🔌</div>
+          <div class="result-value" id="res-inv">—<span class="unit"> kW</span></div>
+          <div class="result-label" id="res-inv-lbl">inversor</div>
+        </div>
+        <div class="result-card" id="res-bat-card">
+          <div class="result-icon">🔋</div>
+          <div class="result-value" id="res-bat">—</div>
+          <div class="result-label" id="res-bat-lbl">baterías de litio</div>
+        </div>
+        <div class="result-card">
+          <div class="result-icon">🌿</div>
+          <div class="result-value" id="res-co2">—<span class="unit"> ton</span></div>
+          <div class="result-label">CO₂ evitado/año</div>
+        </div>
+      </div>
+
+      <div class="precio-hl">
+        <div class="p-lbl">Inversión estimada llave en mano</div>
+        <div class="p-big" id="res-precio">—</div>
+        <div class="p-ars" id="res-precio-ars"></div>
+        <div class="p-note">Precio orientativo con equipos, estructura, materiales, instalación y puesta en marcha. El valor final se define con la visita técnica <strong>gratuita y sin compromiso</strong>.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Detalle del cálculo</div>
+        <table class="detail-table" id="res-detalle"></table>
+      </div>
+
+      <div class="res-actions">
+        <button class="ra-btn main" onclick="irA(5)">📩 &nbsp;Solicitar cotización formal</button>
+        <button class="ra-btn" onclick="window.print()">📄 &nbsp;Descargar resumen (PDF)</button>
+        <button class="ra-btn" onclick="irA(2)">➕ &nbsp;Ajustar artefactos y recalcular</button>
+        <button class="ra-btn" onclick="resetAll()">↺ &nbsp;Empezar de nuevo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════ PASO 5 — CONTACTO ════════ -->
+  <div class="paso" id="paso-5">
+    <div class="card" id="contact-card">
+      <div class="card-title">04 — Recibí tu cotización formal</div>
+      <p style="font-size:13px;font-weight:300;color:var(--muted);margin-bottom:22px;line-height:1.7;">Dejanos tus datos y un ingeniero de Nodex revisa tu caso y te contacta en menos de 24 hs hábiles con una propuesta a medida. <strong style="font-weight:500;color:var(--text);">Gratis y sin compromiso.</strong></p>
+
+      <div class="input-grid" style="margin-bottom:18px;">
+        <div>
+          <label class="field-lbl" for="c-nombre">Nombre *</label>
+          <input type="text" class="txt-input" id="c-nombre" placeholder="Tu nombre" maxlength="60" autocomplete="given-name">
+        </div>
+        <div>
+          <label class="field-lbl" for="c-apellido">Apellido</label>
+          <input type="text" class="txt-input" id="c-apellido" placeholder="Tu apellido" maxlength="60" autocomplete="family-name">
+        </div>
+        <div>
+          <label class="field-lbl" for="c-email">Email *</label>
+          <input type="email" class="txt-input" id="c-email" placeholder="tunombre@mail.com" maxlength="100" autocomplete="email">
+        </div>
+        <div>
+          <label class="field-lbl" for="c-tel">WhatsApp / Teléfono *</label>
+          <input type="tel" class="txt-input" id="c-tel" placeholder="11 1234 5678" maxlength="25" autocomplete="tel">
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-lbl">¿Cuándo te gustaría avanzar?</span>
+        <div class="pill-options" id="opt-comenzar">
+          <div class="pill" data-v="Lo antes posible">Lo antes posible</div>
+          <div class="pill" data-v="Próximos 3 meses">Próximos 3 meses</div>
+          <div class="pill" data-v="Próximos 6 meses">Próximos 6 meses</div>
+          <div class="pill" data-v="Solo estoy averiguando">Solo estoy averiguando</div>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-lbl">¿Te interesa financiamiento?</span>
+        <div class="pill-options" id="opt-financia">
+          <div class="pill" data-v="Sí">Sí</div>
+          <div class="pill" data-v="No">No</div>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-lbl">¿Cómo nos conociste?</span>
+        <div class="pill-options" id="opt-conocio">
+          <div class="pill" data-v="Google">Google</div>
+          <div class="pill" data-v="Instagram">Instagram</div>
+          <div class="pill" data-v="Referencia">Referencia</div>
+          <div class="pill" data-v="Otro">Otro</div>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <label class="field-lbl" for="c-obs">Aclaraciones <em>(opcional — cortes de luz frecuentes, sombras, consumo nocturno, etc.)</em></label>
+        <textarea class="txt-input" id="c-obs" maxlength="700" placeholder="Contanos lo que creas importante…"></textarea>
+        <div class="char-count"><span id="obs-count">0</span>/700</div>
+      </div>
+
+      <!-- honeypot anti-spam -->
+      <input type="text" id="c-honey" style="display:none" tabindex="-1" autocomplete="off">
+
+      <div class="check-row">
+        <input type="checkbox" id="c-priv">
+        <label for="c-priv">Acepto la <a href="privacidad.html" target="_blank">política de privacidad</a> y autorizo a Nodex Solar a contactarme por este pedido.</label>
+      </div>
+
+      <div class="step-err" id="err-5">⚠️ Completá tu nombre, un email válido, tu teléfono y aceptá la política de privacidad.</div>
+      <div class="paso-nav">
+        <button class="btn-prev" onclick="prev(5)">← Volver al resultado</button>
+        <button class="btn-next" id="btn-enviar" onclick="enviar()">
+          Enviar solicitud
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="success-panel" id="success-panel">
+      <span class="sp-icon">✅</span>
+      <h3>¡Recibimos tu solicitud!</h3>
+      <div class="sp-id" id="sp-id">—</div>
+      <p>Guardá este número de solicitud. Un ingeniero de Nodex revisa tu caso y te contacta en menos de 24 hs hábiles. Si querés avanzar ya mismo, escribinos por WhatsApp con tu cálculo precargado:</p>
+      <a class="btn-wa-cta" id="sp-wa" href="#" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Seguir por WhatsApp
+      </a>
+      <p style="margin-top:24px;margin-bottom:0;"><a href="index.html" style="color:var(--sol);text-decoration:underline;text-underline-offset:3px;font-size:12px;">← Volver al inicio</a> &nbsp;·&nbsp; <a href="#" onclick="resetAll();return false;" style="color:var(--stone);text-decoration:underline;text-underline-offset:3px;font-size:12px;">Hacer otro cálculo</a></p>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<footer>
+  <span class="footer-text">Nodex Solar · Munro, Buenos Aires · <a href="mailto:nodexsolar@gmail.com">nodexsolar@gmail.com</a> · +54 9 11 7643 8672</span>
+  <span class="footer-text" style="font-style:italic;">Los valores son estimativos. El diseño final se determina con visita técnica. · <a href="privacidad.html">Política de privacidad</a> · <a href="calculadora.html">Calculadora de ahorro ☀️</a></span>
+</footer>
+
+<a href="https://wa.me/5491176438672?text=Hola%20Nodex%20Solar!%20Estoy%20usando%20el%20cotizador%20y%20quiero%20hacer%20una%20consulta." class="wa-float" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_whatsapp',wa_location:'cotizador_float'})">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white" style="position:relative;z-index:1;flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="wa-float-label">Escribinos</span>
+</a>
+
+<script>
+'use strict';
+/* ═══════════════════════════════════════════════════════════════
+   CONFIGURACIÓN — ajustá estos valores cuando cambien tus precios
+   ═══════════════════════════════════════════════════════════════ */
+const CFG={
+  panelW:600,               // potencia de panel que instalás
+  hspOnGrid:3.84,           // kWh/kWp/día efectivo (mismo criterio que calculadora.html: 4.8 × 0.8)
+  hspOffGrid:2.6,           // diseño off-grid: mes de invierno en Buenos Aires
+  batteryKwh:5.12,          // batería de litio LiFePO4 unitaria
+  batteryDod:0.9,           // profundidad de descarga usable
+  batteryUsd:1650,          // precio instalado por batería (USD)
+  hybridFactor:1.10,        // sobrecosto de equipos híbridos/off-grid vs on-grid
+  minPvUsdOnGrid:4000,      // piso de precio parte FV on-grid (mismo que calculadora.html)
+  minPvUsdBackup:2600,      // piso de precio parte FV híbrido/off-grid (sistemas chicos)
+  roofDiscount:.75,         // chapa/teja: estructura más simple (mismo que calculadora.html)
+  acSurge:2.6,              // pico de arranque de compresores de aire acondicionado
+  invSurge:2.0,             // sobrecarga breve que tolera el inversor
+  invMono:[3,5,6,8,10],     // tamaños de inversor monofásico (kW)
+  invTri:[10,12,15,20],     // tamaños de inversor trifásico (kW)
+  batAutonomyMargin:1.2,    // margen de seguridad para baterías
+  nivelBajo:4000, nivelMedio:12000, // umbrales Wh/día para etiqueta Bajo/Medio/Alto
+  efi:{A:.9,B:1,C:1.1}      // ajuste por eficiencia de aires acondicionados
+};
+
+/* ── Catálogo de artefactos (potencias de referencia, editables) ── */
+const HORAS=[0.5,1,2,3,4,6,8,12,24];
+const CATALOGO={
+  iluminacion:{nombre:'Iluminación',icono:'💡',items:[
+    {id:'led10',n:'Foco LED 10W',w:10,hs:6},
+    {id:'led16',n:'Foco LED 16W',w:16,hs:6},
+    {id:'led24',n:'Foco LED 24W',w:24,hs:6},
+    {id:'tubo',n:'Tubo / lámpara fluorescente',w:40,hs:6},
+    {id:'reflector',n:'Reflector LED exterior',w:50,hs:6}
+  ]},
+  cocina:{nombre:'Cocina y heladeras',icono:'🍳',items:[
+    {id:'helsin',n:'Heladera sin freezer',w:150,hs:8},
+    {id:'helcon',n:'Heladera con freezer',w:200,hs:8},
+    {id:'freezer',n:'Freezer independiente',w:300,hs:8},
+    {id:'cava',n:'Cava de vinos',w:85,hs:8},
+    {id:'micro',n:'Microondas',w:1200,hs:0.5},
+    {id:'pava',n:'Pava eléctrica',w:2000,hs:0.5},
+    {id:'cafetera',n:'Cafetera',w:900,hs:0.5},
+    {id:'licuadora',n:'Licuadora',w:400,hs:0.5},
+    {id:'tostadora',n:'Tostadora',w:800,hs:0.5},
+    {id:'anafe',n:'Anafe eléctrico (4 hornallas)',w:6000,hs:1},
+    {id:'horno',n:'Horno eléctrico',w:2500,hs:1},
+    {id:'lavavajillas',n:'Lavavajillas',w:1500,hs:1}
+  ]},
+  climatizacion:{nombre:'Climatización',icono:'❄️',items:[
+    {id:'aa2200',n:'Aire acond. 2200 frigorías',w:484,hs:6,ac:true},
+    {id:'aa3000',n:'Aire acond. 3000 frigorías',w:660,hs:6,ac:true},
+    {id:'aa3500',n:'Aire acond. 3500 frigorías',w:770,hs:6,ac:true},
+    {id:'aa4500',n:'Aire acond. 4500 frigorías',w:990,hs:6,ac:true},
+    {id:'aa9000',n:'Aire acond. 9000 frigorías',w:1980,hs:6,ac:true},
+    {id:'ventpie',n:'Ventilador de pie',w:80,hs:8},
+    {id:'venttecho',n:'Ventilador de techo',w:65,hs:8},
+    {id:'caloventor',n:'Caloventor / estufa eléctrica',w:1500,hs:4}
+  ]},
+  entretenimiento:{nombre:'Entretenimiento',icono:'📺',items:[
+    {id:'tv',n:'Televisor LED',w:100,hs:6},
+    {id:'consola',n:'Consola de videojuegos',w:200,hs:2},
+    {id:'router',n:'Router WiFi / módem',w:12,hs:24},
+    {id:'audio',n:'Equipo de audio',w:80,hs:2}
+  ]},
+  trabajo:{nombre:'Trabajo y estudio',icono:'💻',items:[
+    {id:'laptop',n:'Notebook',w:65,hs:8},
+    {id:'pc',n:'PC de escritorio',w:300,hs:8},
+    {id:'monitor',n:'Monitor adicional',w:30,hs:8},
+    {id:'impresora',n:'Impresora',w:150,hs:1},
+    {id:'cargadores',n:'Cargadores varios (celular, etc.)',w:50,hs:4}
+  ]},
+  lavanderia:{nombre:'Lavandería',icono:'🧺',items:[
+    {id:'lavarropas',n:'Lavarropas',w:500,hs:1},
+    {id:'secarropas',n:'Secarropas',w:3000,hs:1},
+    {id:'plancha',n:'Plancha',w:1200,hs:1}
+  ]},
+  agua:{nombre:'Agua y bombas',icono:'🚿',items:[
+    {id:'bomba05',n:'Bomba de agua ½ HP',w:400,hs:1},
+    {id:'bomba075',n:'Bomba de agua ¾ HP',w:600,hs:1},
+    {id:'bomba1',n:'Bomba / motor 1 HP',w:800,hs:1},
+    {id:'presur',n:'Presurizadora de agua',w:400,hs:2},
+    {id:'bombapileta',n:'Bomba de pileta',w:800,hs:6},
+    {id:'termo',n:'Termotanque eléctrico',w:2500,hs:2},
+    {id:'ducha',n:'Ducha eléctrica',w:2400,hs:1},
+    {id:'porton',n:'Motor portón eléctrico',w:550,hs:0.5}
+  ]}
+};
+// índice plano id → item
+const ITEMS={};
+Object.keys(CATALOGO).forEach(c=>CATALOGO[c].items.forEach(it=>{it.cat=c;ITEMS[it.id]=it;}));
+
+/* ── Estado ── */
+const LS_KEY='nodex_cotizador_v1';
+let S={paso:1,propiedad:null,conexion:null,techo:null,localidad:'',
+  items:{},custom:[],kwhFactura:null,
+  sistema:null,autonomia:null,sim:40,
+  comenzar:null,financia:null,conocio:null,
+  id:null};
+let R=null;   // último resultado calculado
+let tcARS=null; // cotización USD→ARS (dolarapi, informativa)
+
+const fmt=(n,d=0)=>n.toLocaleString('es-AR',{minimumFractionDigits:d,maximumFractionDigits:d});
+const $=id=>document.getElementById(id);
+
+/* ═══════════ Persistencia ═══════════ */
+function save(){try{localStorage.setItem(LS_KEY,JSON.stringify(S));}catch(e){}}
+function load(){
+  try{
+    const raw=localStorage.getItem(LS_KEY);
+    if(raw){const p=JSON.parse(raw);if(p&&typeof p==='object')S=Object.assign(S,p);}
+  }catch(e){}
+}
+
+/* ═══════════ Selectores tipo radio (cards y pills) ═══════════ */
+function wireGroup(containerId,onPick){
+  const cont=$(containerId);
+  cont.querySelectorAll('[data-v]').forEach(el=>{
+    el.addEventListener('click',()=>{
+      cont.querySelectorAll('[data-v]').forEach(o=>o.classList.remove('sel'));
+      el.classList.add('sel');
+      onPick(el.dataset.v);
+    });
+  });
+}
+function setGroup(containerId,val){
+  const cont=$(containerId);
+  cont.querySelectorAll('[data-v]').forEach(o=>o.classList.toggle('sel',o.dataset.v===val));
+}
+
+/* ═══════════ Catálogo UI ═══════════ */
+function buildCatalogo(){
+  const wrap=$('catalogo');
+  wrap.innerHTML='';
+  Object.keys(CATALOGO).forEach((catKey,idx)=>{
+    const cat=CATALOGO[catKey];
+    const acc=document.createElement('div');
+    acc.className='acc-cat'+(idx===0?' open':'');
+    acc.id='cat-'+catKey;
+    let rows='';
+    cat.items.forEach(it=>{
+      const st=S.items[it.id];
+      const q=st?st.q:0;
+      const hs=st?st.hs:it.hs;
+      const efi=st&&st.efi?st.efi:'B';
+      rows+=`<div class="item-row${q>0?' on':''}" id="row-${it.id}">
+        <div class="item-info"><span class="item-name">${it.n}</span> <span class="item-w">· ${fmt(it.w)} W</span></div>
+        <div class="item-extra">
+          <span class="mini-lbl">Horas/día</span>
+          <select class="mini-sel" onchange="setHs('${it.id}',this.value)">${HORAS.map(h=>`<option value="${h}"${h===hs?' selected':''}>${h===0.5?'½ h':h+' h'}</option>`).join('')}</select>
+          ${it.ac?`<span class="mini-lbl">Eficiencia</span>
+          <select class="mini-sel" onchange="setEfi('${it.id}',this.value)">
+            <option value="A"${efi==='A'?' selected':''}>A (−10%)</option>
+            <option value="B"${efi==='B'?' selected':''}>B</option>
+            <option value="C"${efi==='C'?' selected':''}>C (+10%)</option>
+          </select>`:''}
+        </div>
+        <div class="stepper-ctl">
+          <button type="button" onclick="chgQty('${it.id}',-1)" aria-label="Quitar">−</button>
+          <span class="qty" id="qty-${it.id}">${q}</span>
+          <button type="button" onclick="chgQty('${it.id}',1)" aria-label="Agregar">+</button>
+        </div>
+      </div>`;
+    });
+    acc.innerHTML=`<button class="acc-head" type="button" onclick="this.parentElement.classList.toggle('open')">
+      <span class="ah-name"><span class="ah-icon">${cat.icono}</span> ${cat.nombre}<span class="ah-count" id="cnt-${catKey}"></span></span>
+      <span class="ah-arrow">▾</span></button>
+      <div class="acc-body">${rows}</div>`;
+    wrap.appendChild(acc);
+  });
+  updateCatCounts();
+}
+function chgQty(id,d){
+  const it=ITEMS[id];
+  let st=S.items[id]||{q:0,hs:it.hs,efi:'B'};
+  st.q=Math.max(0,Math.min(99,st.q+d));
+  if(st.q===0)delete S.items[id];else S.items[id]=st;
+  $('qty-'+id).textContent=st.q;
+  $('row-'+id).classList.toggle('on',st.q>0);
+  updateCatCounts();refresh();
+}
+function setHs(id,v){if(S.items[id]){S.items[id].hs=parseFloat(v);refresh();}}
+function setEfi(id,v){if(S.items[id]){S.items[id].efi=v;refresh();}}
+function updateCatCounts(){
+  Object.keys(CATALOGO).forEach(c=>{
+    const n=CATALOGO[c].items.reduce((a,it)=>a+(S.items[it.id]?S.items[it.id].q:0),0);
+    const el=$('cnt-'+c);
+    el.textContent=n>0?n+' ✓':'';
+    el.classList.toggle('visible',n>0);
+  });
+}
+
+/* ═══════════ Personalizados ═══════════ */
+function addCustom(pref){
+  S.custom.push(pref||{n:'',w:'',hs:4,q:1});
+  renderCustom();refresh();
+}
+function delCustom(i){S.custom.splice(i,1);renderCustom();refresh();}
+function updCustom(i,k,v){
+  if(k==='n')S.custom[i].n=v;
+  else S.custom[i][k]=parseFloat(v)||0;
+  refresh();
+}
+function renderCustom(){
+  const wrap=$('custom-rows');
+  wrap.innerHTML=S.custom.map((c,i)=>`<div class="custom-row">
+    <input type="text" class="txt-input" placeholder="Nombre (ej.: soldadora)" value="${(c.n||'').replace(/"/g,'&quot;')}" maxlength="50" oninput="updCustom(${i},'n',this.value)">
+    <input type="number" class="txt-input" placeholder="Watts" value="${c.w||''}" min="1" max="30000" style="max-width:110px;" oninput="updCustom(${i},'w',this.value)">
+    <select class="mini-sel" onchange="updCustom(${i},'hs',this.value)">${HORAS.map(h=>`<option value="${h}"${h===c.hs?' selected':''}>${h===0.5?'½ h':h+' h'}</option>`).join('')}</select>
+    <input type="number" class="txt-input" placeholder="Cant." value="${c.q||1}" min="1" max="99" style="max-width:80px;" oninput="updCustom(${i},'q',this.value)">
+    <button type="button" class="del-btn" onclick="delCustom(${i})" aria-label="Eliminar">✕</button>
+  </div>`).join('');
+}
+
+/* ═══════════ Totales ═══════════ */
+function getTotals(){
+  let totalW=0,whDia=0,acW=0,n=0;const list=[];
+  Object.keys(S.items).forEach(id=>{
+    const it=ITEMS[id];if(!it)return;
+    const st=S.items[id];
+    const w=it.w*(it.ac?(CFG.efi[st.efi]||1):1);
+    totalW+=w*st.q;whDia+=w*st.q*st.hs;n+=st.q;
+    if(it.ac)acW+=w*st.q;
+    list.push({label:it.n+(it.ac&&st.efi!=='B'?' (efic. '+st.efi+')':''),q:st.q,w:w,hs:st.hs,wh:w*st.q*st.hs});
+  });
+  S.custom.forEach(c=>{
+    if(c.w>0&&c.q>0){
+      totalW+=c.w*c.q;whDia+=c.w*c.q*c.hs;n+=c.q;
+      list.push({label:(c.n||'Dispositivo propio'),q:c.q,w:c.w,hs:c.hs,wh:c.w*c.q*c.hs});
+    }
+  });
+  return{totalW,whDia,acW,n,list};
+}
+
+function refresh(){
+  const t=getTotals();
+  $('cb-n').textContent=fmt(t.n);
+  $('cb-w').textContent=fmt(t.totalW);
+  $('cb-wh').textContent=fmt(t.whDia);
+  const nv=$('cb-nivel');
+  if(t.whDia<CFG.nivelBajo){nv.textContent='Consumo bajo';nv.className='cb-nivel bajo';}
+  else if(t.whDia<CFG.nivelMedio){nv.textContent='Consumo medio';nv.className='cb-nivel medio';}
+  else{nv.textContent='Consumo alto';nv.className='cb-nivel alto';}
+  const rl=$('resumen-list');
+  if(t.list.length===0){rl.innerHTML='<p style="font-size:12.5px;color:var(--stone);font-weight:300;">Todavía no elegiste ningún artefacto.</p>';}
+  else{rl.innerHTML=t.list.map(x=>`<div class="rl-row"><span class="rl-name">${x.q}× ${x.label}</span><span class="rl-val">${fmt(x.w*x.q)} W · ${x.hs===0.5?'½':x.hs} h → ${fmt(x.wh)} Wh</span></div>`).join('');}
+  $('resumen-whdia').textContent=fmt(t.whDia)+' Wh/día';
+  $('sim-w').textContent=fmt(Math.round(t.totalW*S.sim/100))+' W';
+  save();
+}
+
+/* ═══════════ Wizard ═══════════ */
+function irA(n){
+  S.paso=n;
+  document.querySelectorAll('.paso').forEach(p=>p.classList.remove('act'));
+  $('paso-'+n).classList.add('act');
+  document.querySelectorAll('.stp').forEach(s=>{
+    const k=parseInt(s.dataset.s);
+    s.classList.toggle('act',k===n);
+    s.classList.toggle('done',k<n);
+  });
+  $('consumo-bar').classList.toggle('visible',n===2);
+  window.scrollTo({top:0,behavior:'smooth'});
+  window.dataLayer=window.dataLayer||[];
+  window.dataLayer.push({event:'cotizador_paso',paso:n});
+  save();
+}
+function prev(from){irA(from-1===4?4:from-1);}
+function next(from){
+  if(from===1){
+    if(!S.propiedad||!S.conexion||!S.techo){$('err-1').classList.add('visible');return;}
+    $('err-1').classList.remove('visible');
+    irA(2);
+  }else if(from===2){
+    S.kwhFactura=parseFloat($('inp-kwh').value)||null;
+    const t=getTotals();
+    if(t.n===0){$('err-2').classList.add('visible');return;}
+    $('err-2').classList.remove('visible');
+    irA(3);
+  }else if(from===3){
+    if(!S.sistema){$('err-3').classList.add('visible');return;}
+    $('err-3').classList.remove('visible');
+    calcular();
+  }
+}
+
+/* ═══════════ Lógica de sistema / autonomía ═══════════ */
+function onSistemaPick(v){
+  S.sistema=v;
+  const necesitaBat=(v==='hibrido'||v==='offgrid'||(v==='auto'&&S.conexion==='ninguna'));
+  $('block-autonomia').style.display=necesitaBat?'block':'none';
+  if(necesitaBat&&!S.autonomia){
+    S.autonomia=(v==='offgrid'||S.conexion==='ninguna')?24:6;
+    setGroup('opt-autonomia',String(S.autonomia));
+  }
+  save();
+}
+function aplicarRestriccionRed(){
+  // sin red: solo Off Grid tiene sentido
+  const sinRed=S.conexion==='ninguna';
+  $('note-sinred').classList.toggle('visible',sinRed);
+  ['ongrid','hibrido'].forEach(v=>{
+    const el=document.querySelector('#opt-sistema [data-v="'+v+'"]');
+    el.classList.toggle('disabled',sinRed);
+  });
+  if(sinRed&&(S.sistema==='ongrid'||S.sistema==='hibrido')){S.sistema=null;setGroup('opt-sistema','');}
+  if(sinRed&&!S.sistema){S.sistema='offgrid';setGroup('opt-sistema','offgrid');onSistemaPick('offgrid');}
+}
+
+/* ═══════════ Cálculo principal ═══════════ */
+function calcular(){
+  const t=getTotals();
+  // resolver "no estoy seguro"
+  let sistema=S.sistema,why='';
+  if(sistema==='auto'){
+    if(S.conexion==='ninguna'){sistema='offgrid';why='Te recomendamos Off Grid porque no tenés conexión a la red: todo tu consumo se cubre con paneles y baterías.';}
+    else{sistema='ongrid';why='Te recomendamos On Grid: tenés conexión a red, así que es la opción con mejor retorno de inversión. Si sufrís cortes de luz seguido, pedinos la variante Híbrida con baterías.';}
+  }else{
+    why={ongrid:'Elegiste On Grid: conectado a la red, sin baterías. Bajás tu factura e inyectás el excedente a la red.',
+         hibrido:'Elegiste Híbrido: ahorrás en tu factura y las baterías de litio te respaldan cuando hay cortes de luz.',
+         offgrid:'Elegiste Off Grid: independencia total de la red, con paneles y baterías dimensionados para todo tu consumo.'}[sistema];
+  }
+  const conBat=sistema!=='ongrid';
+  if(conBat&&!S.autonomia)S.autonomia=sistema==='offgrid'?24:6;
+
+  // consumo de diseño: artefactos vs factura (si la cargó)
+  let whDia=t.whDia;
+  let notaFactura='';
+  if(S.kwhFactura&&S.kwhFactura>0){
+    const whFactura=S.kwhFactura*1000/30;
+    if(whFactura>whDia){whDia=whFactura;notaFactura='Usamos el consumo de tu factura ('+fmt(S.kwhFactura)+' kWh/mes), que es mayor a la suma de artefactos.';}
+  }
+
+  const simW=Math.round(t.totalW*S.sim/100);
+  const picoW=Math.round((t.totalW-t.acW)*S.sim/100+t.acW*CFG.acSurge);
+  const volt=S.conexion==='tri'?380:220;
+  const amps=simW/volt;
+
+  // paneles
+  const hsp=sistema==='offgrid'?CFG.hspOffGrid:CFG.hspOnGrid;
+  const kwpNec=(whDia/1000)/hsp;
+  const nPan=Math.max(Math.ceil(kwpNec*1000/CFG.panelW),2);
+  const kwp=nPan*CFG.panelW/1000;
+
+  // inversor
+  let invNecKw;
+  if(sistema==='ongrid'){invNecKw=kwp*0.85;}
+  else{invNecKw=Math.max(simW,picoW/CFG.invSurge)/1000;invNecKw=Math.max(invNecKw,kwp*0.8);}
+  const sizes=S.conexion==='tri'?CFG.invTri:CFG.invMono;
+  let invKw=sizes.find(s=>s>=invNecKw);
+  let invNota='';
+  if(!invKw){invKw=sizes[sizes.length-1];invNota=' (proyecto grande: puede requerir más de un equipo)';}
+
+  // baterías
+  let nBat=0,batKwhTot=0;
+  if(conBat){
+    const whBackup=whDia*(S.autonomia/24)*CFG.batAutonomyMargin;
+    nBat=Math.max(Math.ceil(whBackup/(CFG.batteryKwh*1000*CFG.batteryDod)),1);
+    batKwhTot=nBat*CFG.batteryKwh;
+  }
+
+  // precio (misma curva que calculadora.html para la parte FV)
+  let pv=1090.9*Math.pow(kwp,-0.198)*kwp;
+  pv=Math.max(pv,conBat?CFG.minPvUsdBackup:CFG.minPvUsdOnGrid);
+  if(S.techo==='chapa'||S.techo==='teja')pv*=CFG.roofDiscount;
+  let total=pv;
+  if(conBat)total=pv*CFG.hybridFactor+nBat*CFG.batteryUsd;
+  const pLow=Math.round(total*0.9/100)*100;
+  const pHigh=Math.round(total*1.1/100)*100;
+
+  const co2=whDia*365/1000*0.4/1000; // ton/año
+
+  if(!S.id)S.id='NDX-'+Date.now().toString(36).toUpperCase();
+
+  R={sistema,why,whDia,simW,picoW,amps,volt,nPan,kwp,invKw,invNota,nBat,batKwhTot,pLow,pHigh,co2,totalW:t.totalW,n:t.n,notaFactura,list:t.list};
+  save();
+
+  // mostrar con animación de carga
+  irA(4);
+  $('resultado-body').style.display='none';
+  $('calc-loading').classList.add('visible');
+  setTimeout(()=>{
+    $('calc-loading').classList.remove('visible');
+    renderResultado();
+    $('resultado-body').style.display='block';
+    window.dataLayer=window.dataLayer||[];
+    window.dataLayer.push({event:'cotizador_resultado',sistema,paneles:R.nPan,kwp:R.kwp,inversor:R.invKw,baterias:R.nBat,precio_min:R.pLow,precio_max:R.pHigh,wh_dia:Math.round(R.whDia)});
+  },1400);
+}
+
+function renderResultado(){
+  const nom={ongrid:'On Grid',hibrido:'Híbrido',offgrid:'Off Grid'}[R.sistema];
+  const ico={ongrid:'🔆',hibrido:'🔋',offgrid:'🏝️'}[R.sistema];
+  $('res-icon').textContent=ico;
+  $('res-tipo').textContent='Sistema '+nom;
+  $('res-why').textContent=R.why;
+
+  const propTxt={casa:'tu casa',depto:'tu departamento (verificamos la factibilidad del balcón o azotea en la visita)',comercio:'tu comercio o industria',campo:'tu propiedad rural'}[S.propiedad]||'tu propiedad';
+  let frase='Basado en <strong>'+fmt(R.simW)+' W</strong> ('+fmt(R.amps,1)+' A) de consumo simultáneo y <strong>'+fmt(R.whDia)+' Wh/día</strong> de energía'+(R.nBat>0?', con <strong>'+S.autonomia+' hs de respaldo</strong> sin sol,':',')+' este es el sistema que dimensionamos para '+propTxt+'.';
+  if(R.notaFactura)frase+=' <em style="color:var(--stone);">'+R.notaFactura+'</em>';
+  $('res-frase').innerHTML=frase;
+
+  $('res-paneles').textContent=fmt(R.nPan);
+  $('res-paneles-lbl').textContent='paneles de '+CFG.panelW+' W';
+  $('res-kwp').innerHTML=fmt(R.kwp,1)+'<span class="unit"> kWp</span>';
+  $('res-inv').innerHTML=fmt(R.invKw)+'<span class="unit"> kW</span>';
+  $('res-inv-lbl').textContent='inversor '+(S.conexion==='tri'?'trifásico':'monofásico')+({ongrid:'',hibrido:' híbrido',offgrid:' off grid'}[R.sistema])+R.invNota;
+  if(R.nBat>0){
+    $('res-bat-card').style.display='';
+    $('res-bat').textContent=fmt(R.nBat);
+    $('res-bat-lbl').textContent='baterías de litio '+fmt(CFG.batteryKwh,2)+' kWh — total '+fmt(R.batKwhTot,1)+' kWh';
+  }else{
+    $('res-bat-card').style.display='none';
+  }
+  $('res-co2').innerHTML=fmt(R.co2,1)+'<span class="unit"> ton/año</span>';
+
+  $('res-precio').textContent='USD '+fmt(R.pLow)+' – '+fmt(R.pHigh);
+  $('res-precio-ars').textContent=tcARS?('≈ $ '+fmt(R.pLow*tcARS)+' – '+fmt(R.pHigh*tcARS)+' ARS (BNA)'):'';
+
+  const nivel=R.whDia<CFG.nivelBajo?'Bajo':R.whDia<CFG.nivelMedio?'Medio':'Alto';
+  let det='<tr class="sep"><td colspan="2">Tu consumo</td></tr>'+
+    '<tr><td>Artefactos seleccionados</td><td>'+fmt(R.n)+'</td></tr>'+
+    '<tr><td>Potencia total conectada</td><td>'+fmt(R.totalW)+' W</td></tr>'+
+    '<tr><td>Consumo simultáneo ('+S.sim+'%)</td><td>'+fmt(R.simW)+' W · '+fmt(R.amps,1)+' A ('+R.volt+'V)</td></tr>'+
+    '<tr><td>Pico de arranque (aires acond.)</td><td>'+fmt(R.picoW)+' W</td></tr>'+
+    '<tr><td>Energía diaria · nivel</td><td>'+fmt(R.whDia)+' Wh/día · '+nivel+'</td></tr>'+
+    (S.kwhFactura?'<tr><td>Consumo declarado en factura</td><td>'+fmt(S.kwhFactura)+' kWh/mes</td></tr>':'')+
+    '<tr class="sep"><td colspan="2">Sistema dimensionado</td></tr>'+
+    '<tr><td>Tipo de sistema</td><td>'+nom+'</td></tr>'+
+    '<tr><td>Paneles de '+CFG.panelW+' W</td><td>'+fmt(R.nPan)+' u. → '+fmt(R.kwp,1)+' kWp</td></tr>'+
+    '<tr><td>Inversor '+(S.conexion==='tri'?'trifásico':'monofásico')+'</td><td>'+fmt(R.invKw)+' kW</td></tr>'+
+    (R.nBat>0?'<tr><td>Baterías litio '+fmt(CFG.batteryKwh,2)+' kWh · '+S.autonomia+' hs respaldo</td><td>'+fmt(R.nBat)+' u. → '+fmt(R.batKwhTot,1)+' kWh</td></tr>':'')+
+    '<tr class="sep"><td colspan="2">Supuestos del cálculo</td></tr>'+
+    '<tr><td>Generación de diseño</td><td>'+(R.sistema==='offgrid'?CFG.hspOffGrid+' kWh/kWp/día (invierno)':CFG.hspOnGrid+' kWh/kWp/día')+'</td></tr>'+
+    (R.nBat>0?'<tr><td>Descarga útil batería · margen</td><td>'+Math.round(CFG.batteryDod*100)+'% · +'+Math.round((CFG.batAutonomyMargin-1)*100)+'%</td></tr>':'')+
+    '<tr><td>Techo</td><td>'+({chapa:'Chapa',teja:'Tejas',losa:'Losa',tierra:'A piso',otro:'Otro'}[S.techo]||'—')+'</td></tr>'+
+    '<tr><td><strong>Inversión estimada</strong></td><td>USD '+fmt(R.pLow)+' – '+fmt(R.pHigh)+'</td></tr>';
+  $('res-detalle').innerHTML=det;
+  $('print-meta').textContent='Solicitud '+S.id+' · '+new Date().toLocaleDateString('es-AR')+' · nodexsolar.com.ar — valores estimativos, sujetos a visita técnica';
+}
+
+/* ═══════════ Envío del lead ═══════════ */
+function artefactosTexto(){
+  return R.list.map(x=>x.q+'× '+x.label+' ('+fmt(x.w)+' W, '+(x.hs===0.5?'½':x.hs)+' h/día)').join(' · ');
+}
+function waMensaje(nombre){
+  const nom={ongrid:'On Grid',hibrido:'Híbrido',offgrid:'Off Grid'}[R.sistema];
+  return encodeURIComponent(
+    '¡Hola Nodex Solar! Soy '+(nombre||'')+' — usé el cotizador de la web (solicitud '+S.id+'):\n\n'+
+    '🏠 Propiedad: '+({casa:'Casa',depto:'Departamento',comercio:'Comercio/Industria',campo:'Campo/Rural'}[S.propiedad]||'-')+(S.localidad?' — '+S.localidad:'')+'\n'+
+    '⚡ Consumo: '+fmt(R.whDia)+' Wh/día · '+fmt(R.simW)+' W simultáneos\n'+
+    '🔆 Sistema '+nom+': '+R.nPan+' paneles ('+fmt(R.kwp,1)+' kWp) + inversor '+R.invKw+' kW'+(R.nBat>0?' + '+R.nBat+' baterías de litio ('+S.autonomia+' hs respaldo)':'')+'\n'+
+    '💵 Inversión estimada: USD '+fmt(R.pLow)+' – '+fmt(R.pHigh)+'\n\n'+
+    '¿Podemos coordinar una visita técnica sin costo?');
+}
+function enviar(){
+  const nombre=$('c-nombre').value.trim();
+  const apellido=$('c-apellido').value.trim();
+  const email=$('c-email').value.trim();
+  const tel=$('c-tel').value.trim();
+  const obs=$('c-obs').value.trim();
+  const priv=$('c-priv').checked;
+  const emailOk=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const telOk=tel.replace(/\D/g,'').length>=8;
+  if(!nombre||!emailOk||!telOk||!priv){$('err-5').classList.add('visible');return;}
+  if($('c-honey').value){return;} // bot
+  $('err-5').classList.remove('visible');
+  if(!R){irA(3);return;} // sin resultado calculado no hay nada que enviar
+
+  const btn=$('btn-enviar');
+  btn.disabled=true;btn.style.opacity='.6';btn.firstChild.textContent='Enviando… ';
+
+  const nom={ongrid:'On Grid',hibrido:'Híbrido',offgrid:'Off Grid'}[R.sistema];
+  fetch('https://formsubmit.co/ajax/guidosoifer@gmail.com',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({
+      _subject:'🔋 Cotizador Nodex — solicitud '+S.id+' ('+nom+')',
+      _template:'table',
+      _honey:'',
+      solicitud:S.id,
+      nombre:nombre+(apellido?' '+apellido:''),
+      email:email,
+      telefono:tel,
+      propiedad:({casa:'Casa',depto:'Departamento',comercio:'Comercio/Industria',campo:'Campo/Rural'}[S.propiedad]||'-'),
+      localidad:S.localidad||'-',
+      conexion:({mono:'Monofásica 220V',tri:'Trifásica 380V',ninguna:'Sin conexión a red'}[S.conexion]||'-'),
+      techo:({chapa:'Chapa',teja:'Tejas',losa:'Losa',tierra:'A piso',otro:'Otro'}[S.techo]||'-'),
+      sistema:nom,
+      artefactos:artefactosTexto(),
+      consumo_total:fmt(R.totalW)+' W conectados · '+fmt(R.whDia)+' Wh/día',
+      consumo_simultaneo:fmt(R.simW)+' W ('+S.sim+'%) · pico '+fmt(R.picoW)+' W',
+      kwh_factura:S.kwhFactura?fmt(S.kwhFactura)+' kWh/mes':'-',
+      autonomia:R.nBat>0?S.autonomia+' hs':'-',
+      paneles:R.nPan+' × '+CFG.panelW+' W ('+fmt(R.kwp,1)+' kWp)',
+      inversor:R.invKw+' kW '+(S.conexion==='tri'?'trifásico':'monofásico'),
+      baterias:R.nBat>0?R.nBat+' × '+CFG.batteryKwh+' kWh':'sin baterías',
+      precio_estimado:'USD '+fmt(R.pLow)+' – '+fmt(R.pHigh),
+      comenzar:S.comenzar||'-',
+      financiamiento:S.financia||'-',
+      nos_conocio:S.conocio||'-',
+      observaciones:obs||'-'
+    })
+  }).catch(()=>{}).finally(()=>{
+    btn.disabled=false;btn.style.opacity='';
+    $('contact-card').style.display='none';
+    $('success-panel').classList.add('visible');
+    $('sp-id').textContent='Solicitud '+S.id;
+    $('sp-wa').href='https://wa.me/5491176438672?text='+waMensaje(nombre);
+    window.dataLayer=window.dataLayer||[];
+    window.dataLayer.push({event:'cotizador_lead',solicitud:S.id,sistema:R.sistema,precio_min:R.pLow,precio_max:R.pHigh});
+    window.scrollTo({top:0,behavior:'smooth'});
+    try{localStorage.removeItem(LS_KEY);}catch(e){}
+  });
+}
+/* ═══════════ Reset ═══════════ */
+function resetAll(){
+  try{localStorage.removeItem(LS_KEY);}catch(e){}
+  location.reload();
+}
+
+/* ═══════════ Init ═══════════ */
+load();
+buildCatalogo();
+renderCustom();
+
+wireGroup('opt-propiedad',v=>{S.propiedad=v;save();});
+wireGroup('opt-conexion',v=>{S.conexion=v;$('note-ninguna').classList.toggle('visible',v==='ninguna');aplicarRestriccionRed();save();});
+wireGroup('opt-techo',v=>{S.techo=v;$('note-losa').classList.toggle('visible',v==='losa');save();});
+wireGroup('opt-sistema',v=>{onSistemaPick(v);});
+wireGroup('opt-autonomia',v=>{S.autonomia=parseInt(v);save();});
+wireGroup('opt-comenzar',v=>{S.comenzar=v;save();});
+wireGroup('opt-financia',v=>{S.financia=v;save();});
+wireGroup('opt-conocio',v=>{S.conocio=v;save();});
+
+$('inp-localidad').addEventListener('input',e=>{S.localidad=e.target.value;save();});
+$('inp-sim').addEventListener('input',e=>{S.sim=parseInt(e.target.value);$('sim-label').textContent=S.sim+'%';refresh();});
+$('c-obs').addEventListener('input',e=>{$('obs-count').textContent=e.target.value.length;});
+
+// restaurar estado guardado en la UI
+(function restore(){
+  if(S.propiedad)setGroup('opt-propiedad',S.propiedad);
+  if(S.conexion){setGroup('opt-conexion',S.conexion);$('note-ninguna').classList.toggle('visible',S.conexion==='ninguna');}
+  if(S.techo){setGroup('opt-techo',S.techo);$('note-losa').classList.toggle('visible',S.techo==='losa');}
+  if(S.sistema){setGroup('opt-sistema',S.sistema);onSistemaPick(S.sistema);}
+  if(S.autonomia)setGroup('opt-autonomia',String(S.autonomia));
+  if(S.comenzar)setGroup('opt-comenzar',S.comenzar);
+  if(S.financia)setGroup('opt-financia',S.financia);
+  if(S.conocio)setGroup('opt-conocio',S.conocio);
+  if(S.localidad)$('inp-localidad').value=S.localidad;
+  if(S.kwhFactura)$('inp-kwh').value=S.kwhFactura;
+  $('inp-sim').value=S.sim;$('sim-label').textContent=S.sim+'%';
+  aplicarRestriccionRed();
+  refresh();
+  // siempre arrancamos en el paso guardado (pero nunca en 4/5 sin resultado)
+  let p=S.paso||1;
+  if(p>3)p=3;
+  irA(p);
+})();
+
+// cotización BNA (informativa, para mostrar el precio también en ARS)
+(async function(){
+  try{
+    const res=await fetch('https://dolarapi.com/v1/dolares/oficial',{cache:'no-store'});
+    if(res.ok){const d=await res.json();if(d.venta)tcARS=d.venta;}
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
