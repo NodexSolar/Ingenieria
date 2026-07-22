@@ -338,6 +338,25 @@ nav.scrolled{background:rgba(250,248,244,.99);box-shadow:0 1px 16px rgba(26,26,1
 .btn-wa{display:inline-flex;align-items:center;gap:14px;font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--white);background:#1A6A35;text-decoration:none;border:none;cursor:pointer;padding:16px 32px;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);transition:background .2s,transform .2s;}
 .btn-wa:hover{background:#22884A;transform:translateY(-1px);}
 
+/* MANTENIMIENTO */
+.mant-wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-bottom:56px;}
+.mant-body{font-size:14px;font-weight:300;line-height:1.85;color:var(--muted);max-width:460px;margin-bottom:32px;}
+.mant-feats{display:flex;flex-direction:column;gap:16px;margin-bottom:8px;}
+.mant-feat{display:flex;gap:16px;align-items:flex-start;}
+.mant-feat-n{font-family:'DM Mono',monospace;font-size:10px;color:var(--sol);flex-shrink:0;width:22px;padding-top:3px;}
+.mant-feat-t{font-size:13px;font-weight:400;color:var(--text);margin-bottom:3px;}
+.mant-feat-d{font-size:12px;font-weight:300;line-height:1.6;color:var(--muted);}
+.mant-gallery{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:140px;gap:6px;}
+.mant-gallery a:first-child{grid-column:span 2;grid-row:span 2;height:auto;}
+.mant-gallery a{display:block;overflow:hidden;position:relative;cursor:zoom-in;}
+.mant-gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .3s;filter:brightness(.94);}
+.mant-gallery a:hover img{transform:scale(1.06);filter:brightness(1);}
+.mant-lightbox{position:fixed;inset:0;background:rgba(21,40,21,.92);z-index:300;display:flex;align-items:center;justify-content:center;padding:40px;opacity:0;pointer-events:none;transition:opacity .25s;}
+.mant-lightbox.open{opacity:1;pointer-events:all;}
+.mant-lightbox img{max-width:min(92vw,1100px);max-height:88vh;object-fit:contain;box-shadow:0 24px 64px rgba(0,0,0,.4);}
+.mant-lightbox-close{position:absolute;top:28px;right:36px;font-size:13px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,241,233,.7);background:none;border:none;cursor:pointer;transition:color .2s;}
+.mant-lightbox-close:hover{color:var(--cream);}
+
 /* PROYECTOS */
 .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
 .proj-card{position:relative;overflow:hidden;cursor:default;background:var(--cream-dk);}
@@ -523,7 +542,9 @@ footer{background:var(--forest);border-top:1px solid rgba(246,241,233,.06);paddi
   #home,.why,.impact-hero{grid-template-columns:1fr;}
   .hero-right{display:none;}
   .hero-mob-img{display:block;position:relative;margin:20px -40px 0;}
-  .svc-grid,.proj-grid,.testi-grid,.footer-main{grid-template-columns:1fr;}
+  .svc-grid,.proj-grid,.testi-grid,.footer-main,.mant-wrap{grid-template-columns:1fr;}
+  .mant-wrap{gap:40px;}
+  .mant-gallery{grid-auto-rows:120px;}
   .proj-card.feat{grid-column:span 1;aspect-ratio:16/9;}
   .process-row,.pkg-grid,.numbers{grid-template-columns:1fr 1fr;}
   .contact-grid{grid-template-columns:1fr;}
@@ -582,6 +603,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <ul class="nav-links">
     <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#mantenimiento">Mantenimiento</a></li>
     <li><a href="#proyectos">Proyectos</a></li>
     <li><a href="#nosotros">Nosotros</a></li>
     <li><a href="#faq">FAQ</a></li>
@@ -594,6 +616,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="mob-menu" id="mobMenu">
   <a href="#servicios" onclick="toggleMenu()">Servicios</a>
+  <a href="#mantenimiento" onclick="toggleMenu()">Mantenimiento</a>
   <a href="#proyectos" onclick="toggleMenu()">Proyectos</a>
   <a href="#nosotros" onclick="toggleMenu()">Nosotros</a>
   <a href="#faq" onclick="toggleMenu()">FAQ</a>
@@ -893,6 +916,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+
+<!-- MANTENIMIENTO -->
+<section id="mantenimiento" class="page bg-cream">
+  <div class="section-header reveal">
+    <div><p class="sh-lbl">— Limpieza y mantenimiento</p><h2 class="sh-title">Mantené tu sistema <em>al 100%</em></h2></div>
+  </div>
+  <div class="mant-wrap">
+    <div class="reveal">
+      <p class="mant-body">El polvo, la tierra y el hollín se acumulan sobre los módulos y pueden reducir su rendimiento de forma silenciosa. Sumado a esto, conexiones flojas, cableado deteriorado o alarmas del inversor sin atender pueden convertirse en fallas mayores con el tiempo. Un mantenimiento periódico asegura que tu instalación —residencial, industrial o en campo— siga generando al máximo de su capacidad durante toda su vida útil.</p>
+      <div class="mant-feats">
+        <div class="mant-feat"><span class="mant-feat-n">01</span><div><div class="mant-feat-t">Limpieza profesional de los módulos</div><div class="mant-feat-d">Con agua de calidad adecuada y herramientas específicas que evitan daños en la superficie de los paneles.</div></div></div>
+        <div class="mant-feat"><span class="mant-feat-n">02</span><div><div class="mant-feat-t">Inspección visual y de estructura</div><div class="mant-feat-d">Detección de roturas, fisuras o delaminaciones en cada módulo, y revisión del estado de la estructura de soporte y fijaciones.</div></div></div>
+        <div class="mant-feat"><span class="mant-feat-n">03</span><div><div class="mant-feat-t">Revisión de cableado y conexiones</div><div class="mant-feat-d">Inspección del cableado visible, conectores MC4, canalizaciones y cajas de conexión.</div></div></div>
+        <div class="mant-feat"><span class="mant-feat-n">04</span><div><div class="mant-feat-t">Chequeo de inversor y monitoreo</div><div class="mant-feat-d">Verificación del estado general del inversor y revisión de alarmas o fallas visibles.</div></div></div>
+        <div class="mant-feat"><span class="mant-feat-n">05</span><div><div class="mant-feat-t">Informe técnico con registro fotográfico</div><div class="mant-feat-d">Antes y después de la intervención, con observaciones, anomalías detectadas y recomendaciones de mantenimiento.</div></div></div>
+      </div>
+      <div style="margin-top:36px;"><a href="#contacto" class="btn-outline">Consultar →</a></div>
+    </div>
+    <div class="mant-gallery reveal rd1">
+      <a href="mantenimiento-limpieza-paneles-3.webp" onclick="return openLightbox(event,'mantenimiento-limpieza-paneles-3.webp')">
+        <img src="mantenimiento-limpieza-paneles-3.webp" alt="Limpieza profesional de paneles solares" width="2500" height="1500" loading="lazy">
+      </a>
+      <a href="mantenimiento-limpieza-paneles-1.jpg" onclick="return openLightbox(event,'mantenimiento-limpieza-paneles-1.jpg')">
+        <img src="mantenimiento-limpieza-paneles-1.jpg" alt="Trabajo de mantenimiento en instalación fotovoltaica" width="547" height="365" loading="lazy">
+      </a>
+      <a href="mantenimiento-limpieza-paneles-2.jpg" onclick="return openLightbox(event,'mantenimiento-limpieza-paneles-2.jpg')">
+        <img src="mantenimiento-limpieza-paneles-2.jpg" alt="Limpieza y revisión de módulos solares" width="1280" height="720" loading="lazy">
+      </a>
+    </div>
+  </div>
+</section>
+<div class="mant-lightbox" id="mantLightbox" onclick="closeLightbox()">
+  <button class="mant-lightbox-close" onclick="closeLightbox()">Cerrar ✕</button>
+  <img id="mantLightboxImg" src="" alt="">
+</div>
 
 <!-- MARCAS -->
 <div class="brands-strip reveal">
@@ -1274,6 +1332,9 @@ window.addEventListener('scroll',()=>{
 const revObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:.1,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 function toggleMenu(){document.getElementById('mobMenu').classList.toggle('open');}
+function openLightbox(e,src){e.preventDefault();document.getElementById('mantLightboxImg').src=src;document.getElementById('mantLightbox').classList.add('open');return false;}
+function closeLightbox(){document.getElementById('mantLightbox').classList.remove('open');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
 let counted=false;
 const countObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting&&!counted){counted=true;countUp('cnt-inst',0,12,1400);countUp('cnt-kw',0,380,2000);countUp('cnt-gar',0,25,1600);countUp('cnt-co2',0,500,2200);}});},{threshold:.5});
 ['cnt-inst','cnt-kw','cnt-gar','cnt-co2'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent='0';});
