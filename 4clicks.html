@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Cotización en 4 clicks | Nodex Solar</title>
+<meta name="description" content="Cotizá tu sistema de paneles solares en 4 clicks. Precio estimado al instante y consulta directa por WhatsApp con Nodex Solar, Zona Norte GBA.">
+<link rel="canonical" href="https://nodexsolar.com.ar/4clicks.html">
+<meta property="og:title" content="Cotización solar en 4 clicks | Nodex Solar">
+<meta property="og:description" content="Respondé 4 preguntas con botones y conocé un precio estimado al instante.">
+<meta property="og:image" content="https://nodexsolar.com.ar/og-image.png?v=4">
+<meta property="og:url" content="https://nodexsolar.com.ar/4clicks.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta name="theme-color" content="#FAF8F4">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KTT9TDJ2');</script>
+<!-- End Google Tag Manager -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<style>
+:root{
+  --sol:#C8881A;--sol-lt:#E8A835;--sol-vivid:#EF9F27;--sol-pale:#FDF3E0;--sol-border:rgba(200,136,26,.25);
+  --forest:#152815;--forest2:#1B3219;--forest3:#243D22;
+  --cream:#F6F1E9;--cream-dk:#EDE5D4;--cream-bg:#FAF8F4;
+  --white:#FFFFFF;--text:#1A1A12;--muted:rgba(26,26,18,.55);--stone:#8A8878;
+  --border-lt:rgba(26,26,18,.1);--wa:#1FA855;--nav-h:64px;
+  color-scheme:light;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--cream-bg);color:var(--text);-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;min-height:100vh}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a{color:inherit;text-decoration:none}
+@keyframes spin-cw{to{transform:rotate(360deg)}}
+.logo-spin-slow{animation:spin-cw 120s linear infinite}
+
+/* NAV (igual a la web) */
+nav{position:sticky;top:0;height:calc(var(--nav-h) + env(safe-area-inset-top,0px));padding-top:env(safe-area-inset-top,0px);z-index:1000;display:flex;align-items:center;justify-content:space-between;padding-inline:5%;background:rgba(250,248,244,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border-lt)}
+.nav-logo{display:flex;align-items:center;gap:14px}
+.nl-main{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;letter-spacing:.32em;text-transform:uppercase;color:var(--text);line-height:1;display:block}
+.nl-sub{font-size:8px;font-weight:300;letter-spacing:.5em;text-transform:uppercase;color:var(--sol);line-height:1;display:block;margin-top:3px}
+.stepcount{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--stone)}
+.progress{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;height:3px;background:var(--cream-bg)}
+.progress span{background:var(--cream-dk);transition:background .3s}
+.progress span.on{background:var(--sol)}
+.progress.hide{visibility:hidden}
+
+.wrap{max-width:560px;margin:0 auto;padding-inline:20px;padding-block:24px calc(env(safe-area-inset-bottom,0px) + 32px)}
+.screen{display:flex;flex-direction:column;gap:20px}
+.screen.anim{animation:fade-up .4s ease both}
+@keyframes fade-up{from{opacity:.001;transform:translateY(14px)}to{opacity:1;transform:none}}
+.eyebrow{font-size:9.5px;font-weight:400;letter-spacing:.32em;text-transform:uppercase;color:var(--sol);display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--sol);opacity:.7}
+h1,h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;line-height:.95;letter-spacing:-.02em;color:var(--text);text-wrap:balance}
+h1{font-size:clamp(46px,13vw,64px)}
+h2{font-size:clamp(36px,10vw,46px)}
+h1 em,h2 em{font-style:italic;color:var(--sol)}
+.lead{font-size:14px;font-weight:300;line-height:1.75;color:var(--muted);max-width:42ch}
+.back{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--stone);display:inline-flex;gap:10px;align-items:center;padding:4px 0;align-self:flex-start}
+.back::before{content:'';width:20px;height:1px;background:var(--stone)}
+
+/* Botones de marca (paralelogramo) */
+.btn{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:58px;font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--white);background:var(--forest);clip-path:polygon(14px 0%,100% 0%,calc(100% - 14px) 100%,0% 100%);transition:background .2s,transform .12s,opacity .2s}
+.btn:active{transform:scale(.98)}
+.btn[disabled]{opacity:.3;cursor:not-allowed}
+.btn.sol{background:var(--sol);color:var(--forest)}
+.btn.wa{background:var(--wa)}
+.ghost{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);padding:12px;align-self:center}
+button:focus-visible,a:focus-visible{outline:2px solid var(--sol);outline-offset:3px}
+
+/* HERO */
+.hero{position:relative;margin-inline:-20px;margin-top:-24px;min-height:min(78vh,640px);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--forest)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,40,21,.05) 0%,rgba(21,40,21,.15) 40%,rgba(21,40,21,.88) 100%)}
+.hero-in{position:relative;z-index:1;padding:28px 20px 30px;display:flex;flex-direction:column;gap:18px}
+.hero h1{color:var(--cream)}
+.hero .eyebrow{color:var(--sol-lt)}
+.hero .eyebrow::before{background:var(--sol-lt)}
+.hero p{font-size:14px;font-weight:300;line-height:1.7;color:rgba(246,241,233,.82);max-width:36ch}
+.chips4{display:flex;gap:6px;flex-wrap:wrap}
+.chips4 span{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--cream);border:1px solid rgba(246,241,233,.3);padding:5px 9px}
+
+/* MAPA */
+.mapbox{position:relative;border:1px solid var(--border-lt);background:var(--white)}
+#map{height:min(58vh,420px);width:100%;background:#e9e6df}
+.leaflet-container{font-family:'DM Sans',sans-serif}
+.nodex-pin{width:46px;height:52px;filter:drop-shadow(0 4px 8px rgba(21,40,21,.35))}
+.user-pin{width:22px;height:22px;border-radius:50%;background:var(--forest);border:4px solid var(--sol-lt);box-shadow:0 0 0 6px rgba(200,136,26,.25)}
+.maphint{position:absolute;left:10px;right:10px;bottom:10px;z-index:500;pointer-events:none;display:flex;justify-content:center}
+.maphint span{background:rgba(21,40,21,.88);color:var(--cream);font-size:12px;padding:7px 12px;letter-spacing:.02em}
+.locrow{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mini{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border:1px solid var(--border-lt);background:var(--white);font-size:13px;color:var(--forest);padding:8px}
+.mini.sel{border-color:var(--sol);background:var(--sol-pale)}
+.zoneinfo{display:flex;flex-direction:column;gap:4px;padding:14px 16px;background:var(--sol-pale);border-left:2px solid var(--sol)}
+.zoneinfo b{font-size:15px;font-weight:500;color:var(--forest)}
+.zoneinfo span{font-size:13px;color:var(--muted);line-height:1.45}
+.zoneinfo.empty{background:transparent;border-left-color:var(--border-lt)}
+.zoneinfo.out{background:#F7EFE6}
+
+/* OPCIONES */
+.opts{display:grid;gap:10px}
+.opts.cols2{grid-template-columns:1fr 1fr}
+.opts.cols3{grid-template-columns:repeat(3,1fr)}
+.opt{background:var(--white);border:1px solid var(--border-lt);padding:14px 16px;display:flex;align-items:center;gap:14px;text-align:left;min-height:66px;transition:border-color .15s,background .15s,transform .1s;position:relative}
+.opt:active{transform:scale(.98)}
+.opt.sel{border-color:var(--sol);background:var(--sol-pale)}
+.opt.sel::after{content:'';position:absolute;top:0;right:0;border-style:solid;border-width:0 18px 18px 0;border-color:transparent var(--sol) transparent transparent}
+.opt .ic{flex:none;width:52px;height:44px;display:grid;place-items:center}
+.opt .t{display:flex;flex-direction:column;gap:3px;min-width:0}
+.opt .t b{font-size:15px;font-weight:500;color:var(--forest)}
+.opt .t span{font-size:12.5px;color:var(--muted);line-height:1.35}
+.opt.stack{flex-direction:column;align-items:center;text-align:center;gap:8px;padding:16px 8px}
+.opt.stack .t{align-items:center}
+.people{display:flex;gap:2px;height:30px;align-items:flex-end}
+.glabel{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--stone);margin-top:6px}
+.reveal{display:flex;flex-direction:column;gap:10px;animation:fade-up .35s ease both}
+.note{font-size:12px;color:var(--stone);line-height:1.5}
+
+/* RESULTADO */
+.result{background:var(--forest);color:var(--cream);padding:24px 20px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
+.result::before{content:'';position:absolute;right:-60px;top:-60px;width:200px;height:230px;opacity:.08;background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 234'%3E%3Cpolygon points='100,24 178,69 178,159 100,204 22,159 22,69' stroke='%23E8A835' stroke-width='3' fill='none'/%3E%3Ccircle cx='100' cy='114' r='12' fill='%23E8A835'/%3E%3C/svg%3E")}
+.result .eyebrow{color:var(--sol-lt)}
+.result .eyebrow::before{background:var(--sol-lt)}
+.sys{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:400;line-height:1.05;color:var(--cream)}
+.pricebig{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(34px,10vw,48px);line-height:1;color:var(--sol-lt);white-space:nowrap;font-variant-numeric:tabular-nums;transition:opacity .2s}
+.pricebig small{display:block;font-family:'DM Sans',sans-serif;font-weight:300;font-size:12px;letter-spacing:.06em;color:rgba(246,241,233,.7);margin-top:8px;white-space:normal}
+.phase{display:flex;flex-direction:column;gap:8px}
+.phase .glabel{color:rgba(246,241,233,.6);margin:0}
+.seg{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(246,241,233,.25)}
+.seg button{min-height:46px;font-size:13px;color:rgba(246,241,233,.75);letter-spacing:.04em}
+.seg button.on{background:var(--sol);color:var(--forest);font-weight:600}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-top:1px solid rgba(246,241,233,.15);padding-top:14px}
+.facts div{display:flex;flex-direction:column;gap:3px}
+.facts b{font-family:'DM Mono',monospace;font-size:16px;font-weight:500;color:var(--cream)}
+.facts span{font-size:11px;color:rgba(246,241,233,.62);line-height:1.3}
+.incl{display:flex;flex-direction:column;gap:9px;font-size:14px;font-weight:300}
+.incl li{list-style:none;display:flex;gap:12px;align-items:flex-start;line-height:1.45}
+.incl li::before{content:'';flex:none;width:7px;height:7px;margin-top:7px;background:var(--sol);transform:rotate(45deg)}
+.summary{display:flex;flex-wrap:wrap;gap:6px}
+.summary span{font-size:11.5px;padding:5px 10px;background:var(--cream);color:var(--forest);border:1px solid var(--border-lt)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTT9TDJ2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<nav>
+  <a href="index.html" class="nav-logo" aria-label="Nodex Solar, ir al inicio">
+    <svg class="logo-spin-slow" aria-hidden="true" width="34" height="40" viewBox="0 0 200 234" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs><clipPath id="nc"><polygon points="100,24 178,69 178,159 100,204 22,159 22,69"/></clipPath></defs>
+      <g clip-path="url(#nc)">
+        <line x1="-100" y1="162" x2="300" y2="-69" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
+        <line x1="-100" y1="184" x2="300" y2="-47" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
+        <line x1="-100" y1="206" x2="300" y2="-25" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
+        <line x1="-100" y1="228" x2="300" y2="-3" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
+        <line x1="-100" y1="250" x2="300" y2="19" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
+        <line x1="-100" y1="272" x2="300" y2="41" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
+        <line x1="-100" y1="294" x2="300" y2="63" stroke="#C8881A" stroke-width=".8" opacity=".4"/>
+      </g>
+      <line x1="100" y1="24" x2="100" y2="204" stroke="#C8881A" stroke-width="1.2" opacity=".5"/>
+      <line x1="178" y1="69" x2="22" y2="159" stroke="#C8881A" stroke-width="1.2" opacity=".5"/>
+      <line x1="178" y1="159" x2="22" y2="69" stroke="#C8881A" stroke-width="1.2" opacity=".5"/>
+      <polygon points="100,24 178,69 178,159 100,204 22,159 22,69" stroke="#C8881A" stroke-width="2.5" fill="none"/>
+      <circle cx="100" cy="114" r="18" stroke="#C8881A" stroke-width=".8" opacity=".3" fill="none"/>
+      <circle cx="100" cy="114" r="10" fill="#C8881A"/>
+      <circle cx="100" cy="24" r="5" fill="#C8881A"/>
+      <circle cx="178" cy="69" r="5" fill="#C8881A"/>
+      <circle cx="178" cy="159" r="5" fill="#C8881A"/>
+      <circle cx="100" cy="204" r="5" fill="#C8881A"/>
+      <circle cx="22" cy="159" r="5" fill="#C8881A"/>
+      <circle cx="22" cy="69" r="5" fill="#C8881A"/>
+    </svg>
+    <div><span class="nl-main">Nodex</span><span class="nl-sub">Solar</span></div>
+  </a>
+  <span class="stepcount" id="stepcount">4 clicks</span>
+</nav>
+<div class="progress hide" id="progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+<main class="wrap" id="view" aria-live="polite"></main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script>
+/* ===== Configuración ===== */
+const WA_NUMBER = "5491176438672";
+const MUNRO = [-34.5306, -58.5225];
+
+/* Zona de trabajo (el círculo rojo): Zárate/Campana → Luján → Ezeiza → Berazategui, por la costa */
+const AREA = [[-34.03,-59.12],[-34.22,-59.25],[-34.45,-59.27],[-34.62,-59.22],[-34.78,-59.02],[-34.90,-58.80],[-34.94,-58.55],[-34.92,-58.33],[-34.84,-58.17],[-34.74,-58.13],[-34.66,-58.30],[-34.58,-58.37],[-34.48,-58.48],[-34.40,-58.58],[-34.30,-58.72],[-34.17,-58.90],[-34.08,-59.00]];
+
+/* Localidades para nombrar el punto tocado */
+const PLACES = [["Munro",-34.5306,-58.5225],["Florida",-34.528,-58.495],["Olivos",-34.508,-58.48],["Vicente López",-34.526,-58.47],["Martínez",-34.492,-58.505],["San Isidro",-34.471,-58.528],["Béccar",-34.46,-58.535],["Boulogne",-34.50,-58.56],["San Fernando",-34.443,-58.56],["Tigre",-34.426,-58.58],["Nordelta",-34.405,-58.645],["Benavídez",-34.41,-58.69],["Garín",-34.42,-58.76],["Escobar",-34.348,-58.795],["Maschwitz",-34.38,-58.74],["Del Viso",-34.45,-58.80],["Pilar",-34.459,-58.914],["Campana",-34.163,-58.959],["Zárate",-34.098,-59.028],["Capilla del Señor",-34.29,-59.10],["Luján",-34.570,-59.105],["General Rodríguez",-34.608,-58.952],["Moreno",-34.634,-58.79],["Merlo",-34.665,-58.73],["Marcos Paz",-34.78,-58.84],["José C. Paz",-34.515,-58.768],["Grand Bourg",-34.48,-58.73],["San Miguel",-34.543,-58.712],["Bella Vista",-34.56,-58.69],["Hurlingham",-34.588,-58.639],["Ituzaingó",-34.658,-58.667],["Castelar",-34.65,-58.645],["Morón",-34.653,-58.619],["Haedo",-34.643,-58.592],["Ramos Mejía",-34.64,-58.565],["Caseros",-34.605,-58.563],["San Martín",-34.575,-58.537],["Villa Ballester",-34.55,-58.555],["San Justo",-34.68,-58.56],["González Catán",-34.77,-58.63],["Ezeiza",-34.854,-58.522],["Canning",-34.87,-58.50],["Monte Grande",-34.82,-58.47],["Lomas de Zamora",-34.761,-58.406],["Banfield",-34.745,-58.395],["Adrogué",-34.80,-58.39],["Burzaco",-34.83,-58.39],["Lanús",-34.700,-58.395],["Avellaneda",-34.662,-58.365],["Quilmes",-34.724,-58.254],["Bernal",-34.71,-58.28],["Berazategui",-34.765,-58.212],["Florencio Varela",-34.81,-58.275],["Palermo (CABA)",-34.58,-58.43],["Belgrano (CABA)",-34.56,-58.46],["Núñez (CABA)",-34.545,-58.465],["Villa Urquiza (CABA)",-34.573,-58.49],["Villa Devoto (CABA)",-34.60,-58.515],["Villa Ortúzar (CABA)",-34.58,-58.47],["Caballito (CABA)",-34.62,-58.44],["Flores (CABA)",-34.63,-58.46],["Recoleta (CABA)",-34.59,-58.39],["San Telmo (CABA)",-34.62,-58.37],["Mataderos (CABA)",-34.66,-58.50],["Paternal (CABA)",-34.598,-58.468],["Saavedra (CABA)",-34.553,-58.485],["La Plata",-34.921,-57.954],["Cañuelas",-35.05,-58.76],["San Vicente",-35.02,-58.42]];
+
+/* Modelo de precios (USD con resguardo). Mismo que la planilla interna. */
+const P = {panel:105.47, est:{chapa:52.22,teja:106.46,losa:185,nose:106.46}, fij:{chapa:218.6,teja:158.1,losa:351.6,nose:218.6},
+  cable:215.56, tablero:{mono:311,tri:449}, limitador:{mono:157.68,tri:170.73}, bat:1071.59, transp:240, tramite:300,
+  mo6:500, mo12:600, moExtra:50, factor:1.275};
+const INV = {
+  ON_mono:[[99,"Inversor conectado a red monofásico",601.58]],
+  ON_tri:[[7.5,"Inversor conectado a red trifásico",587.52],[12,"Inversor conectado a red trifásico",624.67],[99,"Inversor conectado a red trifásico",891.82]],
+  HIB_mono:[[7.2,"Inversor híbrido monofásico 6 kW",1124.82],[99,"Inversor híbrido monofásico 8 kW",1459.25]],
+  HIB_tri:[[12,"Inversor híbrido trifásico 10 kW",2051.78],[99,"Inversor híbrido trifásico 12 kW",2145.18]]
+};
+const ROOFS = {chapa:"Chapa", teja:"Teja", losa:"Losa", nose:"No sé / otro"};
+const PEOPLE = {p12:{label:"1 a 2", gas:250, elec:450}, p34:{label:"3 a 4", gas:400, elec:700}, p5:{label:"5 o más", gas:550, elec:1000}};
+const CUTS = {nunca:{label:"Nunca",bat:1}, aveces:{label:"A veces",bat:1}, seguido:{label:"Seguido",bat:2}};
+const UG = {si:"Sí, quiero vender el excedente", no:"No, solo para mi consumo", otra:"Mi servicio es de otra empresa o cooperativa"};
+const KWH_PANEL = 575/1000*4.8*0.8*30;
+
+const S = {step:0, loc:null, roof:null, people:null, energy:null, goal:null, cut:null, ug:null, fase:"mono"};
+
+/* ===== Geo ===== */
+function km(a,b){const R=6371,t=Math.PI/180,dLa=(b[0]-a[0])*t,dLo=(b[1]-a[1])*t;const h=Math.sin(dLa/2)**2+Math.cos(a[0]*t)*Math.cos(b[0]*t)*Math.sin(dLo/2)**2;return 2*R*Math.asin(Math.sqrt(h));}
+function inArea(p){let inside=false;for(let i=0,j=AREA.length-1;i<AREA.length;j=i++){const [yi,xi]=AREA[i],[yj,xj]=AREA[j];if(((xi>p[1])!==(xj>p[1]))&&(p[0]<(yj-yi)*(p[1]-xi)/(xj-xi)+yi))inside=!inside;}return inside;}
+function nearest(p){let best=null,d=1e9;for(const [n,la,lo] of PLACES){const k=km(p,[la,lo]);if(k<d){d=k;best=n;}}return {name:best,dist:d};}
+function describeLoc(p){
+  const d=Math.round(km(MUNRO,p)), inside=inArea(p), n=nearest(p);
+  let transp, msg;
+  if(!inside){transp=1.5; msg="Está fuera de nuestra zona habitual. Igual podemos ir: el traslado se cotiza aparte.";}
+  else if(d<=12){transp=.5; msg="Estamos a minutos. Es nuestra zona.";}
+  else if(d<=30){transp=1; msg="Trabajamos ahí todas las semanas.";}
+  else if(d<=50){transp=1.25; msg="Llegamos sin problema, con un pequeño costo de traslado.";}
+  else {transp=1.5; msg="Llegamos, con un costo de traslado mayor.";}
+  return {lat:p[0],lng:p[1],name:n.dist<6?n.name:"Zona de "+n.name,km:d,inside,transp,msg};
+}
+
+/* ===== Cálculo ===== */
+function sizePanels(kwh){let n=Math.round(kwh*0.9/KWH_PANEL/3)*3;return Math.min(15,Math.max(6,n));}
+function quote(fase){
+  const kwh=PEOPLE[S.people][S.energy], n=sizePanels(kwh), kwp=n*575/1000, mods=Math.ceil(n/3);
+  const tipo=S.goal==="respaldo"?"HIB":"ON", bat=tipo==="HIB"?CUTS[S.cut].bat:0;
+  const inv=INV[tipo+"_"+fase].find(([l])=>kwp<=l);
+  let mo=n<=6?P.mo6:n<=12?P.mo12:P.mo12+P.moExtra*Math.ceil((n-12)/3); mo+=P.moExtra*Math.max(0,bat-1);
+  const tramite = tipo==="ON" && S.ug==="si";
+  const cost=n*P.panel+mods*P.est[S.roof]+P.fij[S.roof]+inv[2]+(tipo==="ON"?P.limitador[fase]:0)+bat*P.bat+P.cable+P.tablero[fase]+mo+P.transp*S.loc.transp+(tramite?P.tramite:0);
+  const mid=cost*P.factor, lo=Math.floor(mid*.95/100)*100, hi=Math.ceil(mid*1.10/100)*100;
+  const gen=n*KWH_PANEL;
+  return {kwh,n,kwp,tipo,bat,inv:inv[1],lo,hi,tramite,cover:Math.min(100,Math.round(gen/kwh*100)),gen:Math.round(gen)};
+}
+const usd=v=>"USD "+v.toLocaleString("es-AR");
+const kwpTxt=v=>v.toFixed(1).replace(".",",");
+
+/* ===== Íconos ===== */
+const ICON={
+  chapa:`<svg width="52" height="40" viewBox="0 0 52 40"><path d="M4 20 26 5l22 15" fill="none" stroke="#152815" stroke-width="2.2" stroke-linejoin="round"/><path d="M10 16v20h32V16" fill="none" stroke="#152815" stroke-width="1.6"/><path d="M12 15l14-9 14 9" fill="none" stroke="#C8881A" stroke-width="1.4" stroke-dasharray="2 2.5"/></svg>`,
+  teja:`<svg width="52" height="40" viewBox="0 0 52 40"><path d="M4 20 26 5l22 15" fill="none" stroke="#B5552B" stroke-width="2.8" stroke-linejoin="round"/><path d="M10 16v20h32V16" fill="none" stroke="#152815" stroke-width="1.6"/><path d="M15 13.5a3 3 0 0 0 6 0M21 9.5a3 3 0 0 0 6 0M27 9.5a3 3 0 0 0 6 0M31 13.5a3 3 0 0 0 6 0" fill="none" stroke="#B5552B" stroke-width="1.4"/></svg>`,
+  losa:`<svg width="52" height="40" viewBox="0 0 52 40"><rect x="6" y="10" width="40" height="5" fill="#8A8878"/><path d="M10 15v21h32V15" fill="none" stroke="#152815" stroke-width="1.6"/><path d="M16 10l8-6M30 10l8-6" stroke="#C8881A" stroke-width="2"/></svg>`,
+  nose:`<svg width="52" height="40" viewBox="0 0 52 40"><circle cx="26" cy="20" r="15" fill="none" stroke="#152815" stroke-width="1.6"/><text x="26" y="26.5" text-anchor="middle" font-family="Georgia,serif" font-size="19" fill="#C8881A">?</text></svg>`,
+  gas:`<svg width="40" height="36" viewBox="0 0 40 36"><path d="M20 4c4 6 9 9 9 16a9 9 0 0 1-18 0c0-4 2-6 4-8 0 3 1 5 3 5 0-5-1-8 2-13z" fill="#4A7BC8"/></svg>`,
+  elec:`<svg width="40" height="36" viewBox="0 0 40 36"><path d="M23 3 11 20h8l-3 13 13-18h-8z" fill="#C8881A"/></svg>`,
+  ahorro:`<svg width="44" height="40" viewBox="0 0 44 40"><rect x="7" y="6" width="26" height="30" fill="none" stroke="#152815" stroke-width="1.6"/><path d="M12 14h16M12 20h16M12 26h9" stroke="#152815" stroke-width="1.4"/><path d="M30 22l6 7 6-7" fill="none" stroke="#C8881A" stroke-width="2.2"/><path d="M36 12v16" stroke="#C8881A" stroke-width="2.2"/></svg>`,
+  bat:`<svg width="44" height="40" viewBox="0 0 44 40"><rect x="8" y="10" width="26" height="22" fill="none" stroke="#152815" stroke-width="1.8"/><rect x="34" y="17" width="3" height="8" fill="#152815"/><path d="M23 13l-6 9h5l-2 7 6-9h-5z" fill="#C8881A"/></svg>`,
+  sun:`<svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="#C8881A"/><g stroke="#C8881A" stroke-width="2" stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></g></svg>`,
+  gps:`<svg width="16" height="16" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="#152815"/><circle cx="12" cy="12" r="8" fill="none" stroke="#152815" stroke-width="2"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3" stroke="#152815" stroke-width="2"/></svg>`
+};
+function personIcons(k){const n={p12:2,p34:4,p5:5}[k];let s="";for(let i=0;i<n;i++)s+=`<svg width="12" height="28" viewBox="0 0 12 28"><circle cx="6" cy="5" r="4" fill="#152815"/><path d="M1 28V15a5 5 0 0 1 10 0v13z" fill="#152815"/></svg>`;return `<span class="people">${s}</span>`;}
+const NODEX_PIN=`<svg class="nodex-pin" viewBox="0 0 46 52"><path d="M23 51 15 40h16z" fill="#152815"/><polygon points="23,2 42,13 42,35 23,46 4,35 4,13" fill="#152815" stroke="#E8A835" stroke-width="2.5"/><g stroke="#E8A835" stroke-width="1" opacity=".55"><line x1="23" y1="2" x2="23" y2="46"/><line x1="42" y1="13" x2="4" y2="35"/><line x1="42" y1="35" x2="4" y2="13"/></g><circle cx="23" cy="24" r="5" fill="#E8A835"/></svg>`;
+
+/* ===== Render ===== */
+const view=document.getElementById("view");
+let lastStep=-1, map=null, userMarker=null;
+function track(ev,data){try{(window.dataLayer=window.dataLayer||[]).push(Object.assign({event:ev},data||{}));}catch(e){}}
+function setTop(){
+  const pr=document.getElementById("progress");
+  pr.classList.toggle("hide",S.step===0);
+  pr.querySelectorAll("span").forEach((el,i)=>el.classList.toggle("on",i<S.step));
+  document.getElementById("stepcount").textContent=S.step>=1&&S.step<=4?`Click ${S.step} de 4`:(S.step===5?"Tu estimado":"4 clicks");
+}
+function go(step){S.step=step;render();window.scrollTo({top:0,behavior:"smooth"});}
+const back=()=>`<button class="back" data-back type="button">Volver</button>`;
+function opt(group,val,icon,title,desc,extra){return `<button type="button" class="opt ${extra||""}${S[group]===val?" sel":""}" data-group="${group}" data-val="${val}"><span class="ic">${icon}</span><span class="t"><b>${title}</b>${desc?`<span>${desc}</span>`:""}</span></button>`;}
+
+function render(){
+  setTop();
+  let h="";
+  if(S.step===0){
+    h=`<section class="screen">
+      <div class="hero">
+        <img src="cada-techo-nodo-solar.webp" alt="Casa con paneles solares instalados por Nodex Solar" fetchpriority="high">
+        <div class="hero-in">
+          <span class="eyebrow">Cotización en 4 clicks</span>
+          <h1>Coticemos en <em>un minuto.</em></h1>
+          <p>Cuatro preguntas con botones, sin escribir nada. Al final ves un precio estimado y nos lo mandás por WhatsApp.</p>
+          <div class="chips4"><span>Dónde</span><span>Techo</span><span>Tu casa</span><span>Qué buscás</span></div>
+        </div>
+      </div>
+      <button class="btn sol" type="button" data-next="1">Comenzar ${ICON.sun}</button>
+    </section>`;
+  }
+  else if(S.step===1){
+    const L=S.loc;
+    h=`<section class="screen">${back()}
+      <span class="eyebrow">Click 1 · Ubicación</span>
+      <h2>¿Dónde está <em>la casa?</em></h2>
+      <p class="lead">Tocá el mapa donde está tu casa. La estrella es Nodex, en Munro.</p>
+      <div class="mapbox"><div id="map" role="application" aria-label="Mapa de CABA y Gran Buenos Aires"></div>${L?"":`<div class="maphint"><span>Tocá el mapa para marcar tu casa</span></div>`}</div>
+      <div class="locrow">
+        <button type="button" class="mini" data-gps>${ICON.gps} Usar mi ubicación</button>
+        <button type="button" class="mini${L&&L.other?" sel":""}" data-other>Estoy en otro lugar</button>
+      </div>
+      <div class="zoneinfo${L?(L.inside?"":" out"):" empty"}" id="zoneinfo">${zoneHTML()}</div>
+      <button class="btn" type="button" data-next="2" ${L?"":"disabled"}>Siguiente</button>
+    </section>`;
+  }
+  else if(S.step===2){
+    h=`<section class="screen">${back()}
+      <span class="eyebrow">Click 2 · Techo</span>
+      <h2>¿Qué techo <em>tenés?</em></h2>
+      <p class="lead">Donde irían los paneles.</p>
+      <div class="opts cols2">
+        ${opt("roof","chapa",ICON.chapa,"Chapa","","stack")}
+        ${opt("roof","teja",ICON.teja,"Teja","","stack")}
+        ${opt("roof","losa",ICON.losa,"Losa","Terraza plana","stack")}
+        ${opt("roof","nose",ICON.nose,"No sé / otro","Lo vemos juntos","stack")}
+      </div>
+    </section>`;
+  }
+  else if(S.step===3){
+    h=`<section class="screen">${back()}
+      <span class="eyebrow">Click 3 · Tu casa</span>
+      <h2>¿Cómo es <em>la casa?</em></h2>
+      <p class="lead">Con esto estimamos cuánta luz consumen.</p>
+      <span class="glabel">¿Cuántos viven?</span>
+      <div class="opts cols3">
+        ${opt("people","p12",personIcons("p12"),"1 a 2","","stack")}
+        ${opt("people","p34",personIcons("p34"),"3 a 4","","stack")}
+        ${opt("people","p5",personIcons("p5"),"5 o más","","stack")}
+      </div>
+      <span class="glabel">¿Cómo cocinan y calefaccionan?</span>
+      <div class="opts">
+        ${opt("energy","gas",ICON.gas,"Con gas","Cocina, calefón o estufas a gas")}
+        ${opt("energy","elec",ICON.elec,"Todo eléctrico","Sin gas, o aire acondicionado todo el año")}
+      </div>
+      <button class="btn" type="button" data-next="4" ${S.people&&S.energy?"":"disabled"}>Siguiente</button>
+    </section>`;
+  }
+  else if(S.step===4){
+    let sub="";
+    if(S.goal==="respaldo") sub=`<div class="reveal"><span class="glabel">¿Se te corta la luz?</span><div class="opts cols3">
+        ${opt("cut","nunca","","Nunca","","stack")}${opt("cut","aveces","","A veces","","stack")}${opt("cut","seguido","","Seguido","","stack")}</div></div>`;
+    if(S.goal==="ahorro") sub=`<div class="reveal"><span class="glabel">Si tu servicio es de Edenor o Edesur</span>
+        <p class="lead" style="color:var(--text)">¿Te interesa hacer el trámite de Usuario Generador y venderle a la red la energía que te sobra?</p>
+        <div class="opts">${opt("ug","si","","Sí, quiero vender el excedente","La distribuidora te paga lo que inyectás")}${opt("ug","no","","No, solo para mi consumo","Sin trámite, el sistema no inyecta a la red")}${opt("ug","otra","","Tengo otra empresa o cooperativa","Lo revisamos con tu factura")}</div></div>`;
+    h=`<section class="screen">${back()}
+      <span class="eyebrow">Click 4 · Qué buscás</span>
+      <h2>¿Para qué querés <em>el sistema?</em></h2>
+      <div class="opts cols2">
+        ${opt("goal","ahorro",ICON.ahorro,"Ahorrar","Bajar la factura de luz","stack")}
+        ${opt("goal","respaldo",ICON.bat,"Respaldo","Tener luz en los cortes, con baterías","stack")}
+      </div>
+      ${sub}
+    </section>`;
+  }
+  else if(S.step===5){
+    h=resultHTML();
+    track("cotizador_resultado",{distancia_km:S.loc.km,techo:S.roof,personas:S.people,energia:S.energy,objetivo:S.goal});
+  }
+  view.innerHTML=h;
+  if(lastStep!==S.step){const sc=view.querySelector(".screen");if(sc)sc.classList.add("anim");lastStep=S.step;}
+  if(S.step===1) initMap();
+  bindResult();
+}
+
+function zoneHTML(){
+  const L=S.loc;
+  if(!L) return `<span>Todavía no marcaste tu casa.</span>`;
+  if(L.other) return `<b>Otra localidad</b><span>${L.msg}</span>`;
+  return `<b>${L.name}</b><span>A ${L.km} km de Nodex. ${L.msg}</span>`;
+}
+
+function resultHTML(){
+  const q=quote(S.fase);
+  const tipoTxt=q.tipo==="ON"?"Sistema para ahorrar":"Sistema híbrido con respaldo";
+  const incl=[`${q.n} paneles solares de 575 W`,`${q.inv} con monitoreo por Wi-Fi`,
+    q.bat?`${q.bat} batería${q.bat>1?"s":""} de litio de 5 kWh`:null,
+    q.tipo==="ON"&&!q.tramite?"Limitador de inyección (el sistema no le devuelve energía a la red)":null,
+    q.tramite?"Gestión del trámite de Usuario Generador":null,
+    `Estructura para techo de ${S.roof==="nose"?"tu casa":ROOFS[S.roof].toLowerCase()}`,"Tablero de protecciones y cableado","Instalación completa y puesta en marcha"].filter(Boolean);
+  const fine=["Valor estimado en dólares, con equipos de primera marca.","El precio final se confirma después de ver tu factura y fotos del techo."];
+  if(q.tramite) fine.push("Los costos propios de la distribuidora (medidor bidireccional, inspección) se suman aparte.");
+  if(!S.loc.inside) fine.push("El traslado fuera de nuestra zona se cotiza aparte.");
+  return `<section class="screen">${back()}
+    <span class="eyebrow">Tu estimado</span>
+    <div class="result">
+      <span class="eyebrow">${tipoTxt}</span>
+      <div class="sys">${q.n} paneles · ${kwpTxt(q.kwp)} kWp</div>
+      <div class="pricebig" id="price">${usd(q.lo)} – ${q.hi.toLocaleString("es-AR")}<small>Precio estimado llave en mano</small></div>
+      <div class="phase"><span class="glabel">Tu servicio de luz es</span>
+        <div class="seg" role="group" aria-label="Tipo de servicio"><button type="button" data-fase="mono" class="${S.fase==="mono"?"on":""}" aria-pressed="${S.fase==="mono"}">Monofásico</button><button type="button" data-fase="tri" class="${S.fase==="tri"?"on":""}" aria-pressed="${S.fase==="tri"}">Trifásico</button></div>
+      </div>
+      <div class="facts">
+        <div><b>~${q.cover}%</b><span>de tu consumo cubierto</span></div>
+        <div><b>${q.gen}</b><span>kWh/mes generados</span></div>
+        <div><b>${q.bat?(q.bat*5).toFixed(0)+" kWh":"—"}</b><span>${q.bat?"de respaldo":"sin baterías"}</span></div>
+      </div>
+    </div>
+    <p class="note">¿No sabés qué servicio tenés? Si en el medidor entran 2 cables es monofásico; si entran 4, trifásico.</p>
+    <ul class="incl">${incl.map(i=>`<li>${i}</li>`).join("")}</ul>
+    <div class="summary">${summaryChips().map(c=>`<span>${c}</span>`).join("")}</div>
+    <a class="btn wa" id="wa" href="${waLink(q)}" target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>
+      Mandar a Nodex por WhatsApp</a>
+    <p class="note">${fine.join(" ")}</p>
+    <button class="ghost" type="button" data-restart>Empezar de nuevo</button>
+  </section>`;
+}
+function summaryChips(){
+  const c=[S.loc.other?"Otra localidad":S.loc.name,"Techo "+ROOFS[S.roof].toLowerCase(),PEOPLE[S.people].label+" personas",S.energy==="gas"?"Con gas":"Todo eléctrico"];
+  if(S.goal==="respaldo") c.push("Cortes: "+CUTS[S.cut].label.toLowerCase()); else c.push(S.ug==="si"?"Con trámite de Usuario Generador":S.ug==="no"?"Sin trámite":"Otra distribuidora");
+  return c;
+}
+function waLink(q){
+  const L=S.loc;
+  const ref="COT-"+[S.roof,S.people,S.energy,S.goal,S.fase].map(x=>x.slice(0,2).toUpperCase()).join("");
+  const lugar=L.other?"Otra localidad (fuera de AMBA)":`${L.name} (${L.km} km de Munro)`;
+  const obj=S.goal==="respaldo"?`Respaldo con baterías (cortes: ${CUTS[S.cut].label.toLowerCase()})`:`Ahorrar en la factura (${S.ug==="si"?"quiere hacer el trámite de Usuario Generador":S.ug==="no"?"sin trámite, solo autoconsumo":"otra empresa o cooperativa"})`;
+  const txt=`Hola Nodex! Hice la cotización en 4 clicks:\n\n`+
+    `- Lugar: ${lugar}\n- Techo: ${ROOFS[S.roof]}\n- En casa: ${PEOPLE[S.people].label} personas, ${S.energy==="gas"?"con gas":"todo eléctrico"}\n- Busco: ${obj}\n- Servicio: ${S.fase==="mono"?"monofásico":"trifásico"}\n\n`+
+    `Me salió: ${q.n} paneles (${kwpTxt(q.kwp)} kWp)${q.bat?` con ${q.bat} batería${q.bat>1?"s":""}`:""}, entre ${usd(q.lo)} y ${usd(q.hi)}.\n\n`+
+    `¿Me arman el presupuesto exacto? (${ref})`+(L.other?"":`\nUbicación: https://maps.google.com/?q=${L.lat.toFixed(4)},${L.lng.toFixed(4)}`);
+  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(txt)}`;
+}
+function bindResult(){
+  const wa=document.getElementById("wa");
+  if(wa) wa.addEventListener("click",()=>track("cotizador_whatsapp",{distancia_km:S.loc.km,fase:S.fase,objetivo:S.goal}));
+}
+
+/* ===== Mapa ===== */
+function initMap(){
+  const el=document.getElementById("map");
+  if(!window.L){el.innerHTML=`<p class="note" style="padding:16px">No se pudo cargar el mapa. Usá "Usar mi ubicación" o "Estoy en otro lugar".</p>`;return;}
+  map=L.map(el,{zoomControl:true,scrollWheelZoom:false,attributionControl:true,zoomSnap:.25});
+  map.attributionControl.setPrefix(false);
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",{maxZoom:18,subdomains:"abcd",attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+  const area=L.polygon(AREA,{color:"#C8881A",weight:2,fillColor:"#E8A835",fillOpacity:.18,dashArray:"6 5"}).addTo(map);
+  map.invalidateSize();
+  map.fitBounds(area.getBounds(),{padding:[6,6]});
+  L.marker(MUNRO,{icon:L.divIcon({className:"",html:NODEX_PIN,iconSize:[46,52],iconAnchor:[23,51]}),keyboard:false,interactive:false,zIndexOffset:1000}).addTo(map);
+  if(S.loc&&!S.loc.other) placeUser([S.loc.lat,S.loc.lng],false);
+  map.on("click",e=>placeUser([e.latlng.lat,e.latlng.lng],true));
+  setTimeout(()=>map.invalidateSize(),150);
+}
+function placeUser(p,update){
+  if(!map) return;
+  if(userMarker) userMarker.setLatLng(p); else userMarker=L.marker(p,{icon:L.divIcon({className:"",html:'<div class="user-pin"></div>',iconSize:[22,22],iconAnchor:[11,11]})}).addTo(map);
+  if(update){S.loc=describeLoc(p);refreshLoc();track("cotizador_ubicacion",{distancia_km:S.loc.km,dentro:S.loc.inside});}
+}
+function refreshLoc(){
+  const z=document.getElementById("zoneinfo"); if(!z) return;
+  z.className="zoneinfo"+(S.loc?(S.loc.inside?"":" out"):" empty"); z.innerHTML=zoneHTML();
+  const hint=view.querySelector(".maphint"); if(hint) hint.remove();
+  view.querySelector("[data-next='2']").disabled=!S.loc;
+  view.querySelector("[data-other]").classList.toggle("sel",!!(S.loc&&S.loc.other));
+}
+
+/* ===== Eventos ===== */
+view.addEventListener("click",e=>{
+  const f=e.target.closest("[data-fase]");
+  if(f){S.fase=f.dataset.fase;const y=window.scrollY;render();window.scrollTo(0,y);track("cotizador_fase",{fase:S.fase});return;}
+  const o=e.target.closest("[data-group]");
+  if(o){
+    const g=o.dataset.group; S[g]=o.dataset.val;
+    if(g==="goal"){S.cut=null;S.ug=null;}
+    if(g==="roof"){render();setTimeout(()=>go(3),220);return;}
+    if(g==="cut"||g==="ug"){render();setTimeout(()=>go(5),260);return;}
+    render(); if(g==="goal"){const r=view.querySelector(".reveal");if(r)r.scrollIntoView({behavior:"smooth",block:"center"});} return;
+  }
+  if(e.target.closest("[data-gps]")){
+    const b=e.target.closest("[data-gps]");
+    if(!navigator.geolocation){b.textContent="Tu teléfono no permite ubicación";return;}
+    b.textContent="Buscando…";
+    navigator.geolocation.getCurrentPosition(pos=>{const p=[pos.coords.latitude,pos.coords.longitude];placeUser(p,true);if(map)map.setView(p,12);b.innerHTML=ICON.gps+" Usar mi ubicación";},
+      ()=>{b.textContent="No pudimos ubicarte, tocá el mapa";},{enableHighAccuracy:false,timeout:8000});
+    return;
+  }
+  if(e.target.closest("[data-other]")){S.loc={other:true,inside:false,km:null,transp:1.5,msg:"Interior de Buenos Aires u otra provincia. El traslado se cotiza aparte según la distancia."};if(userMarker&&map){map.removeLayer(userMarker);userMarker=null;}refreshLoc();return;}
+  const n=e.target.closest("[data-next]");
+  if(n&&!n.disabled){if(S.step===0)track("cotizador_inicio");go(+n.dataset.next);return;}
+  if(e.target.closest("[data-back]")){go(Math.max(0,S.step-1));return;}
+  if(e.target.closest("[data-restart]")){Object.assign(S,{loc:null,roof:null,people:null,energy:null,goal:null,cut:null,ug:null,fase:"mono"});userMarker=null;go(0);}
+});
+const _render=render;
+render=function(){ if(map){map.remove();map=null;userMarker=null;} _render(); };
+render();
+</script>
+</body>
+</html>
